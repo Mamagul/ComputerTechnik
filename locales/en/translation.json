@@ -1,0 +1,51 @@
+{
+  "header": {
+    "about": "About",
+    "catalog": "Catalog",
+    "customBuild": "Custom Build",
+    "repair": "Repair",
+    "b2b": "Wholesale",
+    "reviews": "Reviews",
+    "contact": "Contact",
+    "languageSwitch": "Language"
+  },
+  "hero": {
+    "title": "Laptops and Gaming PCs Retail and Wholesale",
+    "subtitle": "From Hamburg to the World!",
+    "cta": "Get Price List",
+    "cta2": "Configure PC"
+  },
+  "about": {
+    "title": "About Computer Technic",
+    "description": "We are your reliable partner for computer and gaming hardware."
+  },
+  "catalog": {
+    "title": "Our Catalog",
+    "description": "Discover our wide selection of laptops and PCs."
+  },
+  "customBuild": {
+    "title": "PC Configurator",
+    "description": "Build your dream PC."
+  },
+  "repair": {
+    "title": "Repair Service",
+    "description": "Professional repair for all devices."
+  },
+  "b2b": {
+    "title": "Wholesale",
+    "description": "Special conditions for dealers and companies."
+  },
+  "reviews": {
+    "title": "Customer Reviews",
+    "description": "What our customers say about us."
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Get in touch with us."
+  },
+  "footer": {
+    "address": "Hamburg, Germany",
+    "phone": "Phone",
+    "email": "Email"
+  }
+}

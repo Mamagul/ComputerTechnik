@@ -1,0 +1,376 @@
+.b2b {
+  padding: 6rem 0;
+  background: var(--dark-bg);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.b2b::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+    repeat;
+  opacity: 0.5;
+}
+
+.b2b .container {
+  position: relative;
+  z-index: 2;
+}
+
+.b2b-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.b2b-header h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.b2b-header h3 {
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.b2b-header p {
+  font-size: 1.125rem;
+  color: var(--gray-300);
+  line-height: 1.7;
+}
+
+.b2b-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.benefit-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.benefit-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-8px);
+}
+
+.benefit-card:hover::before {
+  transform: scaleX(1);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.benefit-content h4 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.benefit-content p {
+  color: var(--gray-300);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.partnership-types {
+  margin-bottom: 4rem;
+}
+
+.partnership-types h3 {
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.partnerships {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.partnership-card {
+  background: var(--gradient-primary);
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.partnership-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.partnership-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+}
+
+.partnership-card:hover::before {
+  opacity: 1;
+}
+
+.partnership-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.partnership-card h4 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.partnership-card p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.b2b-contact {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.b2b-contact-info {
+  font-size: 1.125rem;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.b2b-contact .btn {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.price-tiers {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius-lg);
+  padding: 3rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.price-tiers h3 {
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+}
+
+.tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.tier {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  padding: 2rem 1rem;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.tier:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--accent-color);
+  transform: translateY(-4px);
+}
+
+.tier-quantity {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.tier-discount {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent-color);
+}
+
+/* Анимации */
+.benefit-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.benefit-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.benefit-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.benefit-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.benefit-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.benefit-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.benefit-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.partnership-card {
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+  animation: scaleInUp 0.6s ease-out forwards;
+}
+
+.partnership-card:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.partnership-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.partnership-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+@keyframes scaleInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.tier {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.tier:nth-child(1) {
+  animation-delay: 0.6s;
+}
+.tier:nth-child(2) {
+  animation-delay: 0.7s;
+}
+.tier:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .b2b-benefits {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .partnerships {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .tiers {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .b2b {
+    padding: 4rem 0;
+  }
+
+  .b2b-benefits {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .benefit-card {
+    padding: 1.5rem;
+  }
+
+  .partnership-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .price-tiers {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .benefit-card {
+    padding: 1.25rem;
+  }
+
+  .benefit-icon {
+    font-size: 2.5rem;
+  }
+
+  .partnership-icon {
+    font-size: 2.5rem;
+  }
+
+  .price-tiers {
+    padding: 1.5rem;
+  }
+
+  .tier {
+    padding: 1.5rem 1rem;
+  }
+}

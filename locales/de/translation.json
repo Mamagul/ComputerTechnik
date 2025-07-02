@@ -1,0 +1,51 @@
+{
+  "header": {
+    "about": "Über uns",
+    "catalog": "Katalog",
+    "customBuild": "Konfigurator",
+    "repair": "Reparatur",
+    "b2b": "Großhandel",
+    "reviews": "Bewertungen",
+    "contact": "Kontakt",
+    "languageSwitch": "Sprache"
+  },
+  "hero": {
+    "title": "Laptops und Gaming-PCs im Einzel- und Großhandel",
+    "subtitle": "Aus Hamburg in die ganze Welt!",
+    "cta": "Preisliste anfordern",
+    "cta2": "PC konfigurieren"
+  },
+  "about": {
+    "title": "Über Computer Technic",
+    "description": "Wir sind Ihr zuverlässiger Partner für Computer und Gaming-Hardware."
+  },
+  "catalog": {
+    "title": "Unser Katalog",
+    "description": "Entdecken Sie unsere große Auswahl an Laptops und PCs."
+  },
+  "customBuild": {
+    "title": "PC Konfigurator",
+    "description": "Stellen Sie Ihren Traum-PC zusammen."
+  },
+  "repair": {
+    "title": "Reparatur Service",
+    "description": "Professionelle Reparatur für alle Geräte."
+  },
+  "b2b": {
+    "title": "Großhandel",
+    "description": "Spezielle Konditionen für Händler und Unternehmen."
+  },
+  "reviews": {
+    "title": "Kundenbewertungen",
+    "description": "Was unsere Kunden über uns sagen."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "description": "Nehmen Sie Kontakt mit uns auf."
+  },
+  "footer": {
+    "address": "Hamburg, Deutschland",
+    "phone": "Telefon",
+    "email": "E-Mail"
+  }
+}

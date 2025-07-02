@@ -1,0 +1,381 @@
+.reviews {
+  padding: 6rem 0;
+  background: var(--light-secondary);
+  position: relative;
+}
+
+.reviews-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reviews-header h2 {
+  color: var(--gray-900);
+  margin-bottom: 1rem;
+}
+
+.reviews-header p {
+  font-size: 1.125rem;
+  color: var(--gray-600);
+}
+
+.reviews-carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.carousel-btn {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-lg);
+}
+
+.carousel-btn.prev {
+  order: -1;
+}
+
+.carousel-btn.next {
+  order: 1;
+}
+
+.review-card {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: 3rem;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+}
+
+.review-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+}
+
+.review-rating {
+  margin-bottom: 1.5rem;
+}
+
+.star {
+  font-size: 1.5rem;
+  margin: 0 0.125rem;
+}
+
+.review-text {
+  font-size: 1.25rem;
+  color: var(--gray-700);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-style: italic;
+  position: relative;
+}
+
+.review-text::before {
+  content: '"';
+  font-size: 4rem;
+  color: var(--primary-color);
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  font-family: serif;
+  opacity: 0.3;
+}
+
+.review-author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.review-author strong {
+  color: var(--gray-900);
+  font-size: 1.125rem;
+}
+
+.review-author span {
+  color: var(--gray-600);
+  font-size: 0.875rem;
+}
+
+.review-author .location {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.review-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 4rem;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: var(--gray-300);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.indicator.active {
+  background: var(--primary-color);
+  transform: scale(1.2);
+}
+
+.indicator:hover {
+  background: var(--primary-color);
+  opacity: 0.7;
+}
+
+.case-studies {
+  margin-bottom: 4rem;
+}
+
+.case-studies h3 {
+  text-align: center;
+  color: var(--gray-900);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.cases {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.case-card {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  position: relative;
+  border-left: 4px solid var(--primary-color);
+}
+
+.case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.case-card h4 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.case-card p {
+  color: var(--gray-600);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.case-result {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 0.875rem;
+  display: inline-block;
+}
+
+.partners {
+  text-align: center;
+}
+
+.partners h3 {
+  color: var(--gray-900);
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+}
+
+.partner-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.partner-logo {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.partner-logo:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.partner-logo .logo {
+  font-size: 2rem;
+}
+
+.partner-logo .name {
+  font-size: 0.75rem;
+  color: var(--gray-600);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Анимации */
+.review-card {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.case-card {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.case-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.case-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.partner-logo {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.partner-logo:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.partner-logo:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.partner-logo:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.partner-logo:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .partner-logos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews {
+    padding: 4rem 0;
+  }
+
+  .reviews-carousel {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .carousel-btn {
+    position: static;
+    order: 2;
+  }
+
+  .carousel-btn.prev {
+    order: 2;
+  }
+
+  .carousel-btn.next {
+    order: 3;
+  }
+
+  .review-card {
+    padding: 2rem;
+    order: 1;
+  }
+
+  .cases {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-logos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .review-card {
+    padding: 1.5rem;
+  }
+
+  .review-text {
+    font-size: 1.125rem;
+  }
+
+  .case-card {
+    padding: 1.5rem;
+  }
+
+  .partner-logos {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-logo {
+    padding: 1rem;
+  }
+}
