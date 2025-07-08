@@ -7,7 +7,7 @@
     "b2b": "Wholesale",
     "reviews": "Reviews",
     "contact": "Contact",
-    "languageSwitch": "Language"
+    "leaveRequest": "Leave request"
   },
   "hero": {
     "title": "Laptops and Gaming PCs Retail and Wholesale",
@@ -21,7 +21,17 @@
   },
   "catalog": {
     "title": "Our Catalog",
-    "description": "Discover our wide selection of laptops and PCs."
+    "description": "High quality computer technology for every need",
+    "getPrice": "Get price",
+    "addRequest": "Add to request",
+    "available": "Available",
+    "notAvailable": "Not available",
+    "categories": {
+      "laptops": "Laptops",
+      "gaming": "Gaming PCs",
+      "custom": "Custom Builds",
+      "monitors": "Monitors & Accessories"
+    }
   },
   "customBuild": {
     "title": "PC Configurator",

@@ -7,7 +7,7 @@
     "b2b": "Großhandel",
     "reviews": "Bewertungen",
     "contact": "Kontakt",
-    "languageSwitch": "Sprache"
+    "leaveRequest": "Anfrage hinterlassen"
   },
   "hero": {
     "title": "Laptops und Gaming-PCs im Einzel- und Großhandel",
@@ -21,7 +21,17 @@
   },
   "catalog": {
     "title": "Unser Katalog",
-    "description": "Entdecken Sie unsere große Auswahl an Laptops und PCs."
+    "description": "Hohe Qualität Computertechnologie für jede Bedürfnis",
+    "getPrice": "Preisliste anfordern",
+    "addRequest": "Zu Anfrage hinzufügen",
+    "available": "Verfügbar",
+    "notAvailable": "Nicht verfügbar",
+    "categories": {
+      "laptops": "Laptops",
+      "gaming": "Gaming PCs",
+      "custom": "Maßgeschneiderte Builds",
+      "monitors": "Monitore & Zubehör"
+    }
   },
   "customBuild": {
     "title": "PC Konfigurator",
