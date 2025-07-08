@@ -1,151 +1,95 @@
-import { useState } from "react";
-import "./Catalog.css";
+import React from "react";
+import { useTranslation } from "react-i18next";
+import Card from "./Card";
+import catalogBg from "../images/catalog.svg";
+import desktop from "../images/card.png";
+import Aurora from "./Aurora";
 
-const Catalog = ({ language }) => {
-  const [activeFilter, setActiveFilter] = useState("all");
+export default function Catalog() {
+  const { t } = useTranslation();
 
-  const t = {
-    de: {
-      title: "Unser Katalog",
-      subtitle: "Hochwertige Computertechnik für jeden Bedarf",
-      filters: {
-        all: "Alle Produkte",
-        laptops: "Laptops",
-        gaming: "Gaming PCs",
-        custom: "Konfigurationen",
-        monitors: "Monitore",
-        accessories: "Zubehör",
-      },
-      products: [
-        {
-          id: 1,
-          category: "laptops",
-          name: "Business Laptop Pro",
-          price: "ab 899€",
-          specs: ["Intel i7", "16GB RAM", "512GB SSD", '15.6" Display'],
-          image: "💻",
-        },
-        {
-          id: 2,
-          category: "gaming",
-          name: "Gaming Beast RTX 4080",
-          price: "ab 2.499€",
-          specs: ["RTX 4080", "AMD Ryzen 7", "32GB RAM", "1TB NVMe"],
-          image: "🖥️",
-        },
-        {
-          id: 3,
-          category: "monitors",
-          name: '27" 4K Gaming Monitor',
-          price: "ab 549€",
-          specs: ["4K UHD", "144Hz", "HDR10", "USB-C"],
-          image: "🖥️",
-        },
-      ],
-      cta: "Preis anfragen",
-      available: "Verfügbar",
-      addToCart: "Zur Anfrage hinzufügen",
+  const categories = [
+    {
+      name: "Ноутбуки",
+      image: "../images/catalog.svg",
     },
-    en: {
-      title: "Our Catalog",
-      subtitle: "High-quality computer technology for every need",
-      filters: {
-        all: "All Products",
-        laptops: "Laptops",
-        gaming: "Gaming PCs",
-        custom: "Configurations",
-        monitors: "Monitors",
-        accessories: "Accessories",
-      },
-      products: [
-        {
-          id: 1,
-          category: "laptops",
-          name: "Business Laptop Pro",
-          price: "from €899",
-          specs: ["Intel i7", "16GB RAM", "512GB SSD", '15.6" Display'],
-          image: "💻",
-        },
-        {
-          id: 2,
-          category: "gaming",
-          name: "Gaming Beast RTX 4080",
-          price: "from €2,499",
-          specs: ["RTX 4080", "AMD Ryzen 7", "32GB RAM", "1TB NVMe"],
-          image: "🖥️",
-        },
-        {
-          id: 3,
-          category: "monitors",
-          name: '27" 4K Gaming Monitor',
-          price: "from €549",
-          specs: ["4K UHD", "144Hz", "HDR10", "USB-C"],
-          image: "🖥️",
-        },
-      ],
-      cta: "Get Price",
-      available: "Available",
-      addToCart: "Add to Inquiry",
+    {
+      name: "Игровые ПК",
+      image: "../images/catalog.svg",
     },
-  };
+    {
+      name: "Сборки под заказ",
+      image: "../images/catalog.svg",
+    },
+    {
+      name: "Мониторы и аксессуары",
+      image: "../images/catalog.svg",
+    },
+  ];
 
-  const content = t[language];
-
-  const filteredProducts =
-    activeFilter === "all"
-      ? content.products
-      : content.products.filter((product) => product.category === activeFilter);
-
+  const dataCards = [
+    {
+      image: desktop,
+      title: "Apple iMac 24",
+      description: "I5/16 GB RAM SSD 512 GB/ GTX 150 Ti",
+      available: "В наличии",
+    },
+    {
+      image: desktop,
+      title: "Apple iMac 24",
+      description: "I5/16 GB RAM SSD 512 GB/ GTX 150 Ti",
+      available: "Нет в наличии",
+    },
+    {
+      image: desktop,
+      title: "Apple iMac 24",
+      description: "I5/16 GB RAM SSD 512 GB/ GTX 150 Ti",
+      available: "Нет в наличии",
+    },
+    {
+      image: desktop,
+      title: "Apple iMac 24",
+      description: "I5/16 GB RAM SSD 512 GB/ GTX 150 Ti",
+      available: "В наличии",
+    },
+  ];
   return (
-    <section className="catalog" id="catalog">
-      <div className="container">
-        <div className="catalog-header">
-          <h2>{content.title}</h2>
-          <p>{content.subtitle}</p>
-        </div>
-
-        <div className="catalog-filters">
-          {Object.entries(content.filters).map(([key, value]) => (
-            <button
-              key={key}
-              className={`filter-btn ${activeFilter === key ? "active" : ""}`}
-              onClick={() => setActiveFilter(key)}
-            >
-              {value}
+    <div>
+      <Aurora
+        colorStops={["#3A29FF", "#FF94B4", "#019ee2"]}
+        blend={0.5}
+        amplitude={1.0}
+        speed={1}
+      />
+      <div
+        className="catalog bg-cover bg-center bg-no-repeat min-h-[90vh] flex flex-col items-center justify-start pb-[85px] px-[110px] -mt-[85px]"
+        style={{ backgroundImage: `url(${catalogBg})` }}
+      >
+        <h2 className="font-PlayfairDisplay text-white text-4xl font-bold pb-[20px]">
+          {t("catalog.title")}
+        </h2>
+        <p className="font-helvetica text-[#fde9e9] text-base font-light pb-[40px]">
+          {t("catalog.description")}
+        </p>
+        <div className="containerCategories flex gap-[50px] pb-[70px]">
+          {categories.map((category) => (
+            <button className="font-helvetica bg-none hover:bg-[#e7f1fc] hover:text-[#263238] transition-all duration-300 border-[1px] border-[#fffefe] hover:border-[#263238] text-[#fffefe] rounded p-[10px] text-xl font-light">
+              {category.name}
             </button>
           ))}
         </div>
-
-        <div className="catalog-grid">
-          {filteredProducts.map((product) => (
-            <div key={product.id} className="product-card">
-              <div className="product-image">{product.image}</div>
-              <div className="product-info">
-                <h3>{product.name}</h3>
-                <div className="product-specs">
-                  {product.specs.map((spec, index) => (
-                    <span key={index} className="spec-tag">
-                      {spec}
-                    </span>
-                  ))}
-                </div>
-                <div className="product-price">{product.price}</div>
-                <div className="product-actions">
-                  <button className="btn btn-primary">{content.cta}</button>
-                  <button className="btn btn-secondary">
-                    {content.addToCart}
-                  </button>
-                </div>
-                <div className="product-status available">
-                  {content.available}
-                </div>
-              </div>
-            </div>
+        <div className="containerCards flex gap-[50px]">
+          {dataCards.map((card) => (
+            <Card
+              key={card.title}
+              image={card.image}
+              title={card.title}
+              description={card.description}
+              available={card.available}
+            />
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
-};
-
-export default Catalog;
+}
