@@ -4,6 +4,10 @@
   flex-direction: column;
 }
 
+body {
+  background-color: #e7f1fc;
+}
+
 /* Плавная прокрутка */
 html {
   scroll-behavior: smooth;
@@ -79,4 +83,14 @@ section {
 
 .page-transition.fade-exit-active {
   opacity: 0;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: clamp(320px, 100vw - 2rem, 1280px);
+  margin-inline: auto;
 }
