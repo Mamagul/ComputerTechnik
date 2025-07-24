@@ -88,6 +88,7 @@ section {
 a,
 button {
   cursor: pointer;
+  transition: 0.2s;
 }
 
 .container {
