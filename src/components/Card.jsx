@@ -13,7 +13,7 @@ export default function Card({ image, title, description, available }) {
         boxShadow: '0px 4px 12px 0px rgba(255, 255, 255, 0.07)',
       }}>
       <div className="card-content flex flex-col gap-3 sm:gap-4 p-4 sm:p-6">
-        <div className="card-image min-w-[200px] min-h-[150px] sm:min-w-[220px] sm:min-h-[170px] md:min-w-[240px] md:min-h-[190px]">
+        <div className="card-image">
           <img src={image} alt="card" className="w-full h-full object-cover rounded" />
         </div>
         <div className="card-title text-[#fffafa] text-center text-lg sm:text-xl md:text-2xl font-bold">
