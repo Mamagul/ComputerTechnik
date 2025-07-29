@@ -128,7 +128,7 @@ export default function Aurora(props) {
       antialias: true,
     });
     const gl = renderer.gl;
-    gl.clearColor(0, 0, 0, 0);
+    gl.clearColor(1, 1, 1, 0);
     gl.enable(gl.BLEND);
     gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
     gl.canvas.style.backgroundColor = "transparent";
@@ -201,4 +201,13 @@ export default function Aurora(props) {
   }, [amplitude]);
 
   return <div ref={ctnDom} className="w-full h-full" />;
+}
+{
+  /* <Aurora
+        colorStops={["#3A29FF", "#FF94B4", "#019ee2", "#E7F1FC"]}
+        blend={0.9}
+        amplitude={1.0}
+        speed={1}
+        className="absolute top-0 left-0 w-full h-full"
+      /> */
 }

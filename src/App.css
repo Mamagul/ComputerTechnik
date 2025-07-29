@@ -83,6 +83,29 @@ section {
 
 .page-transition.fade-exit-active {
   opacity: 0;
+  background-color: #0a02f8;
+}
+
+/* Puzzle */
+
+.puzzle-item {
+  transition: transform 0.3s ease;
+}
+
+.puzzle-item:hover {
+  transform: scale(1.02);
+  z-index: 10;
+}
+
+a,
+button {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.container {
+  max-width: clamp(320px, 100vw - 2rem, 1280px);
+  margin-inline: auto;
 }
 
 a,

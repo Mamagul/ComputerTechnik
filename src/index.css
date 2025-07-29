@@ -29,4 +29,18 @@
 @theme {
   --font-PlayfairDisplay: "Playfair Display", serif;
   --font-helvetica: "Helvetica", sans-serif;
+  --gradient-overlay: linear-gradient(
+    252.08deg,
+    rgba(25, 30, 36, 0.06) 10.86%,
+    rgba(25, 30, 36, 0.01) 25.84%,
+    #1c1e21 53.56%,
+    rgba(21, 21, 21, 0.98) 84.86%
+  );
+  --shadow-soft: 0px 4px 12px 0px rgba(0, 0, 0, 0.07);
+}
+.gradient-overlay {
+  background: var(--gradient-overlay);
+}
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
 }

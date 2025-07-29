@@ -10,7 +10,7 @@
     "leaveRequest": "Anfrage hinterlassen"
   },
   "hero": {
-    "title": "Laptops und Gaming-PCs im Einzel- und Großhandel",
+    "title": "Laptops und Gaming-PCs – Einzel- und Großhandel",
     "subtitle": "Aus Hamburg in die ganze Welt!",
     "cta": "Preisliste anfordern",
     "cta2": "PC konfigurieren"
@@ -48,6 +48,41 @@
   "reviews": {
     "title": "Kundenbewertungen",
     "description": "Was unsere Kunden über uns sagen."
+  },
+  "techServices": {
+    "title": "Technische Wartung",
+    "description": "Ein Computer benötigt – wie jede andere Maschine – regelmäßige Wartung. Sie ist entscheidend für einen stabilen, effizienten und langlebigen Betrieb des gesamten Systems. Die Vernachlässigung Ihres PCs kann zu schwerwiegenden und irreversiblen Folgen führen.",
+    "why": "Warum technische Wartung regelmäßig durchgeführt werden sollte",
+    "items": {
+      "1": "Steigert die Computerleistung",
+      "2": "Schützt vor Schäden an der Hardware",
+      "3": "Hält Ihren PC sauber und gepflegt",
+      "4": "Befreit den PC von Schadsoftware und unnötigen Programmen",
+      "5": "Verlängert die Lebensdauer Ihres PCs",
+      "6": "Spart Zeit, Geld und Nerven"
+    }
+  },
+  "upgrade": {
+    "title": "Hardware-Upgrade und Austausch",
+    "description": "Wir konfigurieren und bauen Ihren PC ganz nach Ihren Wünschen. Höchste Qualität, professionelle Montage und umfassende Tests.",
+    "componentReplacement": "Komponententausch",
+    "fixIssues": "Probleme beheben",
+    "desc1": "Wir wählen die optimalen Komponenten passend zu den Anforderungen Ihres PCs aus.",
+    "desc2": "Unsere Experten diagnostizieren Ihren PC gründlich und lösen das Problem.",
+    "items1": [
+      "Grafikkarten-Upgrade",
+      "Auswahl von CPU und Mainboard",
+      "RAM-Erweiterung",
+      "Verbesserte Kühlung",
+      "Austausch defekter Teile"
+    ],
+    "items2": [
+      "Komplette PC-Diagnose",
+      "Professionelle Reinigung mit Druckluft",
+      "Austausch der Wärmeleitpaste",
+      "Wartung von Custom-Wasserkühlung",
+      "OS-Optimierung & Treiber-Updates"
+    ]
   },
   "contact": {
     "title": "Kontakt",

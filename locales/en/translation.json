@@ -10,7 +10,7 @@
     "leaveRequest": "Leave request"
   },
   "hero": {
-    "title": "Laptops and Gaming PCs Retail and Wholesale",
+    "title": "Laptops and Gaming PCs – Retail and Wholesale",
     "subtitle": "From Hamburg to the World!",
     "cta": "Get Price List",
     "cta2": "Configure PC"
@@ -40,6 +40,41 @@
   "repair": {
     "title": "Repair Service",
     "description": "Professional repair for all devices."
+  },
+  "techServices": {
+    "title": "Technical Maintenance",
+    "description": "A computer, just like any other machine, requires regular maintenance. This is the key to stable, efficient, and long-lasting system performance. Neglecting the condition of your PC can lead to serious and irreversible consequences.",
+    "why": "Why regular technical maintenance is important",
+    "items": {
+      "1": "Improves Computer Performance",
+      "2": "Prevents hardware damage ",
+      "3": "Keeps your PC clean and well-maintained",
+      "4": "Cleans out malware and unused apps",
+      "5": "Extends your PC’s lifespan",
+      "6": "Saves time, money, and stress"
+    }
+  },
+  "upgrade": {
+    "title": "Hardware Upgrade & Replacement",
+    "description": "We configure and build your PC according to your wishes. Highest quality, professional assembly and comprehensive testing",
+    "componentReplacement": "Component Replacement",
+    "fixIssues": "Fix Issues",
+    "desc1": "We choose the perfect components tailored to your PC tasks.",
+    "desc2": "Experienced technicians will carry out a complete PC diagnostics and resolve the problem.",
+    "items1": [
+      "Graphics card upgrade",
+      "New CPU and motherboard selection",
+      "RAM expansion",
+      "Enhanced cooling system",
+      "Faulty parts replacement"
+    ],
+    "items2": [
+      "Full PC diagnostics",
+      "Professional cleaning with compressed air",
+      "Thermal paste replacement",
+      "Custom water cooling maintenance",
+      "OS optimization and driver updates"
+    ]
   },
   "b2b": {
     "title": "Wholesale",
