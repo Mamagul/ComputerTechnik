@@ -86,7 +86,8 @@
   },
   "contact": {
     "title": "Kontakt",
-    "description": "Nehmen Sie Kontakt mit uns auf."
+    "description": "Nehmen Sie Kontakt mit uns auf.",
+    "button": "Jetzt kontaktieren"
   },
   "footer": {
     "address": "Hamburg, Deutschland",

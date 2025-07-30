@@ -86,7 +86,8 @@
   },
   "contact": {
     "title": "Contact",
-    "description": "Get in touch with us."
+    "description": "Get in touch with us.",
+    "button": "Get in touch"
   },
   "footer": {
     "address": "Hamburg, Germany",
