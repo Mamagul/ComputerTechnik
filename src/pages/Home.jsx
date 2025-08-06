@@ -10,6 +10,7 @@ import Footer from "../components/Footer";
 import Upgrade from "../components/Upgrade";
 import Contacts from "../components/Contacts";
 import OfficeMaintenance from "../components/OfficeMaintenance";
+import B2b from "../components/B2b";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <TechServices />
         <Upgrade />
         <OfficeMaintenance />
+        <B2b />
         <Contacts />
       </div>
       <Footer />
