@@ -39,8 +39,10 @@
     }
   },
   "customBuild": {
-    "title": "PC Configurator",
-    "description": "Build your dream PC."
+    "title": "PC Konfigurator",
+    "description": "Stellen Sie Ihren Traum-PC zusammen.",
+    "wholesale": "Wholesale",
+    "retail": "Retail"
   },
   "repair": {
     "title": "Repair Service",
@@ -81,10 +83,10 @@
       "OS optimization and driver updates"
     ]
   },
-  "b2b": {
+  "officeMaintenance": {
     "title": "Business IT Service",
     "description": "Technical maintenance of office equipment is a key aspect of business management, ensuring the uninterrupted operation of essential office devices. Proper maintenance reduces the risk of breakdowns, extends the lifespan of equipment, and minimizes disruptions to daily workflows.",
-    "effective": "Effective office equipment servicing includes several important components:",
+    "effective": "Effective office equipment servicing includes several important components",
     "h4_text1": "Regular Inspections",
     "h4_text2": "Preventive Maintenance",
     "h4_text3": "Repairs and Troubleshooting",
@@ -104,6 +106,17 @@
       "Documentation: maintaining records of maintenance and repair work."
     ],
     "p1": "Our company provides technical maintenance for all types of office equipment. We offer high-quality service at competitive prices. All work is performed by experienced professionals who can solve any problem and restore your equipment to full working condition."
+  },
+  "b2b": {
+    "title": "Wholesale & B2B",
+    "h4_text": "We offer favorable terms for wholesale clients",
+    "items": [
+      "Personalized Terms of Cooperation",
+      "Price list on request",
+      "Europe-wide & international delivery",
+      "All necessary customs and shipping documents"
+    ],
+    "button": "Request a wholesale quote"
   },
   "reviews": {
     "title": "Customer Reviews",

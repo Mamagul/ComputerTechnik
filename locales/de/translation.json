@@ -40,16 +40,18 @@
   },
   "customBuild": {
     "title": "PC Konfigurator",
-    "description": "Stellen Sie Ihren Traum-PC zusammen."
+    "description": "Stellen Sie Ihren Traum-PC zusammen.",
+    "wholesale": "Großhandel",
+    "retail": "Einzelhandel"
   },
   "repair": {
     "title": "Reparatur Service",
     "description": "Professionelle Reparatur für alle Geräte."
   },
-  "b2b": {
+  "officeMaintenance": {
     "title": "Technischer Support für Büros",
     "description": "Die technische Wartung von Bürogeräten ist ein wesentlicher Bestandteil des Geschäftsmanagements und gewährleistet den reibungslosen Betrieb wichtiger Büroausstattung. Eine fachgerechte Wartung senkt das Ausfallrisiko, verlängert die Lebensdauer der Geräte und minimiert Unterbrechungen im Arbeitsalltag.",
-    "effective": "Eine effektive Wartung von Bürogeräten umfasst mehrere wichtige Aspekte:",
+    "effective": "Eine effektive Wartung von Bürogeräten umfasst mehrere wichtige Aspekte",
     "h4_text1": "Regelmäßige Überprüfungen",
     "h4_text2": "Vorbeugende Wartung",
     "h4_text3": "Reparatur und Fehlerbehebung",
@@ -69,6 +71,17 @@
       "Dokumentation: Protokollierung aller Wartungs- und Reparaturmaßnahmen."
     ],
     "p1": "Unser Unternehmen führt die Wartung aller Arten von Bürogeräten durch. Wir bieten unseren Kunden hochwertige Dienstleistungen zu fairen Preisen. Bei uns arbeiten ausschließlich erfahrene Fachkräfte, die jedes Problem lösen und Ihre Geräte wieder voll funktionsfähig machen."
+  },
+  "b2b": {
+    "title": "Großhandel & B2B",
+    "h4_text": "Wir bieten attraktive Konditionen für Großhandelskunden",
+    "items": [
+      "Individuelle Kooperationsbedingungen",
+      "Preise auf Anfrage",
+      "Europaweiter & internationaler Versand",
+      "Alle erforderlichen Zoll- und Begleitdokumente"
+    ],
+    "button": "Ein Angebot für Geschäftskunden erhalten"
   },
   "reviews": {
     "title": "Kundenbewertungen",
@@ -109,6 +122,7 @@
       "OS-Optimierung & Treiber-Updates"
     ]
   },
+
   "contact": {
     "title": "Kontakt",
     "description": "Nehmen Sie Kontakt mit uns auf.",

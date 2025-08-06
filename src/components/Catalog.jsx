@@ -57,7 +57,6 @@ export default function Catalog() {
   );
 
   console.log("filteredCards", filteredCards);
-  console.log("translate:", t("catalog.description"));
 
   return (
     <section className="relative bg-black min-h-screen">
