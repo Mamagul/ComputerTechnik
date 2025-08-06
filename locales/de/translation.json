@@ -16,11 +16,16 @@
     "cta2": "PC konfigurieren"
   },
   "about": {
-    "title": "Über Computer Technic",
-    "description": "Wir sind Ihr zuverlässiger Partner für Computer und Gaming-Hardware."
+    "title": "Über uns",
+    "description": "Wir sind Ihr zuverlässiger Partner für Computer und Gaming-Hardware.",
+    "icon1": "Lieferung in ganz Europa",
+    "icon2": "Für Privat- und Geschäftskunden",
+    "icon3": "Individuelle Betreuung",
+    "icon4": "Dokumente & Garantie",
+    "comp": "PCs gebaut"
   },
   "catalog": {
-    "title": "Unser Katalog",
+    "title": "Geschäft",
     "description": "Hohe Qualität Computertechnologie für jede Bedürfnis",
     "getPrice": "Preisliste anfordern",
     "addRequest": "Zu Anfrage hinzufügen",
@@ -42,8 +47,28 @@
     "description": "Professionelle Reparatur für alle Geräte."
   },
   "b2b": {
-    "title": "Großhandel",
-    "description": "Spezielle Konditionen für Händler und Unternehmen."
+    "title": "Technischer Support für Büros",
+    "description": "Die technische Wartung von Bürogeräten ist ein wesentlicher Bestandteil des Geschäftsmanagements und gewährleistet den reibungslosen Betrieb wichtiger Büroausstattung. Eine fachgerechte Wartung senkt das Ausfallrisiko, verlängert die Lebensdauer der Geräte und minimiert Unterbrechungen im Arbeitsalltag.",
+    "effective": "Eine effektive Wartung von Bürogeräten umfasst mehrere wichtige Aspekte:",
+    "h4_text1": "Regelmäßige Überprüfungen",
+    "h4_text2": "Vorbeugende Wartung",
+    "h4_text3": "Reparatur und Fehlerbehebung",
+    "items1": [
+      "Häufige Kontrollen: regelmäßige Inspektionen zur Erkennung von Abnutzung.",
+      "Reinigung: Entfernung von Staub und Schmutz aus den Geräten.",
+      "Leistungstests: Überprüfung der ordnungsgemäßen Funktion der Geräte."
+    ],
+    "items2": [
+      "Geplante Wartung: regelmäßige professionelle Inspektionen und Einstellungen.",
+      "Teilersatz: Austausch von Verbrauchsteilen wie Toner oder Batterien vor Ausfall.",
+      "Software-Updates: Aktualisierung von Software und Gerätetreibern."
+    ],
+    "items3": [
+      "Schnelle Reaktion: zügige Problemlösung zur Minimierung von Ausfallzeiten.",
+      "Qualifiziertes Fachpersonal: geschulte Techniker für Reparaturarbeiten.",
+      "Dokumentation: Protokollierung aller Wartungs- und Reparaturmaßnahmen."
+    ],
+    "p1": "Unser Unternehmen führt die Wartung aller Arten von Bürogeräten durch. Wir bieten unseren Kunden hochwertige Dienstleistungen zu fairen Preisen. Bei uns arbeiten ausschließlich erfahrene Fachkräfte, die jedes Problem lösen und Ihre Geräte wieder voll funktionsfähig machen."
   },
   "reviews": {
     "title": "Kundenbewertungen",

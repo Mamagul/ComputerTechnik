@@ -12,15 +12,20 @@
   "hero": {
     "title": "Laptops and Gaming PCs – Retail and Wholesale",
     "subtitle": "From Hamburg to the World!",
-    "cta": "Get Price List",
-    "cta2": "Configure PC"
+    "cta": "Get price list",
+    "cta2": "Build your PC"
   },
   "about": {
-    "title": "About Computer Technic",
-    "description": "We are your reliable partner for computer and gaming hardware."
+    "title": "About us",
+    "description": "We are your reliable partner for computer and gaming hardware.",
+    "icon1": "Europe-wide delivery",
+    "icon2": "For Individuals and Businesses",
+    "icon3": "Personalized Approach",
+    "icon4": "Documents & Warranty",
+    "comp": "PCs built"
   },
   "catalog": {
-    "title": "Our Catalog",
+    "title": "Shop",
     "description": "High quality computer technology for every need",
     "getPrice": "Get price",
     "addRequest": "Add to request",
@@ -77,8 +82,28 @@
     ]
   },
   "b2b": {
-    "title": "Wholesale",
-    "description": "Special conditions for dealers and companies."
+    "title": "Business IT Service",
+    "description": "Technical maintenance of office equipment is a key aspect of business management, ensuring the uninterrupted operation of essential office devices. Proper maintenance reduces the risk of breakdowns, extends the lifespan of equipment, and minimizes disruptions to daily workflows.",
+    "effective": "Effective office equipment servicing includes several important components:",
+    "h4_text1": "Regular Inspections",
+    "h4_text2": "Preventive Maintenance",
+    "h4_text3": "Repairs and Troubleshooting",
+    "items1": [
+      "Frequent checks: regular inspections to detect wear and tear.",
+      "Cleaning: removing dust and debris from devices.",
+      "Performance testing: verifying that the equipment is working properly."
+    ],
+    "items2": [
+      "Scheduled service: periodic professional checkups and adjustments.",
+      "Parts replacement: replacing consumables such as toner or batteries before failure occurs.",
+      "Software updates: keeping software and device drivers up to date."
+    ],
+    "items3": [
+      "Fast response: quick problem-solving to minimize downtime.",
+      "Qualified technicians: trained staff performing repairs.",
+      "Documentation: maintaining records of maintenance and repair work."
+    ],
+    "p1": "Our company provides technical maintenance for all types of office equipment. We offer high-quality service at competitive prices. All work is performed by experienced professionals who can solve any problem and restore your equipment to full working condition."
   },
   "reviews": {
     "title": "Customer Reviews",
