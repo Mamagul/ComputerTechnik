@@ -1,9 +1,13 @@
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const [language, setLanguage] = useState("de");
+
+  useEffect(() => {
+    setLanguage(i18n.language);
+  }, [i18n.language]);
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);

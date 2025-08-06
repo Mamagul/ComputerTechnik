@@ -8,7 +8,7 @@ export default function useFetch(dataName) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const dataUrl = `${baseUrl}/${dataName}`;
+  const dataUrl = `${baseUrl}/${dataName}/`;
 
   useEffect(() => {
     axios

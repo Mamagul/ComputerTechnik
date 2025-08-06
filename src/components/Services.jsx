@@ -68,8 +68,8 @@ export default function Services() {
       <div className="relative z-20">
         <h2 className="text-4xl font-bold text-center">Services</h2>
         <div className="grid grid-cols-2 grid-rows-2 gap-[30px] pt-14">
-          {services.map((service) => (
-            <div className="service-card flex flex-col gap-5 group">
+          {services.map((service, index) => (
+            <div key={index} className="service-card flex flex-col gap-5 group">
               <div className="img-container flex items-center justify-center rounded shadow-soft p-[1px] group-hover:p-0 group-hover:border group-hover:border-[#019ee2]">
                 <img
                   src={service.image}

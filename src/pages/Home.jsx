@@ -9,6 +9,7 @@ import AssemblyToOrder from "../components/AssemblyToOrder";
 import Footer from "../components/Footer";
 import Upgrade from "../components/Upgrade";
 import Contacts from "../components/Contacts";
+import OfficeMaintenance from "../components/OfficeMaintenance";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <AssemblyToOrder />
         <TechServices />
         <Upgrade />
+        <OfficeMaintenance />
         <Contacts />
       </div>
       <Footer />
