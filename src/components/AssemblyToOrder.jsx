@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import assemblyBg from "../images/assemblyBg.svg";
 import assemblyIcon1 from "../images/iconAssembly.svg";
 import { useTranslation } from "react-i18next";
@@ -6,6 +6,8 @@ import ImagePuzzle from "./ImagePuzzle";
 
 export default function AssemblyToOrder() {
   const { t } = useTranslation();
+  const [selectedOption, setSelectedOption] = useState(1);
+
   const professionalAssembly = [
     {
       id: 1,
@@ -28,13 +30,6 @@ export default function AssemblyToOrder() {
         "Careful assembly by experienced technicians. Вы получаете мощное решение, обеспечивающее высокоскоростную работу.",
       image: assemblyIcon1,
     },
-    {
-      id: 4,
-      title: "Professional Assembly",
-      description:
-        "Ваш компьютер, не только справится с любой задачей, но и прослужит вам долгие годы.",
-      image: assemblyIcon1,
-    },
   ];
   return (
     <section
@@ -54,24 +49,64 @@ export default function AssemblyToOrder() {
         </p>
       </div>
       <div className="form flex gap-10 ">
-        <form className="flex flex-col gap-5 bg-[#011729b0] rounded py-10 px-10 w-1/2">
-          <label className="font-helvetica text-[#019ee2] text-2xl font-semibold">
-            Contact Details
-            {/* {nameError && (
-                  <span className="text-red-500 text-xs text-center font-light ml-2">
-                    {nameError}
-                  </span>
-                )} */}
-          </label>
-          <div className="flex flex-col gap-2 bg-[#012749] rounded border border-[#013761]">
-            <input
-              type="text"
-              value={name}
-              //   onChange={handleNameChange}
-              placeholder={""}
-              className="text-white px-[10px] py-2"
-            />
+        <form className="flex flex-col gap-10 bg-[#011729b0] rounded py-10 px-10 w-1/2">
+          <div className="flex flex-col gap-2">
+            <label className="font-helvetica text-[#019ee2] text-[18px] font-normal">
+              Contact Details
+            </label>
+            <div className="flex flex-col gap-2 bg-[#012749] rounded border border-[#013761]">
+              <input
+                type="text"
+                value={name}
+                //   onChange={handleNameChange}
+                placeholder={"Email or phone"}
+                className="text-white px-[10px] py-2"
+              />
+            </div>
           </div>
+          <div className="radio flex flex-col gap-4">
+            <div className="flex gap-1">
+              <label className="inline-flex items-center">
+                <input
+                  type="radio"
+                  name="option"
+                  value={1}
+                  // checked={selectedOption === 1}
+                  // onChange={() => setSelectedOption(1)}
+                  className="sr-only peer"
+                />
+                <div className="w-[15px] h-[15px] sm:w-[24px] sm:h-[24px] lg:w-[30px] lg:h-[30px] rounded-full border border-[#70aac3] peer-checked:bg-[#011729b0] transition-colors duration-200 flex items-center justify-center">
+                  {selectedOption === 1 && (
+                    <div className="w-[9px] h-[9px] sm:w-[13px] sm:h-[13px] lg:w-[18px] lg:h-[18px] rounded-full bg-[#019ee2] transition-transform duration-200" />
+                  )}
+                </div>
+              </label>
+              <span className="font-helvetica ml-3 lg:ml-9 font-normal text-[14px] sm:text-xl lg:text-2xl text-white">
+                {t("wholesale")}
+              </span>
+            </div>
+            <div className="flex gap-1">
+              <label className="inline-flex items-center">
+                <input
+                  type="radio"
+                  name="option"
+                  value={2}
+                  // checked={selectedOption === 2}
+                  // onChange={() => setSelectedOption(2)}
+                  className="sr-only peer"
+                />
+                <div className="w-[15px] h-[15px] sm:w-[24px] sm:h-[24px] lg:w-[30px] lg:h-[30px] rounded-full border border-[#70aac3] peer-checked:bg-[#011729b0] transition-colors duration-200 flex items-center justify-center">
+                  {selectedOption === 2 && (
+                    <div className="w-[9px] h-[9px] sm:w-[13px] sm:h-[13px] lg:w-[18px] lg:h-[18px] rounded-full bg-[#019ee2] transition-transform duration-200" />
+                  )}
+                </div>
+              </label>
+              <span className="font-helvetica ml-3 lg:ml-9 font-normal text-[14px] sm:text-xl lg:text-2xl text-white">
+                {t("retail")}
+              </span>
+            </div>
+          </div>
+
           <button
             type="submit"
             className="font-helvetica bg-[#019ee2] text-[#fffafa] py-[10px] rounded"
