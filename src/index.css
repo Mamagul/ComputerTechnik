@@ -44,3 +44,14 @@
 .shadow-soft {
   box-shadow: var(--shadow-soft);
 }
+/* 
+@media (min-width: 640px) {
+  .header-menu {
+    display: flex;
+  }
+}
+@media (max-width: 640px) {
+  .header-menu {
+    display: none;
+  }
+} */
