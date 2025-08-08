@@ -42,7 +42,7 @@ export default function Services() {
   ];
   return (
     // <div className="services bg-[#E7F1FC] relative">
-    <div className="services bg-[#E7F1FC] py-20 px-28 relative z-20">
+    <div className="services bg-[#E7F1FC] py-5 lg:py-20 px-3 lg:px-28 relative z-20">
       <div
         style={{
           width: "100%",
@@ -66,10 +66,13 @@ export default function Services() {
         />
       </div>
       <div className="relative z-20">
-        <h2 className="text-4xl font-bold text-center">Services</h2>
-        <div className="grid grid-cols-2 grid-rows-2 gap-[30px] pt-14">
+        <h2 className="text-xl lg:text-4xl font-bold text-center">Services</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-4 lg:grid-rows-2 gap-4 lg:gap-[30px] pt-3 lg:pt-14">
           {services.map((service, index) => (
-            <div key={index} className="service-card flex flex-col gap-5 group">
+            <div
+              key={index}
+              className="service-card flex flex-col gap-1 lg:gap-5 group"
+            >
               <div className="img-container flex items-center justify-center rounded shadow-soft p-[1px] group-hover:p-0 group-hover:border group-hover:border-[#019ee2]">
                 <img
                   src={service.image}
@@ -77,19 +80,23 @@ export default function Services() {
                   className="w-full h-full object-cover rounded"
                 />
               </div>
-              <div className="content-container flex justify-between rounded bg-white p-5 group-hover:bg-[#019ee2]">
-                <div className="title-container flex flex-col gap-3 font-helvetica text-[#1F1F1F] w-[70%]">
-                  <h3 className="text-2xl font-normal">{service.title}</h3>
-                  <p className="text-base font-light">{service.description}</p>
+              <div className="content-container flex justify-between rounded bg-white p-2 lg:p-5 group-hover:bg-[#019ee2]">
+                <div className="title-container flex flex-col gap-1 lg:gap-3 font-helvetica text-[#1F1F1F] w-[70%]">
+                  <h3 className="text-[14px] lg:text-2xl font-normal">
+                    {service.title}
+                  </h3>
+                  <p className="text-[10px] lg:text-base font-light">
+                    {service.description}
+                  </p>
                 </div>
-                <div className="icon-container flex items-center justify-center pr-6">
+                <div className="icon-container flex items-center justify-center pr-0 lg:pr-6 scale-[0.6]">
                   <img src={service.icon} alt={service.title} />
                 </div>
               </div>
             </div>
           ))}
         </div>
-        <div className="bg-blue-900 mt-[85px] h-[85vh] flex justify-center items-center">
+        <div className="bg-blue-900 mt-5 lg:mt-[85px] h-[32vh] lg:h-[85vh] flex justify-center items-center">
           <span className="text-white ">Video</span>
         </div>
       </div>

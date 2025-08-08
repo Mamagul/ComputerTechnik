@@ -51,16 +51,16 @@ export default function TechServices() {
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="mainContent flex flex-col justify-center items-center gap-10 px-24">
+      <div className="mainContent flex flex-col justify-center items-center gap-10 px-3 lg:px-24">
         <div className="textContent flex flex-col justify-center items-center gap-2">
           <h3 className="font-helvetica text-2xl font-normal text-[#019ee2]">
             {t("techServices.title")}
           </h3>
-          <p className="font-helvetica text-base font-light text-[#012645] w-[730px] leading-5 text-center">
+          <p className="font-helvetica text-base font-light text-[#012645] w-[310px] lg:w-[730px] text-center">
             {t("techServices.description")}
           </p>
         </div>
-        <div className="techServicesContent flex gap-8">
+        <div className="techServicesContent flex flex-wrap gap-8">
           <div className="w-2/5 h-[400px]">
             <img
               src={techServices2}

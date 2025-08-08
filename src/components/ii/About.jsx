@@ -64,7 +64,7 @@ const About = ({ language }) => {
 
   return (
     <section className="about" id="about">
-      <div className="container">
+      <div className="container1">
         <div className="about-header">
           <h2>{content.title}</h2>
           <h3>{content.subtitle}</h3>

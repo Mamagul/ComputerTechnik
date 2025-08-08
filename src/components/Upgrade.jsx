@@ -17,7 +17,7 @@ export default function Upgrade() {
       />
       <div className="absolute top-0 left-0 w-full h-full bg-[#081826] opacity-50 z-[9]"></div>
       <div className="relative z-10 py-20 flex flex-col gap-14 items-center">
-        <div className="container flex flex-col gap-2">
+        <div className="container1 flex flex-col gap-2">
           <h2 className="font-PlayfairDisplay text-[40px] font-bold text-center text-white">
             {t("upgrade.title")}
           </h2>
@@ -25,7 +25,7 @@ export default function Upgrade() {
             {t("upgrade.description")}
           </p>
         </div>
-        <div className="twoCard container flex gap-8 w-full">
+        <div className="twoCard container1 flex gap-8 w-full">
           <div className="firstCard flex flex-col w-1/2 bg-[#012749] rounded">
             <div className="img h-[345px]">
               <img

@@ -11,8 +11,8 @@ export default function Contacts() {
   const { t } = useTranslation();
 
   return (
-    <section className="flex">
-      <div className="flex flex-col bg-[#011b32] px-28 h-full gap-[46px] py-24">
+    <section className="flex flex-wrap">
+      <div className="flex flex-col bg-[#011b32] px-3 lg:px-28 h-full gap-5 lg:gap-[46px] py-5 lg:py-24">
         <h2 className="font-PlayfairDisplay text-[#e7f1fc] font-bold text-[32px]">
           {t("contact.title")}:
         </h2>

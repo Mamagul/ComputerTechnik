@@ -6,7 +6,7 @@ export default function B2b() {
   const { t } = useTranslation();
   return (
     <section className="b2b bg-[#7db8eb]">
-      <div className="container flex flex-col py-20 gap-14">
+      <div className="container1 flex flex-col py-20 gap-14">
         <h2 className="font-PlayfairDisplay text-[40px] font-bold text-[#012645] text-center">
           {t("b2b.title")}
         </h2>

@@ -1,9 +1,9 @@
-import logo from '../images/logo.svg'
+import logo from "../images/logo.svg";
 
 export default function Footer() {
   return (
     <footer className="">
-      <div className="container">
+      <div className="container1">
         <div className="flex flex-wrap font-semibold sm:justify-between justify-evenly items-center py-6 gap-5">
           <a href="#">
             <img src={logo} alt="Logo" />
@@ -50,5 +50,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

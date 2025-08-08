@@ -14,7 +14,7 @@ import B2b from "../components/B2b";
 
 export default function Home() {
   return (
-    <div className="wrapper">
+    <div className="wrapper overflow-hidden">
       <Header />
       <div className="main">
         <FirstScreen />

@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 export default function OfficeMaintenance() {
   const { t } = useTranslation();
   return (
-    <section className="office-maintenance container flex flex-col bg-[#E7F1FC] py-20 gap-14">
+    <section className="office-maintenance container1 flex flex-col bg-[#E7F1FC] py-20 gap-14">
       <h2 className="font-PlayfairDisplay text-[40px] font-bold text-[#012645] text-center">
         {t("officeMaintenance.title")}
       </h2>

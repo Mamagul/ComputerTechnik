@@ -18,7 +18,7 @@ const LanguageSwitcher = () => {
   return (
     <div className="header-language flex border-[1px] border-[#019ee2] rounded-lg overflow-hidden ">
       <button
-        className={`font-helvetica p-1 text-base font-normal transition-colors duration-200 cursor-pointer ${
+        className={`font-helvetica p-1 text-[8px] lg:text-base font-normal transition-colors duration-200 cursor-pointer ${
           i18n.language === "de"
             ? "bg-[#019ee2] text-white"
             : "bg-white text-[#019ee2] hover:bg-gray-50"
@@ -28,7 +28,7 @@ const LanguageSwitcher = () => {
         DE
       </button>
       <button
-        className={`font-helvetica p-1 text-base font-normal transition-colors duration-200 cursor-pointer ${
+        className={`font-helvetica p-1 text-[8px] lg:text-base font-normal transition-colors duration-200 cursor-pointer ${
           i18n.language === "en"
             ? "bg-[#019ee2] text-white"
             : "bg-white text-[#019ee2] hover:bg-gray-50"

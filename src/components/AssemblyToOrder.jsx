@@ -48,7 +48,7 @@ export default function AssemblyToOrder() {
           quality, professional assembly and comprehensive testing
         </p>
       </div>
-      <div className="form flex gap-10 ">
+      <div className="form flex gap-10 flex-wrap">
         <form className="flex flex-col gap-10 bg-[#011729b0] rounded py-10 px-10 w-1/2">
           <div className="flex flex-col gap-2">
             <label className="font-helvetica text-[#019ee2] text-[18px] font-normal">
