@@ -17,7 +17,7 @@
   },
   "about": {
     "title": "Über uns",
-    "description": "Wir sind Ihr zuverlässiger Partner für Computer und Gaming-Hardware.",
+    "description": "Wir beschäftigen uns seit über 5 Jahren mit Computern und kennen deren Aufbau in- und auswendig. Unsere erfahrenen Spezialisten führen eine umfassende Diagnose Ihres PCs auf höchstem Niveau durch: Sie reinigen das Gerät, beheben Hardware- und Softwareprobleme, entfernen Viren und unnötige Dateien, führen spezielle Tests durch und stellen Ihnen nach Abschluss der Wartung einen detaillierten Bericht zur Verfügung.",
     "icon1": "Lieferung in ganz Europa",
     "icon2": "Für Privat- und Geschäftskunden",
     "icon3": "Individuelle Betreuung",
@@ -40,7 +40,7 @@
   },
   "customBuild": {
     "title": "PC Konfigurator",
-    "description": "Stellen Sie Ihren Traum-PC zusammen.",
+    "description": "Wir konfigurieren und bauen Ihren PC ganz nach Ihren Wünschen – in höchster Qualität, mit professioneller Montage und umfassender Prüfung.",
     "wholesale": "Großhandel",
     "retail": "Einzelhandel"
   },
@@ -85,7 +85,9 @@
   },
   "reviews": {
     "title": "Kundenbewertungen",
-    "description": "Was unsere Kunden über uns sagen."
+    "description": "Was unsere Kunden über uns sagen.",
+    "readMore": "Mehr lesen",
+    "readLess": "Weniger anzeigen"
   },
   "techServices": {
     "title": "Technische Wartung",
@@ -132,5 +134,19 @@
     "address": "Hamburg, Deutschland",
     "phone": "Telefon",
     "email": "E-Mail"
+  },
+  "cookie": {
+    "description": "Durch Klicken auf „Alle Cookies akzeptieren“ stimmen Sie der Speicherung von Cookies auf Ihrem Gerät zu, um die Navigation auf der Website zu verbessern, die Nutzung der Website zu analysieren und unsere Marketingmaßnahmen zu unterstützen.",
+    "buttonSettings": "Cookie-Einstellungen",
+    "buttonAccept": "Alle Cookies akzeptieren"
+  },
+  "time": {
+    "today": "heute",
+    "dayAgo": "vor 1 Tag",
+    "daysAgo": "vor {{count}} Tagen",
+    "monthAgo": "vor 1 Monat",
+    "monthsAgo": "vor {{count}} Monaten",
+    "yearAgo": "vor 1 Jahr",
+    "yearsAgo": "vor {{count}} Jahren"
   }
 }

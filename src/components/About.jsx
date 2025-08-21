@@ -55,7 +55,10 @@ export default function About() {
   ];
 
   return (
-    <div className="aboutUs bg-[#E7F1FC] flex flex-col sm:flex-row items-center justify-center gap-4 lg:gap-16 py-5 lg:py-20 px-10 lg:px-[155px]">
+    <section
+      id="about"
+      className="aboutUs bg-[#E7F1FC] flex flex-col sm:flex-row items-center justify-center gap-4 lg:gap-16 py-5 lg:py-20 px-10 lg:px-[155px]"
+    >
       <h2 className="block sm:hidden font-PlayfairDisplay text-center text-xl lg:text-[40px] font-bold w-full">
         {t("about.title")}
       </h2>
@@ -139,6 +142,6 @@ export default function About() {
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

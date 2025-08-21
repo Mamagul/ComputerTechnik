@@ -17,7 +17,7 @@
   },
   "about": {
     "title": "About us",
-    "description": "We are your reliable partner for computer and gaming hardware.",
+    "description": "We have been working with computers for over 5 years and know their inner workings inside out. Our highly experienced specialists will carry out a comprehensive diagnosis of your PC at the highest level: they will clean it, fix hardware and software issues, remove viruses and unnecessary files, perform specialized tests, and provide you with a detailed service report upon completion.",
     "icon1": "Europe-wide delivery",
     "icon2": "For Individuals and Businesses",
     "icon3": "Personalized Approach",
@@ -40,7 +40,7 @@
   },
   "customBuild": {
     "title": "PC Konfigurator",
-    "description": "Stellen Sie Ihren Traum-PC zusammen.",
+    "description": "We configure and build your PC according to your wishes. Highest quality, professional assembly and comprehensive testing",
     "wholesale": "Wholesale",
     "retail": "Retail"
   },
@@ -119,8 +119,10 @@
     "button": "Request a wholesale quote"
   },
   "reviews": {
-    "title": "Customer Reviews",
-    "description": "What our customers say about us."
+    "title": "Reviews",
+    "description": "What our customers say about us.",
+    "readMore": "Read more",
+    "readLess": "Read less"
   },
   "contact": {
     "title": "Contact",
@@ -131,5 +133,19 @@
     "address": "Hamburg, Germany",
     "phone": "Phone",
     "email": "Email"
+  },
+  "cookie": {
+    "description": "By clicking “Accept All Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+    "buttonSettings": "Cookie Settings",
+    "buttonAccept": "Accept All Cookies"
+  },
+  "time": {
+    "today": "today",
+    "dayAgo": "1 day ago",
+    "daysAgo": "{{count}} days ago",
+    "monthAgo": "1 month ago",
+    "monthsAgo": "{{count}} months ago",
+    "yearAgo": "1 year ago",
+    "yearsAgo": "{{count}} years ago"
   }
 }

@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 const baseUrl = import.meta.env.VITE_API_BASE_URL;
+console.log("Base URL:", baseUrl);
 
 export default function useFetch(dataName) {
   const [data, setData] = useState(null);
@@ -9,6 +10,7 @@ export default function useFetch(dataName) {
   const [error, setError] = useState(null);
 
   const dataUrl = `${baseUrl}/${dataName}/`;
+  console.log("Fetching from URL:", dataUrl);
 
   useEffect(() => {
     axios

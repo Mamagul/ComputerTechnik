@@ -38,7 +38,7 @@ export default function FirstScreen() {
       {/* Desktop */}
       {details && details.length > 0 ? (
         <section
-          className="first-screen hidden sm:flex bg-no-repeat min-h-[90vh] relative z-10 flex px-3 lg:px-32 pt-[132px]"
+          className="first-screen hidden sm:flex bg-no-repeat min-h-[90vh] relative z-10 px-3 lg:px-32 pt-[132px]"
           style={{
             backgroundImage: `url(${details[0].image})`,
             backgroundSize: "80% 100%",

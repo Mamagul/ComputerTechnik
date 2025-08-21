@@ -5,7 +5,10 @@ html {
 body {
   background-color: #e7f1fc;
 }
-
+section[id],
+div[id] {
+  scroll-margin-top: 120px; /* Adjust based on your header height */
+}
 /* Puzzle */
 
 .puzzle-item {

@@ -3,10 +3,46 @@ import assemblyBg from "../images/assemblyBg.svg";
 import assemblyIcon1 from "../images/iconAssembly.svg";
 import { useTranslation } from "react-i18next";
 import ImagePuzzle from "./ImagePuzzle";
+import axios from "axios";
 
 export default function AssemblyToOrder() {
   const { t } = useTranslation();
   const [selectedOption, setSelectedOption] = useState(1);
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
+
+  const baseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!email.trim()) {
+      setSubmitMessage("Please enter your email");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitMessage("");
+
+    try {
+      const category = selectedOption === 1 ? "wholesale" : "retail";
+
+      const response = await axios.post(`${baseUrl}/send-mail/`, {
+        email: email.trim(),
+        category: category,
+      });
+
+      setSubmitMessage(`Catalog sent successfully to ${email}!`);
+      setEmail("");
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setSubmitMessage("Error sending email. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const professionalAssembly = [
     {
@@ -33,6 +69,7 @@ export default function AssemblyToOrder() {
   ];
   return (
     <section
+      id="customBuild"
       className="assemblytoOrder bg-blue-950 h-fit flex flex-col justify-center items-center gap-14 px-28 py-20 relative z-10"
       // style={{
       //   backgroundImage: `url(${assemblyBg})`,
@@ -41,15 +78,17 @@ export default function AssemblyToOrder() {
     >
       <div className="text flex flex-col justify-center items-center gap-2">
         <h2 className="font-PlayfairDisplay text-white text-[40px] font-bold">
-          zborka pod zakaz
+          {t("customBuild.title")}
         </h2>
         <p className="font-helvetica text-[#fde9e9] font-light text-base">
-          We configure and build your PC according to your wishes. Highest
-          quality, professional assembly and comprehensive testing
+          {t("customBuild.description")}
         </p>
       </div>
-      <div className="form flex gap-10 flex-wrap">
-        <form className="flex flex-col gap-10 bg-[#011729b0] rounded py-10 px-10 w-1/2">
+      <div className="form flex flex-col lg:flex-row gap-10">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-10 bg-[#011729b0] rounded py-10 px-10 w-1/2"
+        >
           <div className="flex flex-col gap-2">
             <label className="font-helvetica text-[#019ee2] text-[18px] font-normal">
               Contact Details
@@ -57,8 +96,8 @@ export default function AssemblyToOrder() {
             <div className="flex flex-col gap-2 bg-[#012749] rounded border border-[#013761]">
               <input
                 type="text"
-                value={name}
-                //   onChange={handleNameChange}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder={"Email or phone"}
                 className="text-white px-[10px] py-2"
               />
@@ -71,8 +110,8 @@ export default function AssemblyToOrder() {
                   type="radio"
                   name="option"
                   value={1}
-                  // checked={selectedOption === 1}
-                  // onChange={() => setSelectedOption(1)}
+                  checked={selectedOption === 1}
+                  onChange={() => setSelectedOption(1)}
                   className="sr-only peer"
                 />
                 <div className="w-[15px] h-[15px] sm:w-[24px] sm:h-[24px] lg:w-[30px] lg:h-[30px] rounded-full border border-[#70aac3] peer-checked:bg-[#011729b0] transition-colors duration-200 flex items-center justify-center">
@@ -91,8 +130,8 @@ export default function AssemblyToOrder() {
                   type="radio"
                   name="option"
                   value={2}
-                  // checked={selectedOption === 2}
-                  // onChange={() => setSelectedOption(2)}
+                  checked={selectedOption === 2}
+                  onChange={() => setSelectedOption(2)}
                   className="sr-only peer"
                 />
                 <div className="w-[15px] h-[15px] sm:w-[24px] sm:h-[24px] lg:w-[30px] lg:h-[30px] rounded-full border border-[#70aac3] peer-checked:bg-[#011729b0] transition-colors duration-200 flex items-center justify-center">
@@ -107,13 +146,31 @@ export default function AssemblyToOrder() {
             </div>
           </div>
 
+          {submitMessage && (
+            <div
+              className={`font-helvetica text-center py-2 px-4 rounded ${
+                submitMessage.includes("Error")
+                  ? "text-red-400 bg-red-900/20"
+                  : "text-green-400 bg-green-900/20"
+              }`}
+            >
+              {submitMessage}
+            </div>
+          )}
+
           <button
             type="submit"
-            className="font-helvetica bg-[#019ee2] text-[#fffafa] py-[10px] rounded"
+            disabled={isSubmitting}
+            className={`font-helvetica py-[10px] rounded transition-colors ${
+              isSubmitting
+                ? "bg-gray-600 text-gray-300 cursor-not-allowed"
+                : "bg-[#019ee2] text-[#fffafa] hover:bg-[#0186c7]"
+            }`}
           >
-            Send
+            {isSubmitting ? "Sending..." : "Send"}
           </button>
         </form>
+
         <div className="image flex flex-col gap-10 w-1/2">
           {professionalAssembly.map((item) => (
             <div

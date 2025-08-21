@@ -42,7 +42,10 @@ export default function Services() {
   ];
   return (
     // <div className="services bg-[#E7F1FC] relative">
-    <div className="services bg-[#E7F1FC] py-5 lg:py-20 px-3 lg:px-28 relative z-20">
+    <section
+      id="services"
+      className="services bg-[#E7F1FC] py-5 lg:py-20 px-3 lg:px-28 relative z-20"
+    >
       <div
         style={{
           width: "100%",
@@ -100,6 +103,6 @@ export default function Services() {
           <span className="text-white ">Video</span>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

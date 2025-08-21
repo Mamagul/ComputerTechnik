@@ -59,7 +59,7 @@ export default function Catalog() {
   console.log("filteredCards", filteredCards);
 
   return (
-    <section className="relative  min-h-screen">
+    <section id="catalog" className="relative  min-h-screen">
       <Aurora
         colorStops={["#3A29FF", "#FF94B4", "#019ee2"]}
         blend={0.5}
@@ -88,7 +88,7 @@ export default function Catalog() {
                     );
                     setActiveCategoryId(category.id);
                   }}
-                  className={`font-helvetica w-[70px] lg:w-full text-[8px] sm:text-base md:text-lg font-light rounded px-0 lg:px-4 py-0 lg:py-2 transition-all duration-300 border-[1px] ${
+                  className={`font-helvetica w-[70px] lg:w-full text-[8px] sm:text-base md:text-lg font-light rounded px-[2px] lg:px-4 py-0 lg:py-2 transition-all duration-300 border-[1px] whitespace-normal lg:whitespace-nowrap ${
                     activeCategory === getLocalizedField(category, "name", lang)
                       ? "bg-[#e7f1fc] text-[#263238] border-[#263238]"
                       : "bg-transparent text-[#fffefe] border-[#fffefe] hover:bg-[#e7f1fc] hover:text-[#263238] hover:border-[#263238]"
@@ -100,15 +100,17 @@ export default function Catalog() {
             : null}
         </div>
         <div className="containerCards grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-12">
-          {filteredCards.map((card) => (
-            <Card
-              key={card.title + card.category}
-              image={card.image}
-              title={getLocalizedField(card, "name", lang)}
-              description={getLocalizedField(card, "description", lang)}
-              available={card.check_box}
-            />
-          ))}
+          {filteredCards && filteredCards.length > 0
+            ? filteredCards.map((card) => (
+                <Card
+                  key={card.title + card.category}
+                  image={card.image}
+                  title={getLocalizedField(card, "name", lang)}
+                  description={getLocalizedField(card, "description", lang)}
+                  available={card.check_box}
+                />
+              ))
+            : null}
         </div>
       </div>
     </section>
