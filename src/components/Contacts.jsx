@@ -45,9 +45,13 @@ export default function Contacts() {
               <img src={telegram} alt="telegram" />
             </a>
           </div>
-          {/* <button className="font-helvetica py-[10px] w-full bg-[#019ee2] text-white font-normal whitespace-nowrap text-[10px] sm:text-xs lg:text-base rounded">
+          <a
+            href="https://computershophamburg.de/en/pages/kontaktformular"
+            target="_blank"
+            className="font-helvetica py-[10px] w-full bg-[#019ee2] text-center text-white font-normal whitespace-nowrap text-[10px] sm:text-xs lg:text-base rounded"
+          >
             {t("contact.button")}
-          </button> */}
+          </a>
         </div>
       </div>
       <iframe
