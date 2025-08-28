@@ -38,6 +38,6 @@ button {
 
 @media (max-width: 640px) {
   .container1 {
-    max-width: clamp(320px, 100vw - 1rem, 1280px);
+    max-width: clamp(320px, 100vw - 2rem, 1280px);
   }
 }
