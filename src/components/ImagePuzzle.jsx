@@ -6,35 +6,69 @@ import puzzle4 from "../images/puzzle4.svg";
 
 export default function ImagePuzzle() {
   return (
-    <div className="puzzle-grid grid grid-cols-4 gap-4 h-[300px]">
-      <div className="puzzle-item">
-        <img
-          src={puzzle1}
-          alt="Puzzle 1"
-          className="w-full h-full object-cover"
-        />
+    <>
+      {/* Desktop */}
+      <div className="puzzle-grid hidden sm:grid grid-cols-4 gap-4 h-full">
+        <div className="puzzle-item">
+          <img
+            src={puzzle1}
+            alt="Puzzle 1"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="puzzle-item">
+          <img
+            src={puzzle2}
+            alt="Puzzle 2"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="puzzle-item">
+          <img
+            src={puzzle4}
+            alt="Puzzle 3"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="puzzle-item">
+          <img
+            src={puzzle3}
+            alt="Puzzle 4"
+            className="w-full h-full object-cover"
+          />
+        </div>
       </div>
-      <div className="puzzle-item">
-        <img
-          src={puzzle2}
-          alt="Puzzle 2"
-          className="w-full h-full object-cover"
-        />
+      {/* Mobile */}
+      <div className="puzzle-grid grid sm:hidden grid-cols-2 gap-4 h-full">
+        <div className="puzzle-item rotate-180">
+          <img
+            src={puzzle1}
+            alt="Puzzle 1"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="puzzle-item rotate-180">
+          <img
+            src={puzzle3}
+            alt="Puzzle 2"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="puzzle-item ">
+          <img
+            src={puzzle4}
+            alt="Puzzle 3"
+            className="w-full h-full object-cover scale-x-[-1]"
+          />
+        </div>
+        <div className="puzzle-item">
+          <img
+            src={puzzle2}
+            alt="Puzzle 4"
+            className="w-full h-full object-cover scale-x-[-1]"
+          />
+        </div>
       </div>
-      <div className="puzzle-item">
-        <img
-          src={puzzle4}
-          alt="Puzzle 3"
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="puzzle-item">
-        <img
-          src={puzzle3}
-          alt="Puzzle 4"
-          className="w-full h-full object-cover"
-        />
-      </div>
-    </div>
+    </>
   );
 }

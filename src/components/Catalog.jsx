@@ -20,6 +20,11 @@ export default function Catalog() {
     loading: detailsCardLoading,
     error: detailsCardError,
   } = useFetch("card_list");
+  const {
+    data: description,
+    loading: descriptionLoading,
+    error: descriptionError,
+  } = useFetch("description_main");
 
   category ? console.log(category) : null;
   detailsCard ? console.log(detailsCard) : null;
@@ -33,10 +38,10 @@ export default function Catalog() {
     }
   }, [category, activeCategory, lang]);
 
-  // details ? console.log(details[0].h_text_en) : null;
-  // details ? console.log(details[0].h_text_ru) : null;
+  category ? console.log(category) : null;
+  detailsCard ? console.log(detailsCard) : null;
 
-  if (detailsCardLoading && categoryLoading) {
+  if (detailsCardLoading || categoryLoading || descriptionLoading) {
     return (
       <div className="flex justify-center items-center h-screen text-2xl">
         {/* {t("loading")} */} Loading
@@ -44,7 +49,7 @@ export default function Catalog() {
     );
   }
 
-  if (detailsCardError && categoryError) {
+  if (detailsCardError || categoryError || descriptionError) {
     return (
       <div className="flex justify-center items-center h-screen text-2xl">
         {/* {t("error")} */} Error
@@ -52,14 +57,20 @@ export default function Catalog() {
     );
   }
 
-  const filteredCards = detailsCard?.filter(
-    (card) => card.category.id === activeCategoryId
-  );
+  const filteredCards = detailsCard?.filter((card) => {
+    if (!card.category || !Array.isArray(card.category)) {
+      return false;
+    }
+    return card.category.some((cat) => cat.id === activeCategoryId);
+  });
 
   console.log("filteredCards", filteredCards);
 
   return (
-    <section id="catalog" className="relative  min-h-screen">
+    <section
+      id="catalog"
+      className="relative  min-h-[50vh] sm:min-h-[60vh] lg:min-h-[90vh]"
+    >
       <Aurora
         colorStops={["#3A29FF", "#FF94B4", "#019ee2"]}
         blend={0.5}
@@ -68,16 +79,18 @@ export default function Catalog() {
         className="absolute top-0 left-0 w-full h-full"
       />
       <div
-        className="catalog bg-cover bg-center bg-no-repeat min-h-[90vh] flex flex-col items-center justify-start pb-8 px-3 sm:px-8 md:px-16 lg:px-28 -mt-[148px] lg:-pt-[85px]"
+        className="catalog bg-cover bg-center bg-no-repeat min-h-[50vh] sm:min-h-[60vh] lg:min-h-[90vh] flex flex-col items-center justify-center pb-8 px-3 sm:px-10 lg:px-28 -mt-[148px] lg:-pt-[85px]"
         style={{ backgroundImage: `url(${catalogBg})` }}
       >
-        <h2 className="font-PlayfairDisplay text-white text-xl sm:text-3xl md:text-4xl font-bold pb-1 lg:pb-5 mt-12 lg:mt-20">
+        <h2 className="font-PlayfairDisplay text-white text-xl sm:text-2xl lg:text-4xl xl:text-[40px] font-bold pb-1 lg:pb-5 mt-12 lg:mt-20">
           {t("catalog.title")}
         </h2>
         <p className="font-helvetica text-[#fde9e9] text-[10px] sm:text-base font-light pb-5 lg:pb-10 text-center max-w-2xl">
-          {t("catalog.description")}
+          {description && description.length > 0
+            ? getLocalizedField(description[0], "catalog_des", lang)
+            : null}
         </p>
-        <div className="containerCategories flex justify-center gap-2 sm:gap-6 md:gap-8 lg:gap-12 pb-5 lg:pb-10">
+        <div className="containerCategories container1 flex justify-between lg:justify-center gap-2 sm:gap-4 lg:gap-12 pb-5 lg:pb-10 ">
           {category && category.length > 0
             ? category.slice(0, 4).map((category) => (
                 <button
@@ -88,7 +101,7 @@ export default function Catalog() {
                     );
                     setActiveCategoryId(category.id);
                   }}
-                  className={`font-helvetica w-[70px] lg:w-full text-[8px] sm:text-base md:text-lg font-light rounded px-[2px] lg:px-4 py-0 lg:py-2 transition-all duration-300 border-[1px] whitespace-normal lg:whitespace-nowrap ${
+                  className={`font-helvetica w-[70px] sm:w-full text-[8px] sm:text-base md:text-lg font-light rounded px-[2px] sm:px-[10px] lg:px-4 py-0 sm:py-2 lg:py-2 transition-all duration-300 border-[1px] whitespace-normal sm:whitespace-nowrap ${
                     activeCategory === getLocalizedField(category, "name", lang)
                       ? "bg-[#e7f1fc] text-[#263238] border-[#263238]"
                       : "bg-transparent text-[#fffefe] border-[#fffefe] hover:bg-[#e7f1fc] hover:text-[#263238] hover:border-[#263238]"
@@ -99,11 +112,11 @@ export default function Catalog() {
               ))
             : null}
         </div>
-        <div className="containerCards grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-12">
+        <div className="containerCards grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 lg:gap-12">
           {filteredCards && filteredCards.length > 0
             ? filteredCards.map((card) => (
                 <Card
-                  key={card.title + card.category}
+                  key={card.id}
                   image={card.image}
                   title={getLocalizedField(card, "name", lang)}
                   description={getLocalizedField(card, "description", lang)}

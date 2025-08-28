@@ -4,9 +4,25 @@ import LetterGlitch from "./LetterGlitch";
 import upgrade1 from "../images/upgrade1.svg";
 import upgrade2 from "../images/upgrade2.svg";
 import { MdDone } from "react-icons/md";
+import useFetch from "../hooks/useFetch";
+import getLocalizedField from "../utils/localizationHelpers";
 
 export default function Upgrade() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language;
+  const {
+    data: description,
+    loading: descriptionLoading,
+    error: descriptionError,
+  } = useFetch("description_main");
+  const {
+    data: upgrade,
+    loading: upgradeLoading,
+    error: upgradeError,
+  } = useFetch("upgrade");
+
+  // upgrade ? console.log(upgrade) : null;
+
   return (
     <section id="upgrade" className="upgrade relative">
       <LetterGlitch
@@ -16,71 +32,71 @@ export default function Upgrade() {
         smooth={true}
       />
       <div className="absolute top-0 left-0 w-full h-full bg-[#081826] opacity-[0.6] z-[9]"></div>
-      <div className="relative z-10 py-5 lg:py-20 flex flex-col gap-5 lg:gap-14 items-center">
-        <div className="container1 flex flex-col gap-2">
-          <h2 className="font-PlayfairDisplay text-xl lg:text-[40px] font-bold text-center text-white">
+      <div className="relative z-10 py-5 sm:py-10 lg:py-20 flex flex-col gap-5 sm:gap-8 lg:gap-14 items-center px-0 sm:px-10 lg:px-7 xl:px-26">
+        <div className="container1 flex flex-col items-center gap-2 sm:gap-3">
+          <h2 className="font-PlayfairDisplay text-xl sm:text-2xl lg:text-4xl xl:text-[40px] font-bold text-center text-white">
             {t("upgrade.title")}
           </h2>
-          <p className="font-helvetica text-[8px] lg:text-base font-light text-[#fde9e9] text-center">
-            {t("upgrade.description")}
+          <p className="font-helvetica text-[8px] sm:text-xs lg:text-base font-light text-[#fde9e9] text-center w-[90%]">
+            {description && description.length > 0
+              ? getLocalizedField(description[0], "upgrade_des", lang)
+              : null}
           </p>
         </div>
-        <div className="twoCard container1 flex flex-col lg:flex-row gap-5 lg:gap-8 w-full px-10 lg:px-0">
-          <div className="firstCard flex flex-col w-full lg:w-1/2 bg-[#012749] rounded">
-            <div className="img h-[190px] lg:h-[345px]">
-              <img
-                src={upgrade2}
-                alt="upgrade"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="desc p-2 lg:p-[30px] flex flex-col justify-between h-full gap-2 lg:gap-4">
-              <h3 className="font-helvetica text-base lg:text-[32px] font-normal text-white">
-                {t("upgrade.componentReplacement")}
-              </h3>
-              <p className="font-helvetica text-xs lg:text-2xl font-normal text-[#019ee2]">
-                {t("upgrade.desc1")}
-              </p>
-              <ul className="font-helvetica text-[10px] lg:text-xl font-light text-[#fbfeff]">
-                {t("upgrade.items1", { returnObjects: true }).map(
-                  (item, index) => (
+        {upgrade && upgrade.length > 1 ? (
+          <div className="twoCard container1 flex flex-col sm:flex-row gap-5 lg:gap-8 w-full px-3 sm:px-6 lg:px-0">
+            <div className="firstCard flex flex-col w-full sm:w-1/2 bg-[#012749] rounded">
+              <div className="img h-[190px] lg:h-[345px]">
+                <img
+                  src={upgrade[0].image}
+                  alt="upgrade"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="desc p-2 lg:p-[30px] flex flex-col justify-between gap-1 lg:gap-4">
+                <h3 className="font-helvetica text-base lg:text-2xl xl:text-[32px] font-normal text-white">
+                  {getLocalizedField(upgrade[0], "text", lang)}
+                </h3>
+                <p className="font-helvetica text-xs lg:text-xl xl:text-2xl font-normal text-[#019ee2]">
+                  {getLocalizedField(upgrade[0], "blue_text", lang)}
+                </p>
+                <ul className="font-helvetica text-[10px] lg:text-xl font-light text-[#fbfeff]">
+                  {upgrade[0].upgrade_items.map((item, index) => (
                     <li key={index} className="flex items-center gap-2">
                       <MdDone className="text-[#08b428]" />
-                      {item}
+                      {getLocalizedField(item, "text", lang)}
                     </li>
-                  )
-                )}
-              </ul>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
-          <div className="secondCard flex flex-col w-full lg:w-1/2 bg-[#012749] rounded">
-            <div className="img h-[190px] lg:h-[345px]">
-              <img
-                src={upgrade1}
-                alt="upgrade"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="desc p-2 lg:p-[30px] flex flex-col justify-between h-full gap-2 lg:gap-4">
-              <h3 className="font-helvetica text-base lg:text-[32px] font-normal text-white">
-                {t("upgrade.fixIssues")}
-              </h3>
-              <p className="font-helvetica text-xs lg:text-2xl font-normal text-[#019ee2]">
-                {t("upgrade.desc2")}
-              </p>
-              <ul className="font-helvetica text-[10px] lg:text-xl font-light text-[#fbfeff]">
-                {t("upgrade.items2", { returnObjects: true }).map(
-                  (item, index) => (
+            <div className="secondCard flex flex-col w-full sm:w-1/2 bg-[#012749] rounded">
+              <div className="img h-[190px] lg:h-[345px]">
+                <img
+                  src={upgrade[1].image}
+                  alt="upgrade"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="desc p-2 lg:p-[30px] flex flex-col justify-between gap-1 lg:gap-4">
+                <h3 className="font-helvetica text-base lg:text-2xl xl:text-[32px] font-normal text-white">
+                  {getLocalizedField(upgrade[1], "text", lang)}
+                </h3>
+                <p className="font-helvetica text-xs lg:text-xl xl:text-2xl font-normal text-[#019ee2]">
+                  {getLocalizedField(upgrade[1], "blue_text", lang)}
+                </p>
+                <ul className="font-helvetica text-[10px] lg:text-xl font-light text-[#fbfeff]">
+                  {upgrade[1].upgrade_items.map((item, index) => (
                     <li key={index} className="flex items-center gap-2">
                       <MdDone className="text-[#08b428]" />
-                      {item}
+                      {getLocalizedField(item, "text", lang)}
                     </li>
-                  )
-                )}
-              </ul>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
+        ) : null}
       </div>
     </section>
   );

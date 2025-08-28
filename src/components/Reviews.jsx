@@ -35,7 +35,7 @@ export default function Reviews() {
   // Функция для сокращения текста до 4 строк
   const getTruncatedText = (text, reviewId) => {
     const words = text.split(" ");
-    const maxWords = 25; // примерно 4 строки
+    const maxWords = 12; // примерно 4 строки
 
     if (words.length <= maxWords || expandedReviews[reviewId]) {
       return text;
@@ -54,7 +54,7 @@ export default function Reviews() {
 
   // Проверка нужна ли кнопка "Читать далее"
   const needsReadMore = (text) => {
-    return text.split(" ").length > 25;
+    return text.split(" ").length > 12;
   };
 
   const reviews = [
@@ -93,25 +93,28 @@ export default function Reviews() {
   return (
     <section
       id="reviews"
-      className="reviews container1 py-[85px] flex flex-col gap-8"
+      className="reviews container1 py-5 sm:py-10 lg:py-12 xl:py-[85px] flex flex-col gap-3 lg:gap-8"
     >
-      <h2 className="font-PlayfairDisplay text-xl lg:text-[40px] font-bold text-center text-[#0f0e0e]">
+      <h2 className="font-PlayfairDisplay text-xl sm:text-2xl lg:text-4xl xl:text-[40px] font-bold text-center text-[#0f0e0e]">
         {t("reviews.title")}
       </h2>
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+      <div className="flex justify-start gap-2 lg:gap-8 overflow-auto ">
         {reviews.map((review) => (
           <div
             key={review.id}
-            className="bg-white p-5 flex flex-col justify-between gap-5"
+            className="bg-white p-2 lg:p-5 flex flex-col justify-between gap-5 rounded min-w-[180px] sm:min-w-[210px] lg:min-w-[300px]"
           >
             <div className="starsReview flex flex-col gap-5">
-              <div className="stars flex items-center justify-between">
-                <div className="flex items-center gap-2">
+              <div className="stars flex items-center justify-between gap-4">
+                <div className="flex items-center gap-1 lg:gap-2">
                   {Array.from({ length: review.stars }).map((_, index) => (
-                    <IoStar key={index} className="text-yellow-500" />
+                    <IoStar
+                      key={index}
+                      className="text-yellow-500 text-sm lg:text-xl"
+                    />
                   ))}
                 </div>
-                <div className="w-[34px] h-[34px]">
+                <div className="w-4 lg:w-[34px] h-4 lg:h-[34px]">
                   <img
                     src={google}
                     alt=""
@@ -119,31 +122,31 @@ export default function Reviews() {
                   />
                 </div>
               </div>
-              {/* <p>{review.review}</p> */}
               <div className="review-text">
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-xs lg:text-base">
                   {getTruncatedText(review.review, review.id)}
                 </p>
                 {needsReadMore(review.review) && (
-                  <button
-                    onClick={() => toggleExpanded(review.id)}
-                    className="text-[#019ee2] text-sm font-medium mt-2 hover:underline transition-all duration-200"
+                  <a
+                    href="https://computershophamburg.de/en#shopify-block-ASTUrZkxSUy94ajhrW__google_reviews_google_carousel_one_9gmWyX"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    // onClick={() => toggleExpanded(review.id)}
+                    className="text-[#019ee2] text-[8px] lg:text-sm font-medium mt-2 hover:underline transition-all duration-200"
                   >
-                    {expandedReviews[review.id]
-                      ? t("reviews.readLess")
-                      : t("reviews.readMore")}
-                  </button>
+                    {t("reviews.readMore")}
+                  </a>
                 )}
               </div>
             </div>
-            <div className="flex items-center justify-start gap-5">
+            <div className="flex items-center justify-start gap-2 lg:gap-5">
               <div className="image flex items-center justify-between bg-amber-400 rounded-full overflow-hidden w-10 h-10"></div>
 
               <div className="flex flex-col gap-1">
-                <h3 className="font-helvetica text-sm font-bold text-black">
+                <h3 className="font-helvetica text-[10px] lg:text-sm font-bold text-black">
                   {review.name}
                 </h3>
-                <p className="font-helvetica text-xs font-light text-[#019ee2]">
+                <p className="font-helvetica text-[8px] lg:text-xs font-light text-[#019ee2]">
                   {getRelativeTime(review.date)}
                 </p>
               </div>
