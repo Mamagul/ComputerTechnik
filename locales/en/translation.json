@@ -39,7 +39,7 @@
     }
   },
   "customBuild": {
-    "title": "PC Konfigurator",
+    "title": "Custom PC Build",
     "description": "We configure and build your PC according to your wishes. Highest quality, professional assembly and comprehensive testing",
     "wholesale": "Wholesale",
     "retail": "Retail"
@@ -147,5 +147,6 @@
     "monthsAgo": "{{count}} months ago",
     "yearAgo": "1 year ago",
     "yearsAgo": "{{count}} years ago"
-  }
+  },
+  "emailError": "Please enter a valid email address"
 }

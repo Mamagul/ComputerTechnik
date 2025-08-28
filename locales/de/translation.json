@@ -39,7 +39,7 @@
     }
   },
   "customBuild": {
-    "title": "PC Konfigurator",
+    "title": "Individuelle PC-Konfiguration",
     "description": "Wir konfigurieren und bauen Ihren PC ganz nach Ihren Wünschen – in höchster Qualität, mit professioneller Montage und umfassender Prüfung.",
     "wholesale": "Großhandel",
     "retail": "Einzelhandel"
@@ -148,5 +148,6 @@
     "monthsAgo": "vor {{count}} Monaten",
     "yearAgo": "vor 1 Jahr",
     "yearsAgo": "vor {{count}} Jahren"
-  }
+  },
+  "emailError": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
 }
