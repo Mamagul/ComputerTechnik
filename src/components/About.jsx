@@ -6,6 +6,7 @@ import document from "../images/document.svg";
 import { useTranslation } from "react-i18next";
 import useFetch from "../hooks/useFetch";
 import getLocalizedField from "../utils/localizationHelpers";
+import Loader from "./Loader.jsx";
 
 export default function About() {
   const { t, i18n } = useTranslation();
@@ -23,7 +24,7 @@ export default function About() {
   if (detailsLoading) {
     return (
       <div className="flex justify-center items-center h-screen text-2xl">
-        {/* {t("loading")} */} Loading
+        <Loader />
       </div>
     );
   }

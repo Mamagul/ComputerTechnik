@@ -1,11 +1,10 @@
 import React from "react";
-import techServices from "../images/techSer1.svg";
-import techServices2 from "../images/techSer2.svg";
 import wallClock from "../images/wall-clock.svg";
 import guarantee from "../images/guarantee.svg";
 import { useTranslation } from "react-i18next";
 import useFetch from "../hooks/useFetch";
 import getLocalizedField from "../utils/localizationHelpers";
+import Loader from "./Loader";
 
 export default function TechServices() {
   const { t, i18n } = useTranslation();
@@ -49,6 +48,23 @@ export default function TechServices() {
       description: t("techServices.items.6"),
     },
   ];
+
+  if (detailsLoading) {
+    return (
+      <div className="flex justify-center items-center h-screen text-2xl">
+        <Loader />
+      </div>
+    );
+  }
+
+  if (detailsError) {
+    return (
+      <div className="flex justify-center items-center h-screen text-2xl">
+        {/* {t("error")} */} Error
+      </div>
+    );
+  }
+
   return (
     <section
       id="techServices"

@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import b2bImage from "../images/b2b.svg";
 import useFetch from "../hooks/useFetch";
 import getLocalizedField from "../utils/localizationHelpers";
+import Loader from "./Loader";
 
 export default function B2b() {
   const { t, i18n } = useTranslation();
@@ -13,7 +14,22 @@ export default function B2b() {
     error: b2bError,
   } = useFetch("optom_buy");
 
-  b2b ? console.log(b2b) : null;
+  // b2b ? console.log(b2b) : null;
+  if (b2bLoading) {
+    return (
+      <div className="flex justify-center items-center h-screen text-2xl">
+        <Loader />
+      </div>
+    );
+  }
+
+  if (b2bError) {
+    return (
+      <div className="flex justify-center items-center h-screen text-2xl">
+        {/* {t("error")} */} Error
+      </div>
+    );
+  }
 
   return (
     <section id="b2b" className="b2b bg-[#7db8eb]">

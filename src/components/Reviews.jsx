@@ -35,21 +35,13 @@ export default function Reviews() {
   // Функция для сокращения текста до 4 строк
   const getTruncatedText = (text, reviewId) => {
     const words = text.split(" ");
-    const maxWords = 12; // примерно 4 строки
+    const maxWords = 12;
 
     if (words.length <= maxWords || expandedReviews[reviewId]) {
       return text;
     }
 
     return words.slice(0, maxWords).join(" ") + "...";
-  };
-
-  // Функция для переключения развернутого состояния
-  const toggleExpanded = (reviewId) => {
-    setExpandedReviews((prev) => ({
-      ...prev,
-      [reviewId]: !prev[reviewId],
-    }));
   };
 
   // Проверка нужна ли кнопка "Читать далее"

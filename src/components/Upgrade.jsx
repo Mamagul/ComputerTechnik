@@ -1,11 +1,10 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import LetterGlitch from "./LetterGlitch";
-import upgrade1 from "../images/upgrade1.svg";
-import upgrade2 from "../images/upgrade2.svg";
 import { MdDone } from "react-icons/md";
 import useFetch from "../hooks/useFetch";
 import getLocalizedField from "../utils/localizationHelpers";
+import Loader from "./Loader";
 
 export default function Upgrade() {
   const { t, i18n } = useTranslation();
@@ -22,6 +21,21 @@ export default function Upgrade() {
   } = useFetch("upgrade");
 
   // upgrade ? console.log(upgrade) : null;
+  if (descriptionLoading || upgradeLoading) {
+    return (
+      <div className="flex justify-center items-center h-screen text-2xl">
+        <Loader />
+      </div>
+    );
+  }
+
+  if (descriptionError || upgradeError) {
+    return (
+      <div className="flex justify-center items-center h-screen text-2xl">
+        {/* {t("error")} */} Error
+      </div>
+    );
+  }
 
   return (
     <section id="upgrade" className="upgrade relative">

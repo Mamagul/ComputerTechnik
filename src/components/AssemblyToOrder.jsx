@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import assemblyIcon1 from "../images/iconAssembly.svg";
+import assemblyIcon1 from "../../public/icons/iconCB1.svg";
+import assemblyIcon2 from "../../public/icons/iconCB2.svg";
+import assemblyIcon3 from "../../public/icons/iconCB3.svg";
 import assemblyBg from "../images/assemblyBg.jpg";
 import { useTranslation } from "react-i18next";
 import ImagePuzzle from "./ImagePuzzle";
 import { useCatalogRequest } from "../hooks/useCatalogRequest";
 import useFetch from "../hooks/useFetch";
 import getLocalizedField from "../utils/localizationHelpers";
+import Loader from "./Loader.jsx";
 
 export default function AssemblyToOrder() {
   const { t, i18n } = useTranslation();
@@ -39,26 +42,51 @@ export default function AssemblyToOrder() {
   const professionalAssembly = [
     {
       id: 1,
-      title: "Professional Assembly",
-      description:
-        "We configure and build your PC according to your wishes. Highest quality, professional assembly and comprehensive testing",
+      title_en: "Professional PC Build",
+      title_de: "Professionelle PC-Montage",
+      description_en:
+        "High-quality PC assembly and individual configuration by our company’s engineers. Modding and full customization of system units. Cable management and complete PC personalization.",
+      description_de:
+        "Hochwertige PC-Montage und individuelle Konfiguration durch die Ingenieure unseres Unternehmens. Modding und vollständige Individualisierung von Systemgehäusen. Kabelmanagement und vollständige Personalisierung des PCs.",
       image: assemblyIcon1,
     },
     {
       id: 2,
-      title: "Professional Assembly",
-      description:
-        "Careful assembly by experienced technicians. Вы получаете мощное решение, обеспечивающее высокоскоростную работу.",
-      image: assemblyIcon1,
+      title_en: "PC Stress Testing",
+      title_de: "PC-Stresstest",
+      description_en:
+        "Every PC undergoes a 4-hour stress test with professional software and the latest AAA games – ensuring rock-solid stability and guaranteed performance",
+      description_de:
+        "Jeder PC durchläuft einen 4-stündigen Stresstest mit professioneller Software und den neuesten AAA-Spielen – für absolute Stabilität und garantierte Leistung.",
+      image: assemblyIcon2,
     },
     {
       id: 3,
-      title: "Professional Assembly",
-      description:
-        "Careful assembly by experienced technicians. Вы получаете мощное решение, обеспечивающее высокоскоростную работу.",
-      image: assemblyIcon1,
+      title_en: "Pre-Built PC Delivery",
+      title_de: "Lieferung fertiger PCs",
+      description_en:
+        "We deliver your pre-built PC to any part of the country. You will receive your computer safely and in perfect condition.",
+      description_de:
+        "Wir liefern Ihren fertig aufgebauten PC in jeden Teil des Landes. Sie erhalten Ihren Computer unversehrt und in einwandfreiem Zustand.",
+      image: assemblyIcon3,
     },
   ];
+
+  if (descriptionLoading) {
+    return (
+      <div className="flex justify-center items-center h-screen text-2xl">
+        <Loader />
+      </div>
+    );
+  }
+
+  if (descriptionError) {
+    return (
+      <div className="flex justify-center items-center h-screen text-2xl">
+        {/* {t("error")} */} Error
+      </div>
+    );
+  }
 
   return (
     <section
@@ -170,32 +198,88 @@ export default function AssemblyToOrder() {
           </button>
         </form>
 
-        <div className="image flex flex-col gap-3 lg:gap-5 xl:gap-10 w-full sm:w-1/2">
-          {professionalAssembly.map((item) => (
-            <div
-              key={item.id}
-              className="flex gap-3 lg:gap-10 items-start bg-[#012645] rounded py-3 lg:py-4 px-3 lg:px-7"
-              style={{
-                boxShadow: "0px 4px 12px 0px rgba(0, 0, 0, 0.07)",
-              }}
-            >
-              <div className="image-item w-[32px] h-[32px] lg:w-[50px] lg:h-[50px] flex-shrink-0">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div className="text flex flex-col gap-2 justify-center">
-                <h3 className="font-helvetica text-white text-sm lg:text-xl 2xl:text-2xl font-semibold">
-                  {item.title}
-                </h3>
-                <p className="font-helvetica text-[#fde9e9] font-light text-[10px] lg:text-[14px] xl:text-base">
-                  {item.description}
-                </p>
-              </div>
+        <div className="icons flex flex-col gap-3 lg:gap-5 xl:gap-10 w-full sm:w-1/2">
+          <div
+            key={professionalAssembly[0].id}
+            className="flex gap-3 lg:gap-10 items-start bg-[#012645] rounded py-3 lg:py-4 px-3 lg:px-7"
+            style={{
+              boxShadow: "0px 4px 12px 0px rgba(0, 0, 0, 0.07)",
+            }}
+          >
+            <div className="image-item  flex-shrink-0">
+              <img
+                src={professionalAssembly[0].image}
+                alt={getLocalizedField(professionalAssembly[0], "title", lang)}
+                className="w-full h-full object-contain"
+              />
             </div>
-          ))}
+            <div className="text flex flex-col gap-2 justify-center">
+              <h3 className="font-helvetica text-white text-sm lg:text-xl 2xl:text-2xl font-semibold">
+                {getLocalizedField(professionalAssembly[0], "title", lang)}
+              </h3>
+              <p className="font-helvetica text-[#fde9e9] font-light text-[10px] lg:text-[14px] xl:text-base">
+                {getLocalizedField(
+                  professionalAssembly[0],
+                  "description",
+                  lang
+                )}
+              </p>
+            </div>
+          </div>
+          <div
+            key={professionalAssembly[1].id}
+            className="flex gap-3 lg:gap-10 items-start bg-[#012645] rounded py-3 lg:py-4 px-3 lg:px-7"
+            style={{
+              boxShadow: "0px 4px 12px 0px rgba(0, 0, 0, 0.07)",
+            }}
+          >
+            <div className="image-item  flex-shrink-0">
+              <img
+                src={professionalAssembly[1].image}
+                alt={getLocalizedField(professionalAssembly[1], "title", lang)}
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="text flex flex-col gap-2 justify-center">
+              <h3 className="font-helvetica text-white text-sm lg:text-xl 2xl:text-2xl font-semibold">
+                {getLocalizedField(professionalAssembly[1], "title", lang)}
+              </h3>
+              <p className="font-helvetica text-[#fde9e9] font-light text-[10px] lg:text-[14px] xl:text-base">
+                {getLocalizedField(
+                  professionalAssembly[1],
+                  "description",
+                  lang
+                )}
+              </p>
+            </div>
+          </div>
+          <div
+            key={professionalAssembly[2].id}
+            className="flex gap-3 lg:gap-10 items-start bg-[#012645] rounded py-3 lg:py-4 px-3 lg:px-7"
+            style={{
+              boxShadow: "0px 4px 12px 0px rgba(0, 0, 0, 0.07)",
+            }}
+          >
+            <div className="image-item flex-shrink-0 w-[86px] h-[86px]">
+              <img
+                src={professionalAssembly[2].image}
+                alt={getLocalizedField(professionalAssembly[2], "title", lang)}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="text flex flex-col gap-2 justify-center">
+              <h3 className="font-helvetica text-white text-sm lg:text-xl 2xl:text-2xl font-semibold">
+                {getLocalizedField(professionalAssembly[2], "title", lang)}
+              </h3>
+              <p className="font-helvetica text-[#fde9e9] font-light text-[10px] lg:text-[14px] xl:text-base">
+                {getLocalizedField(
+                  professionalAssembly[2],
+                  "description",
+                  lang
+                )}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <ImagePuzzle />

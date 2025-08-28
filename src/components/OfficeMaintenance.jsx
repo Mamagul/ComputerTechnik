@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import useFetch from "../hooks/useFetch";
 import getLocalizedField from "../utils/localizationHelpers";
+import Loader from "./Loader";
 
 export default function OfficeMaintenance() {
   const { t, i18n } = useTranslation();
@@ -12,7 +13,22 @@ export default function OfficeMaintenance() {
     error: officeServiceError,
   } = useFetch("office_service");
 
-  officeService ? console.log(officeService) : null;
+  // officeService ? console.log(officeService) : null;
+  if (officeServiceLoading) {
+    return (
+      <div className="flex justify-center items-center h-screen text-2xl">
+        <Loader />
+      </div>
+    );
+  }
+
+  if (officeServiceError) {
+    return (
+      <div className="flex justify-center items-center h-screen text-2xl">
+        {/* {t("error")} */} Error
+      </div>
+    );
+  }
   return (
     <section
       id="officeMaintenance"
@@ -37,11 +53,9 @@ export default function OfficeMaintenance() {
               )}
             </span>
             <ul className="list-disc pl-4 ml-4">
-              {officeService[0].office_h4_text[0].office_items.map(
-                (item, index) => (
-                  <li key={item.id}>{getLocalizedField(item, "text", lang)}</li>
-                )
-              )}
+              {officeService[0].office_h4_text[0].office_items.map((item) => (
+                <li key={item.id}>{getLocalizedField(item, "text", lang)}</li>
+              ))}
             </ul>
           </div>
           <div className="item2">
@@ -53,11 +67,9 @@ export default function OfficeMaintenance() {
               )}
             </span>
             <ul className="list-disc pl-4 ml-4">
-              {officeService[0].office_h4_text[1].office_items.map(
-                (item, index) => (
-                  <li key={item.id}>{getLocalizedField(item, "text", lang)}</li>
-                )
-              )}
+              {officeService[0].office_h4_text[1].office_items.map((item) => (
+                <li key={item.id}>{getLocalizedField(item, "text", lang)}</li>
+              ))}
             </ul>
           </div>
           <div className="item3">
@@ -69,11 +81,9 @@ export default function OfficeMaintenance() {
               )}
             </span>
             <ul className="list-disc pl-4 ml-4">
-              {officeService[0].office_h4_text[2].office_items.map(
-                (item, index) => (
-                  <li key={item.id}>{getLocalizedField(item, "text", lang)}</li>
-                )
-              )}
+              {officeService[0].office_h4_text[2].office_items.map((item) => (
+                <li key={item.id}>{getLocalizedField(item, "text", lang)}</li>
+              ))}
             </ul>
           </div>
           <p>{getLocalizedField(officeService[0], "paragraph", lang)}</p>

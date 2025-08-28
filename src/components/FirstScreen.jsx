@@ -3,6 +3,7 @@ import React from "react";
 import useFetch from "../hooks/useFetch.js";
 import { useTranslation } from "react-i18next";
 import getLocalizedField from "../utils/localizationHelpers.js";
+import Loader from "./Loader.jsx";
 
 export default function FirstScreen() {
   const { t, i18n } = useTranslation();
@@ -20,7 +21,7 @@ export default function FirstScreen() {
   if (detailsLoading) {
     return (
       <div className="flex justify-center items-center h-screen text-2xl">
-        {/* {t("loading")} */} Loading
+        <Loader />
       </div>
     );
   }
@@ -71,7 +72,7 @@ export default function FirstScreen() {
       ) : null}
       {/* Mobile */}
       {details && details.length > 0 ? (
-        <section className="first-screen flex sm:hidden bg-no-repeat relative z-10  px-3 lg:px-32 pt-[88px] lg:pt-[152px]">
+        <section className="first-screen flex sm:hidden bg-no-repeat relative z-10  px-3 lg:px-32 pt-[88px] lg:pt-[152px] overflow-hidden">
           <div className="w-full h-[290px] absolute z-[4]">
             <img
               src={details[0].image}

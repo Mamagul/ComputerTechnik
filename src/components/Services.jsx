@@ -6,9 +6,8 @@ import services4 from "../images/services4.svg";
 import serIcon1 from "../images/serIcon1.svg";
 import serIcon2 from "../images/serIcon2.svg";
 import serIcon3 from "../images/serIcon3.svg";
-// import Aurora from "./Aurora";
-import DotGrid from "./effects/DotGrid";
-import useFetch from "../hooks/useFetch";
+import DotGrid from "./effects/DotGrid.jsx";
+import useFetch from "../hooks/useFetch.js";
 import { useTranslation } from "react-i18next";
 import getLocalizedField from "../utils/localizationHelpers";
 import { IoMdPlay } from "react-icons/io";
@@ -17,6 +16,7 @@ import {
   IoVolumeHighSharp,
   IoVolumeMuteSharp,
 } from "react-icons/io5";
+import Loader from "./Loader.jsx";
 
 export default function Services() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -25,7 +25,7 @@ export default function Services() {
   const [volume, setVolume] = useState(1);
   const [showVolumeSlider, setShowVolumeSlider] = useState(false);
   const videoRef = useRef(null);
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const lang = i18n.language;
 
   const {
@@ -114,50 +114,21 @@ export default function Services() {
     }
   };
 
-  const toggleMute = () => {
-    if (videoRef.current) {
-      if (volume > 0) {
-        setVolume(0);
-        videoRef.current.volume = 0;
-      } else {
-        setVolume(1);
-        videoRef.current.volume = 1;
-      }
-    }
-  };
-
-  const getVolumeIcon = () => {
-    if (volume === 0) {
-      return (
-        <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-      );
-    } else if (volume < 0.5) {
-      return (
-        <path d="M18.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM5 9v6h4l5 5V4L9 9H5z" />
-      );
-    } else {
-      return (
-        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-      );
-    }
-  };
-
   if (videoLoading || servicesLoading) {
     return (
-      <section className="services bg-[#E7F1FC] py-5 lg:py-20 px-3 lg:px-28 relative z-20">
-        <div className="flex justify-center items-center h-64">
-          <span className="text-gray-600">Loading...</span>
-        </div>
-      </section>
+      <div className="flex justify-center items-center h-screen text-2xl">
+        <Loader />
+      </div>
     );
   }
 
   if (videoError || servicesError) {
-    console.error("Error loading data:", videoError || servicesError);
+    return (
+      <div className="flex justify-center items-center h-screen text-2xl">
+        {/* {t("error")} */} Error
+      </div>
+    );
   }
-
-  // services ? console.log(services) : null;
-
   const getServiceIcon = (index) => {
     return serviceList[index]?.icon || serIcon1;
   };

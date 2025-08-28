@@ -4,8 +4,8 @@ import getLocalizedField from "../utils/localizationHelpers";
 import useFetch from "../hooks/useFetch";
 import Card from "./Card";
 import catalogBg from "../images/catalog.svg";
-import desktop from "../images/card.png";
 import Aurora from "./Aurora";
+import Loader from "./Loader.jsx";
 
 export default function Catalog() {
   const { t, i18n } = useTranslation();
@@ -44,7 +44,7 @@ export default function Catalog() {
   if (detailsCardLoading || categoryLoading || descriptionLoading) {
     return (
       <div className="flex justify-center items-center h-screen text-2xl">
-        {/* {t("loading")} */} Loading
+        <Loader />
       </div>
     );
   }
@@ -64,7 +64,7 @@ export default function Catalog() {
     return card.category.some((cat) => cat.id === activeCategoryId);
   });
 
-  console.log("filteredCards", filteredCards);
+  // console.log("filteredCards", filteredCards);
 
   return (
     <section
