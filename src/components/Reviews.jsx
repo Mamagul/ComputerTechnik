@@ -5,7 +5,7 @@ import google from "../images/google.svg";
 
 export default function Reviews() {
   const { t } = useTranslation();
-  const [expandedReviews, setExpandedReviews] = useState({});
+  const [expandedReviews] = useState({});
 
   // Функция для расчета относительного времени
   const getRelativeTime = (dateString) => {

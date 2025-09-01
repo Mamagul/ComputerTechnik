@@ -32,7 +32,7 @@ export default function Contacts() {
             info@so-computertechnik.de
           </p>
           <p className="flex gap-3 lg:gap-6 text-white text-[10px] sm:text-xs lg:text-base w-[165px] lg:w-full">
-            <SlLocationPin className="text-[#019ee2] w-5 h-5" />
+            <SlLocationPin className="text-[#019ee2] w-5 h-5 lg:w-8 lg:h-8" />
             Kieler Str. 103-107/entrance D, 25474 Bönningstedt
           </p>
         </div>
@@ -60,7 +60,7 @@ export default function Contacts() {
         width="600"
         height="450"
         style={{ border: 0 }}
-        className="w-full h-[250px] sm:h-[312px] lg:h-[513px] xl:h-[582px]"
+        className="w-full h-[250px] sm:h-[312px] lg:h-[513px] xl:h-[578px]"
         allowFullScreen=""
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"

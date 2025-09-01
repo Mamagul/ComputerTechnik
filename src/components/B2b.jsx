@@ -14,6 +14,38 @@ export default function B2b() {
     error: b2bError,
   } = useFetch("optom_buy");
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    // if (element) {
+    //   element.scrollIntoView({
+    //     behavior: "smooth",
+    //     block: "start",
+    //   });
+    // }
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top;
+      // Определяем отступ в зависимости от размера экрана
+      let offset = 100; // по умолчанию для десктопа
+
+      if (window.innerWidth < 480) {
+        offset = 80; // мобильные устройства
+      } else if (window.innerWidth < 768) {
+        offset = 100; // планшеты портрет
+      } else if (window.innerWidth < 1024) {
+        offset = 110; // планшеты ландшафт
+      } else if (window.innerWidth < 1440) {
+        offset = 115; // небольшие десктопы
+      } else {
+        offset = 140; // большие экраны
+      }
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
   // b2b ? console.log(b2b) : null;
   if (b2bLoading) {
     return (
@@ -44,11 +76,14 @@ export default function B2b() {
                 {getLocalizedField(b2b[0], "title", lang)}:
               </p>
               <ul className="list-disc pl-0 lg:pl-4 ml-0 lg:ml-4 text-sm lg:text-2xl font-normal marker:text-[#019ee2] space-y-7">
-                {b2b[0].optom_buy_items.map((item, index) => (
+                {b2b[0].optom_buy_items.map((item) => (
                   <li key={item.id}>{getLocalizedField(item, "text", lang)}</li>
                 ))}
               </ul>
-              <button className="hidden sm:block bg-[#019ee2] py-4 text-white w-[338px] rounded text-[10px] sm:text-xs lg:text-base">
+              <button
+                className="hidden sm:block bg-[#019ee2] py-4 text-white w-[338px] rounded text-[10px] sm:text-xs lg:text-base"
+                onClick={() => scrollToSection("customBuild")}
+              >
                 {t("b2b.button")}
               </button>
             </div>
