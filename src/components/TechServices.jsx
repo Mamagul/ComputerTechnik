@@ -1,6 +1,10 @@
 import React from "react";
-import wallClock from "../images/wall-clock.svg";
-import guarantee from "../images/guarantee.svg";
+import tech1 from "../../public/icons/tech1.svg";
+import tech2 from "../../public/icons/tech2.svg";
+import tech3 from "../../public/icons/tech3.svg";
+import tech4 from "../../public/icons/tech4.svg";
+import tech5 from "../../public/icons/tech5.svg";
+import tech6 from "../../public/icons/tech6.svg";
 import { useTranslation } from "react-i18next";
 import useFetch from "../hooks/useFetch";
 import getLocalizedField from "../utils/localizationHelpers";
@@ -19,32 +23,32 @@ export default function TechServices() {
   const techServicesData = [
     {
       id: 1,
-      image: wallClock,
+      image: tech1,
       description: t("techServices.items.1"),
     },
     {
       id: 2,
-      image: wallClock,
+      image: tech4,
       description: t("techServices.items.2"),
     },
     {
       id: 3,
-      image: guarantee,
+      image: tech2,
       description: t("techServices.items.3"),
     },
     {
       id: 4,
-      image: guarantee,
+      image: tech5,
       description: t("techServices.items.4"),
     },
     {
       id: 5,
-      image: wallClock,
+      image: tech3,
       description: t("techServices.items.5"),
     },
     {
       id: 6,
-      image: guarantee,
+      image: tech6,
       description: t("techServices.items.6"),
     },
   ];
