@@ -101,7 +101,7 @@ export default function Catalog() {
                     );
                     setActiveCategoryId(category.id);
                   }}
-                  className={`font-helvetica w-[70px] sm:w-full text-[8px] sm:text-base md:text-lg font-light rounded px-[2px] sm:px-[10px] lg:px-4 py-0 sm:py-2 lg:py-2 transition-all duration-300 border-[1px] whitespace-normal sm:whitespace-nowrap ${
+                  className={`font-helvetica w-full text-[8px] sm:text-base md:text-lg font-light rounded-[2px] lg:rounded  px-[10px] lg:px-4 py-0 sm:py-2 lg:py-2 transition-all duration-300 border-[1px] whitespace-normal sm:whitespace-nowrap ${
                     activeCategory === getLocalizedField(category, "name", lang)
                       ? "bg-[#e7f1fc] text-[#263238] border-[#263238]"
                       : "bg-transparent text-[#fffefe] border-[#fffefe] hover:bg-[#e7f1fc] hover:text-[#263238] hover:border-[#263238]"

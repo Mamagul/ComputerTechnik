@@ -8,7 +8,7 @@ export default function ImagePuzzle() {
   return (
     <>
       {/* Desktop */}
-      <div className="puzzle-grid hidden sm:grid grid-cols-4 gap-4 h-full">
+      <div className="puzzle-grid hidden sm:grid grid-cols-4 gap-4 h-full w-full">
         <div className="puzzle-item">
           <img
             src={puzzle1}

@@ -137,7 +137,10 @@ export default function Header() {
                       </a>
                     </li>
                     <li className="header-menu-item py-0 lg:py-2">
-                      <a href="https://computershophamburg.de/en/collections/laptop">
+                      <a
+                        href="https://computershophamburg.de/en/collections/laptop"
+                        target="_blank"
+                      >
                         {t("catalog.title")}
                       </a>
                     </li>
@@ -156,7 +159,7 @@ export default function Header() {
                 </div>
                 <button
                   onClick={() => scrollToSection("customBuild")}
-                  className="header-button font-helvetica p-[5px] lg:p-[10px] bg-none border-[1px] border-[#019ee2] rounded text-[#019ee2] text-[10px] lg:text-base font-normal min-w-[90px] lg:min-w-[178px] whitespace-nowrap"
+                  className="header-button font-helvetica p-[5px] lg:p-[10px] bg-none border-[1px] border-[#019ee2] rounded-[2px] lg:rounded  text-[#019ee2] text-[10px] lg:text-base font-normal min-w-[90px] lg:min-w-[178px] whitespace-nowrap"
                 >
                   {t("header.leaveRequest")}
                 </button>
@@ -176,7 +179,7 @@ export default function Header() {
 
       {/* Mobile Sidebar */}
       <div
-        className={`fixed top-[38px] right-0 h-fit w-80 bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-50 sm:hidden rounded-bl ${
+        className={`fixed top-[38px] right-0 h-fit w-52 bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-50 sm:hidden rounded-bl-[2px] lg:rounded-bl ${
           isSidebarOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -273,28 +276,6 @@ export default function Header() {
               </li>
             </ul>
           </nav>
-
-          {/* Sidebar Footer */}
-          {/* <div className="p-2 border-t border-gray-200">
-            <div className="flex flex-col gap-4">
-              <div className="flex justify-start gap-4 pl-2">
-                <a href="#" className="w-8 h-8">
-                  <img
-                    src={whatsapp}
-                    alt="whatsapp"
-                    className="w-full h-full"
-                  />
-                </a>
-                <a href="#" className="w-8 h-8">
-                  <img
-                    src={telegram}
-                    alt="telegram"
-                    className="w-full h-full"
-                  />
-                </a>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
     </>

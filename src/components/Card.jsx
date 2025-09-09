@@ -17,13 +17,13 @@ export default function Card({ image, title, description, available }) {
 
   return (
     <div
-      className="card border-[1px] border-[#019ee2] bg-[#26323870] rounded-[4px] flex flex-col justify-between min-h-[256px] sm:min-h-[310px] lg:min-h-[450px] w-full max-w-sm mx-auto overflow-hidden"
+      className="card border-[1px] border-[#019ee2] bg-[#26323870] rounded-[2px] lg:rounded  flex flex-col justify-between min-h-[256px] sm:min-h-[310px] lg:min-h-[450px] w-full max-w-sm mx-auto overflow-hidden"
       style={{
         boxShadow: "0px 4px 12px 0px rgba(255, 255, 255, 0.07)",
       }}
     >
       <div className="card-content flex flex-col gap-2 lg:gap-4 p-3 lg:p-6 overflow-hidden">
-        <div className="card-image relative min-w-[130px] min-h-[150px] sm:min-w-[184px] sm:min-h-[116px] overflow-hidden rounded">
+        <div className="card-image relative min-w-[130px] min-h-[150px] sm:min-w-[184px] sm:min-h-[116px] overflow-hidden rounded-[2px] lg:rounded">
           <img src={image} alt="card" className="w-full h-full object-cover" />
         </div>
         <div className="card-title text-[#fffafa] text-center text-sm lg:text-2xl font-bold">
@@ -50,6 +50,7 @@ export default function Card({ image, title, description, available }) {
         </div>
         <a
           href="https://computershophamburg.de/en/collections/laptop"
+          target="_blank"
           className="card-button-text bg-[#019ee2] text-[#fffafa] rounded py-2 w-full max-w-[200px] sm:max-w-[240px] text-center text-[8px] sm:text-[10px] lg:text-base font-medium"
         >
           {t("catalog.getPrice")}

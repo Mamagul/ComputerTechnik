@@ -48,7 +48,7 @@ export default function Contacts() {
           <a
             href="https://computershophamburg.de/en/pages/kontaktformular"
             target="_blank"
-            className="font-helvetica py-[10px] w-full bg-[#019ee2] text-center text-white font-normal whitespace-nowrap text-[10px] sm:text-xs lg:text-base rounded"
+            className="font-helvetica py-2 lg:py-[10px] w-full bg-[#019ee2] text-center text-white font-normal whitespace-nowrap text-[10px] sm:text-xs lg:text-base rounded-[2px] lg:rounded "
           >
             {t("contact.button")}
           </a>

@@ -63,13 +63,13 @@ export default function About() {
       <h2 className="block lg:hidden font-PlayfairDisplay text-center text-xl sm:text-2xl lg:text-4xl xl:text-[40px] font-bold w-full">
         {t("about.title")}
       </h2>
-      <div className="flex flex-col sm:flex-row w-full gap-8 lg:gap-16">
+      <div className="flex flex-col sm:flex-row w-full gap-4 lg:gap-16">
         {details && details.length > 0 ? (
           <div className="images grid grid-cols-2 gap-3 lg:gap-[30px] w-full sm:w-[50%]">
             <div className="2img grid grid-rows-[192px_1fr] lg:grid-rows-[344px_1fr] gap-3 lg:gap-[30px]">
-              <div className="img1 rounded relative h-[192px] lg:h-[344px]">
+              <div className="img1 rounded-[2px] lg:rounded relative h-[192px] lg:h-[344px]">
                 <div
-                  className="absolute -top-4 lg:-top-8 -left-4 lg:-left-11 bg-[#FAF8F8] rounded w-[80px] lg:w-[150px] h-[60px] lg:h-[116px] flex flex-col items-center justify-center font-semibold"
+                  className="absolute -top-4 lg:-top-8 -left-4 lg:-left-11 bg-[#FAF8F8] rounded-[2px] lg:rounded w-[80px] lg:w-[150px] h-[60px] lg:h-[116px] flex flex-col items-center justify-center font-semibold"
                   style={{ boxShadow: "0px 4px 16px 0px rgba(0, 0, 0, 0.07)" }}
                 >
                   <span className="font-PlayfairDisplay text-xl lg:text-4xl text-black">
@@ -82,26 +82,26 @@ export default function About() {
                 <img
                   src={details[0].image_1}
                   alt=""
-                  className="w-full h-full object-cover rounded"
+                  className="w-full h-full object-cover rounded-[2px] lg:rounded"
                 />
               </div>
-              <div className="img2 rounded h-[92px] lg:h-[196px]">
+              <div className="img2 rounded-[2px] lg:rounded h-[92px] lg:h-[196px]">
                 <img
                   src={details[0].image_3}
                   alt=""
-                  className="w-full h-full object-cover rounded"
+                  className="w-full h-full object-cover rounded-[2px] lg:rounded"
                 />
               </div>
             </div>
             <div className="img3 flex items-center justify-center">
-              <div className="rounded h-[205px] lg:h-[390px] relative">
+              <div className="rounded-[2px] lg:rounded h-[205px] lg:h-[390px] relative">
                 <img
                   src={details[0].image_2}
                   alt=""
-                  className="w-full h-full object-cover rounded"
+                  className="w-full h-full object-cover rounded-[2px] lg:rounded"
                 />
                 <div
-                  className="absolute -bottom-7 lg:-bottom-20 left-7 lg:left-18 bg-[#FAF8F8] rounded w-[80px] lg:w-[150px] h-[60px] lg:h-[116px] flex flex-col items-center justify-center font-semibold"
+                  className="absolute -bottom-7 lg:-bottom-20 left-7 lg:left-18 bg-[#FAF8F8] rounded-[2px] lg:rounded w-[80px] lg:w-[150px] h-[60px] lg:h-[116px] flex flex-col items-center justify-center font-semibold"
                   style={{ boxShadow: "0px 4px 16px 0px rgba(0, 0, 0, 0.07)" }}
                 >
                   <span className="font-PlayfairDisplay text-xl lg:text-4xl text-black">
@@ -115,7 +115,7 @@ export default function About() {
             </div>
           </div>
         ) : null}
-        <div className="textCards w-full sm:w-[50%] flex flex-col items-start gap-3 lg:gap-8 xl:gap-14">
+        <div className="textCards w-full sm:w-[50%] flex flex-col items-start gap-3 lg:gap-8 xl:gap-10">
           <div className="text flex flex-col items-start justify-center gap-6">
             <h2 className="font-PlayfairDisplay hidden lg:block text-xl sm:text-2xl lg:text-4xl xl:text-[40px] font-bold">
               {t("about.title")}
@@ -126,12 +126,12 @@ export default function About() {
                 : null}
             </p>
           </div>
-          <div className="cards grid grid-cols-2 grid-rows-2 gap-3 lg:gap-10">
+          <div className="cards grid grid-cols-2 grid-rows-2 gap-3 lg:gap-x-7 lg:gap-y-5">
             {cards.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className="flex flex-col justify-start items-center gap-[10px] bg-[#012645] rounded p-4 border border-[#019ee2]"
+                  className="flex flex-col justify-start items-center gap-[10px] bg-[#012645] rounded-[2px] lg:rounded p-4 border border-[#019ee2]"
                 >
                   <div className="h-9 lg:h-16">
                     <img src={item.image} alt="" className="h-full" />

@@ -59,7 +59,7 @@ export default function Upgrade() {
         </div>
         {upgrade && upgrade.length > 1 ? (
           <div className="twoCard container1 flex flex-col sm:flex-row gap-5 lg:gap-8 w-full px-3 sm:px-6 lg:px-0">
-            <div className="firstCard flex flex-col w-full sm:w-1/2 bg-[#012749] rounded">
+            <div className="firstCard flex flex-col w-full sm:w-1/2 bg-[#012749] rounded-[2px] lg:rounded ">
               <div className="img h-[190px] lg:h-[345px]">
                 <img
                   src={upgrade[0].image}
@@ -84,7 +84,7 @@ export default function Upgrade() {
                 </ul>
               </div>
             </div>
-            <div className="secondCard flex flex-col w-full sm:w-1/2 bg-[#012749] rounded">
+            <div className="secondCard flex flex-col w-full sm:w-1/2 bg-[#012749] rounded-[2px] lg:rounded ">
               <div className="img h-[190px] lg:h-[345px]">
                 <img
                   src={upgrade[1].image}

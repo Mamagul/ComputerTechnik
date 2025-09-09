@@ -92,11 +92,11 @@ export default function TechServices() {
               </p>
             </div>
             <div className="techServicesContent flex flex-col sm:flex-row sm:justify-between items-center lg:items-start gap-4 lg:gap-8">
-              <div className="w-full sm:w-2/5 h-[204px] lg:h-[400px] px-10 sm:px-0 rounded">
+              <div className="w-full sm:w-2/5 h-[204px] lg:h-[400px] px-10 sm:px-0 rounded-[2px] lg:rounded ">
                 <img
                   src={details[0].image_2}
                   alt="techServices"
-                  className="w-full h-full object-cover rounded"
+                  className="w-full h-full object-cover rounded-[2px] lg:rounded "
                 />
               </div>
               <div className="techServicesIcons flex flex-col justify-start items-start gap-4 lg:gap-10 w-full sm:w-3/5">

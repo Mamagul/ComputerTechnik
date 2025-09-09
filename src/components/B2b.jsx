@@ -75,19 +75,19 @@ export default function B2b() {
               <p className="font-bold text-xs sm:text-base lg:text-xl pt-4 lg:pt-0">
                 {getLocalizedField(b2b[0], "title", lang)}:
               </p>
-              <ul className="list-disc pl-0 lg:pl-4 ml-0 lg:ml-4 text-sm lg:text-2xl font-normal marker:text-[#019ee2] space-y-7">
+              <ul className="list-disc pl-0 lg:pl-4 ml-0 lg:ml-4 text-sm lg:text-2xl font-normal marker:text-[#019ee2] space-y-2 lg:space-y-7">
                 {b2b[0].optom_buy_items.map((item) => (
                   <li key={item.id}>{getLocalizedField(item, "text", lang)}</li>
                 ))}
               </ul>
               <button
-                className="hidden sm:block bg-[#019ee2] py-4 text-white w-[338px] rounded text-[10px] sm:text-xs lg:text-base"
+                className="hidden sm:block bg-[#019ee2] py-4 text-white w-[338px] rounded-[2px] lg:rounded text-[10px] sm:text-xs lg:text-base"
                 onClick={() => scrollToSection("customBuild")}
               >
                 {t("b2b.button")}
               </button>
             </div>
-            <button className="flex sm:hidden justify-center items-center bg-[#019ee2] py-4 text-white w-[338px] rounded text-[10px] lg:text-base">
+            <button className="flex sm:hidden justify-center items-center bg-[#019ee2] py-4 text-white w-[338px] rounded-[2px] lg:rounded text-[10px] lg:text-base">
               {t("b2b.button")}
             </button>
             <div className="image w-[310px] lg:w-[500px] h-[310px] lg:h-[500px] ">

@@ -112,83 +112,85 @@ export default function AssemblyToOrder() {
       <div className="form flex flex-col sm:flex-row items-center sm:items-start gap-4 lg:gap-10">
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-5 lg:gap-10 bg-[#011729b0] rounded  p-5 lg:p-10 w-[85%] sm:w-1/2"
+          className="flex flex-col justify-between bg-[#011729b0] rounded-[2px] lg:rounded  p-5 lg:p-10 w-[85%] sm:w-1/2 lg:w-[40%] xl:h-[408px]"
         >
-          <div className="flex flex-col gap-2">
-            <label className="font-helvetica text-[#019ee2] text-xs sm:text-sm lg:text-[18px] font-normal">
-              Contact Details
-            </label>
-            <div className="flex flex-col gap-2 bg-[#012749] rounded border border-[#013761]">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email"
-                className="text-white px-[10px] py-2 bg-transparent outline-none text-xs sm:text-sm lg:text-base"
-                required
-              />
-            </div>
-          </div>
-
-          <div className="radio flex flex-col gap-4">
-            <div className="flex gap-1">
-              <label className="inline-flex items-center">
-                <input
-                  type="radio"
-                  name="option"
-                  value={1}
-                  checked={selectedOption === 1}
-                  onChange={() => setSelectedOption(1)}
-                  className="sr-only peer"
-                />
-                <div className="w-[15px] h-[15px] sm:w-[24px] sm:h-[24px] lg:w-[30px] lg:h-[30px] rounded-full border border-[#70aac3] peer-checked:bg-transparent transition-colors duration-200 flex items-center justify-center">
-                  {selectedOption === 1 && (
-                    <div className="w-[9px] h-[9px] sm:w-[13px] sm:h-[13px] lg:w-[18px] lg:h-[18px] rounded-full bg-[#019ee2] transition-transform duration-200" />
-                  )}
-                </div>
+          <div className="form-header flex flex-col gap-5 lg:gap-10 pb-5 lg:pb-0">
+            <div className="flex flex-col gap-2">
+              <label className="font-helvetica text-[#019ee2] text-xs sm:text-sm lg:text-[18px] font-normal">
+                Contact Details
               </label>
-              <span className="font-helvetica ml-3 lg:ml-9 font-normal text-sm lg:text-xl 2xl:text-2xl text-white">
-                {t("customBuild.wholesale")}
-              </span>
-            </div>
-            <div className="flex gap-1">
-              <label className="inline-flex items-center">
+              <div className="flex flex-col gap-2 bg-[#012749] rounded border border-[#013761]">
                 <input
-                  type="radio"
-                  name="option"
-                  value={2}
-                  checked={selectedOption === 2}
-                  onChange={() => setSelectedOption(2)}
-                  className="sr-only peer"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Email"
+                  className="text-white px-[10px] py-[10px] bg-transparent outline-none text-xs sm:text-sm lg:text-base"
+                  required
                 />
-                <div className="w-[15px] h-[15px] sm:w-[24px] sm:h-[24px] lg:w-[30px] lg:h-[30px] rounded-full border border-[#70aac3] peer-checked:bg-transparent transition-colors duration-200 flex items-center justify-center">
-                  {selectedOption === 2 && (
-                    <div className="w-[9px] h-[9px] sm:w-[13px] sm:h-[13px] lg:w-[18px] lg:h-[18px] rounded-full bg-[#019ee2] transition-transform duration-200" />
-                  )}
-                </div>
-              </label>
-              <span className="font-helvetica ml-3 lg:ml-9 font-normal text-sm lg:text-xl 2xl:text-2xl text-white">
-                {t("customBuild.retail")}
-              </span>
+              </div>
             </div>
+
+            <div className="radio flex flex-col gap-4">
+              <div className="flex gap-1">
+                <label className="inline-flex items-center">
+                  <input
+                    type="radio"
+                    name="option"
+                    value={1}
+                    checked={selectedOption === 1}
+                    onChange={() => setSelectedOption(1)}
+                    className="sr-only peer"
+                  />
+                  <div className="w-[15px] h-[15px] sm:w-[24px] sm:h-[24px] lg:w-[30px] lg:h-[30px] rounded-full border border-[#70aac3] peer-checked:bg-transparent transition-colors duration-200 flex items-center justify-center">
+                    {selectedOption === 1 && (
+                      <div className="w-[9px] h-[9px] sm:w-[13px] sm:h-[13px] lg:w-[18px] lg:h-[18px] rounded-full bg-[#019ee2] transition-transform duration-200" />
+                    )}
+                  </div>
+                </label>
+                <span className="font-helvetica ml-3 lg:ml-9 font-normal text-sm lg:text-xl 2xl:text-2xl text-white">
+                  {t("customBuild.wholesale")}
+                </span>
+              </div>
+              <div className="flex gap-1">
+                <label className="inline-flex items-center">
+                  <input
+                    type="radio"
+                    name="option"
+                    value={2}
+                    checked={selectedOption === 2}
+                    onChange={() => setSelectedOption(2)}
+                    className="sr-only peer"
+                  />
+                  <div className="w-[15px] h-[15px] sm:w-[24px] sm:h-[24px] lg:w-[30px] lg:h-[30px] rounded-full border border-[#70aac3] peer-checked:bg-transparent transition-colors duration-200 flex items-center justify-center">
+                    {selectedOption === 2 && (
+                      <div className="w-[9px] h-[9px] sm:w-[13px] sm:h-[13px] lg:w-[18px] lg:h-[18px] rounded-full bg-[#019ee2] transition-transform duration-200" />
+                    )}
+                  </div>
+                </label>
+                <span className="font-helvetica ml-3 lg:ml-9 font-normal text-sm lg:text-xl 2xl:text-2xl text-white">
+                  {t("customBuild.retail")}
+                </span>
+              </div>
+            </div>
+
+            {error && (
+              <div className="font-helvetica text-center py-2 px-4 rounded-[2px] lg:rounded  text-red-400 bg-red-900/20">
+                {error}
+              </div>
+            )}
+
+            {success && (
+              <div className="font-helvetica text-center py-2 px-4 rounded-[2px] lg:rounded  text-green-400 bg-green-900/20">
+                Catalog sent successfully!
+              </div>
+            )}
           </div>
-
-          {error && (
-            <div className="font-helvetica text-center py-2 px-4 rounded text-red-400 bg-red-900/20">
-              {error}
-            </div>
-          )}
-
-          {success && (
-            <div className="font-helvetica text-center py-2 px-4 rounded text-green-400 bg-green-900/20">
-              Catalog sent successfully!
-            </div>
-          )}
 
           <button
             type="submit"
             disabled={isLoading}
-            className={`font-helvetica py-[10px] rounded transition-colors font-normal text-[10px] lg:text-base ${
+            className={`font-helvetica py-[10px] rounded-[2px] lg:rounded transition-colors font-normal text-[10px] lg:text-base ${
               isLoading
                 ? "bg-gray-600 text-gray-300 cursor-not-allowed"
                 : "bg-[#019ee2] text-[#fffafa] hover:bg-[#0186c7]"
@@ -198,15 +200,15 @@ export default function AssemblyToOrder() {
           </button>
         </form>
 
-        <div className="icons flex flex-col gap-3 lg:gap-5 xl:gap-10 w-full sm:w-1/2">
+        <div className="icons flex flex-col gap-3 lg:gap-5 xl:gap-[30px] w-full sm:w-1/2 lg:w-[60%]">
           <div
             key={professionalAssembly[0].id}
-            className="flex gap-3 lg:gap-10 items-start bg-[#012645] rounded py-3 lg:py-4 px-3 lg:px-7"
+            className="flex gap-2 lg:gap-7 items-center bg-[#012645] rounded-[2px] lg:rounded py-2 2xl:py-4 px-3 lg:px-7 lg:h-[116px]"
             style={{
               boxShadow: "0px 4px 12px 0px rgba(0, 0, 0, 0.07)",
             }}
           >
-            <div className="image-item  flex-shrink-0">
+            <div className="image-item flex-shrink-0">
               <img
                 src={professionalAssembly[0].image}
                 alt={getLocalizedField(professionalAssembly[0], "title", lang)}
@@ -214,10 +216,10 @@ export default function AssemblyToOrder() {
               />
             </div>
             <div className="text flex flex-col gap-2 justify-center">
-              <h3 className="font-helvetica text-white text-sm lg:text-xl 2xl:text-2xl font-semibold">
+              <h3 className="font-helvetica text-white text-sm lg:text-xl 2xl:text-2xl font-normal">
                 {getLocalizedField(professionalAssembly[0], "title", lang)}
               </h3>
-              <p className="font-helvetica text-[#fde9e9] font-light text-[10px] lg:text-[14px] xl:text-base">
+              <p className="font-helvetica text-[#fde9e9] font-light text-[10px] lg:text-[14px]">
                 {getLocalizedField(
                   professionalAssembly[0],
                   "description",
@@ -228,12 +230,12 @@ export default function AssemblyToOrder() {
           </div>
           <div
             key={professionalAssembly[1].id}
-            className="flex gap-3 lg:gap-10 items-start bg-[#012645] rounded py-3 lg:py-4 px-3 lg:px-7"
+            className="flex gap-2 lg:gap-7 items-center bg-[#012645] rounded-[2px] lg:rounded py-2 2xl:py-4 px-3 lg:px-7 lg:h-[116px]"
             style={{
               boxShadow: "0px 4px 12px 0px rgba(0, 0, 0, 0.07)",
             }}
           >
-            <div className="image-item  flex-shrink-0">
+            <div className="image-item flex-shrink-0">
               <img
                 src={professionalAssembly[1].image}
                 alt={getLocalizedField(professionalAssembly[1], "title", lang)}
@@ -241,10 +243,10 @@ export default function AssemblyToOrder() {
               />
             </div>
             <div className="text flex flex-col gap-2 justify-center">
-              <h3 className="font-helvetica text-white text-sm lg:text-xl 2xl:text-2xl font-semibold">
+              <h3 className="font-helvetica text-white text-sm lg:text-xl 2xl:text-2xl font-normal">
                 {getLocalizedField(professionalAssembly[1], "title", lang)}
               </h3>
-              <p className="font-helvetica text-[#fde9e9] font-light text-[10px] lg:text-[14px] xl:text-base">
+              <p className="font-helvetica text-[#fde9e9] font-light text-[10px] lg:text-[14px]">
                 {getLocalizedField(
                   professionalAssembly[1],
                   "description",
@@ -255,7 +257,7 @@ export default function AssemblyToOrder() {
           </div>
           <div
             key={professionalAssembly[2].id}
-            className="flex gap-3 lg:gap-10 items-start bg-[#012645] rounded py-3 lg:py-4 px-3 lg:px-7"
+            className="flex gap-3 lg:gap-7 items-center bg-[#012645] rounded-[2px] lg:rounded py-2 2xl:py-4 px-3 lg:px-7 lg:h-[116px]"
             style={{
               boxShadow: "0px 4px 12px 0px rgba(0, 0, 0, 0.07)",
             }}
@@ -268,10 +270,10 @@ export default function AssemblyToOrder() {
               />
             </div>
             <div className="text flex flex-col gap-2 justify-center">
-              <h3 className="font-helvetica text-white text-sm lg:text-xl 2xl:text-2xl font-semibold">
+              <h3 className="font-helvetica text-white text-sm lg:text-xl 2xl:text-2xl font-normal">
                 {getLocalizedField(professionalAssembly[2], "title", lang)}
               </h3>
-              <p className="font-helvetica text-[#fde9e9] font-light text-[10px] lg:text-[14px] xl:text-base">
+              <p className="font-helvetica text-[#fde9e9] font-light text-[10px] lg:text-[14px]">
                 {getLocalizedField(
                   professionalAssembly[2],
                   "description",

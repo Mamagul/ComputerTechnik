@@ -94,7 +94,7 @@ export default function Reviews() {
         {reviews.map((review) => (
           <div
             key={review.id}
-            className="bg-white p-2 lg:p-5 flex flex-col justify-between gap-5 rounded min-w-[180px] sm:min-w-[210px] lg:min-w-[300px]"
+            className="bg-white p-2 lg:p-5 flex flex-col justify-between gap-5 rounded-[2px] lg:rounded  min-w-[180px] sm:min-w-[210px] lg:min-w-[300px]"
           >
             <div className="starsReview flex flex-col gap-5">
               <div className="stars flex items-center justify-between gap-4">

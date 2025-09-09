@@ -6,6 +6,7 @@ import services4 from "../images/services4.svg";
 import serIcon1 from "../images/serIcon1.svg";
 import serIcon2 from "../images/serIcon2.svg";
 import serIcon3 from "../images/serIcon3.svg";
+import serIcon4 from "../images/serIcon4.svg";
 import DotGrid from "./effects/DotGrid.jsx";
 import useFetch from "../hooks/useFetch.js";
 import { useTranslation } from "react-i18next";
@@ -66,7 +67,7 @@ export default function Services() {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
       image: services4,
-      icon: serIcon1,
+      icon: serIcon4,
     },
   ];
   const togglePlay = () => {
@@ -172,15 +173,15 @@ export default function Services() {
                   key={service.id}
                   className="service-card flex flex-col gap-1 lg:gap-5 group h-full"
                 >
-                  <div className="img-container flex items-center justify-center rounded shadow-soft p-[1px] group-hover:p-0 group-hover:border group-hover:border-[#019ee2]">
+                  <div className="img-container flex items-center justify-center rounded-[2px] lg:rounded shadow-soft p-[1px] group-hover:p-0 group-hover:border group-hover:border-[#019ee2]">
                     <img
                       src={service.image}
                       alt={getLocalizedField(service, "title", lang)}
-                      className="w-full h-full object-cover rounded"
+                      className="w-full h-full object-cover rounded-[2px] lg:rounded "
                     />
                   </div>
-                  <div className="content-container flex justify-between rounded bg-white p-2 lg:p-5 group-hover:bg-[#019ee2] h-full">
-                    <div className="title-container flex flex-col gap-1 lg:gap-3 font-helvetica text-[#1F1F1F] w-[70%]">
+                  <div className="content-container flex justify-between rounded-[2px] lg:rounded bg-white p-2 lg:p-5 group-hover:bg-[#019ee2] h-full">
+                    <div className="title-container flex flex-col justify-start font-helvetica text-[#1F1F1F] w-[70%]">
                       <h3 className="text-[14px] lg:text-xl xl:text-2xl font-normal">
                         {getLocalizedField(service, "title", lang)}
                       </h3>
