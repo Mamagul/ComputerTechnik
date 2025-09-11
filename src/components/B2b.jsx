@@ -71,8 +71,11 @@ export default function B2b() {
         </h2>
         {b2b && b2b.length > 0 ? (
           <div className="flex flex-col-reverse sm:flex-row justify-center lg:justify-between items-center sm:items-start">
+            <button className="flex sm:hidden justify-center items-center bg-[#019ee2] py-2 text-white w-[338px] rounded-[2px] lg:rounded text-[10px] lg:text-base mt-5">
+              {t("b2b.button")}
+            </button>
             <div className="text flex flex-col gap-3 sm:gap-5 lg:gap-8 font-helvetica text-black">
-              <p className="font-bold text-xs sm:text-base lg:text-xl pt-4 lg:pt-0">
+              <p className="font-bold text-xs sm:text-base lg:text-xl">
                 {getLocalizedField(b2b[0], "title", lang)}:
               </p>
               <ul className="list-disc pl-0 lg:pl-4 ml-0 lg:ml-4 text-sm lg:text-2xl font-normal marker:text-[#019ee2] space-y-2 lg:space-y-7">
@@ -87,9 +90,6 @@ export default function B2b() {
                 {t("b2b.button")}
               </button>
             </div>
-            <button className="flex sm:hidden justify-center items-center bg-[#019ee2] py-4 text-white w-[338px] rounded-[2px] lg:rounded text-[10px] lg:text-base">
-              {t("b2b.button")}
-            </button>
             <div className="image w-[310px] lg:w-[500px] h-[310px] lg:h-[500px] ">
               <img
                 src={b2bImage}

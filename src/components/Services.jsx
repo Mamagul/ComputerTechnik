@@ -201,7 +201,7 @@ export default function Services() {
             : null}
         </div>
         {video && video.length > 0 ? (
-          <div className="bg-blue-900 mt-5 lg:mt-[50px] xl:mt-[85px] h-[25vh] sm:h-[32vh] lg:h-[60vh] xl:h-[75vh] flex justify-center items-center relative rounded-lg overflow-hidden">
+          <div className="bg-blue-900 mt-5 lg:mt-[50px] xl:mt-[85px] h-[25vh] sm:h-[45vh] md:h-[62vh] lg:h-[72vh] xl:h-[76vh] flex justify-center items-center relative rounded-lg overflow-hidden">
             <video
               ref={videoRef}
               src={video[0].video}

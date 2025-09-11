@@ -135,9 +135,9 @@
     "email": "Email"
   },
   "cookie": {
-    "description": "By clicking “Accept All Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
-    "buttonSettings": "Cookie Settings",
-    "buttonAccept": "Accept All Cookies"
+    "description": "By clicking “Accept all cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+    "buttonSettings": "Cookie settings",
+    "buttonAccept": "Accept all cookies"
   },
   "time": {
     "today": "today",
