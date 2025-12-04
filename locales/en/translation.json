@@ -2,7 +2,7 @@
   "header": {
     "about": "About",
     "catalog": "Catalog",
-    "customBuild": "Custom Build",
+    "ourServices": "Services",
     "repair": "Repair",
     "b2b": "Wholesale",
     "reviews": "Reviews",
@@ -125,7 +125,7 @@
     "readLess": "Read less"
   },
   "contact": {
-    "title": "Contact",
+    "title": "Contacts",
     "description": "Get in touch with us.",
     "button": "Get in touch"
   },

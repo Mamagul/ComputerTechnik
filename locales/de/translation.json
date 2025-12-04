@@ -2,7 +2,7 @@
   "header": {
     "about": "Über uns",
     "catalog": "Katalog",
-    "customBuild": "Konfigurator",
+    "ourServices": "Dienstleistungen",
     "repair": "Reparatur",
     "b2b": "Großhandel",
     "reviews": "Bewertungen",
@@ -25,7 +25,7 @@
     "comp": "PCs gebaut"
   },
   "catalog": {
-    "title": "Geschäft",
+    "title": "Shop",
     "description": "Hohe Qualität Computertechnologie für jede Bedürfnis",
     "getPrice": "Preisliste anfordern",
     "addRequest": "Zu Anfrage hinzufügen",
@@ -126,7 +126,7 @@
   },
 
   "contact": {
-    "title": "Kontakt",
+    "title": "Kontakte",
     "description": "Nehmen Sie Kontakt mit uns auf.",
     "button": "Jetzt kontaktieren"
   },
