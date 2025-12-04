@@ -1,22 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import assemblyIcon1 from "../../public/icons/iconCB1.svg";
 import assemblyIcon2 from "../../public/icons/iconCB2.svg";
 import assemblyIcon3 from "../../public/icons/iconCB3.svg";
 import assemblyBg from "../images/assemblyBg.jpg";
 import { useTranslation } from "react-i18next";
 import ImagePuzzle from "./ImagePuzzle";
+import LetterGlitch from "./LetterGlitch";
+
 import { useCatalogRequest } from "../hooks/useCatalogRequest";
 import useFetch from "../hooks/useFetch";
 import getLocalizedField from "../utils/localizationHelpers";
 import Loader from "./Loader.jsx";
+import { IoMdPlay } from "react-icons/io";
+import {
+  IoPauseSharp,
+  IoVolumeHighSharp,
+  IoVolumeMuteSharp,
+} from "react-icons/io5";
 
 export default function AssemblyToOrder() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const [volume, setVolume] = useState(1);
+  const [showVolumeSlider, setShowVolumeSlider] = useState(false);
+  const videoRef = useRef(null);
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
   const [selectedOption, setSelectedOption] = useState(1);
   const [email, setEmail] = useState("");
   const { sendCatalogRequest, isLoading, error, success } = useCatalogRequest();
 
+  const {
+    data: video,
+    loading: videoLoading,
+    error: videoError,
+  } = useFetch("main_video");
   const {
     data: description,
     loading: descriptionLoading,
@@ -72,6 +91,66 @@ export default function AssemblyToOrder() {
     },
   ];
 
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  const handleTimeUpdate = () => {
+    if (videoRef.current) {
+      setCurrentTime(videoRef.current.currentTime);
+    }
+  };
+
+  const handleLoadedMetadata = () => {
+    if (videoRef.current) {
+      setDuration(videoRef.current.duration);
+    }
+  };
+
+  const handleSeek = (e) => {
+    if (videoRef.current) {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const pos = (e.clientX - rect.left) / rect.width;
+      videoRef.current.currentTime = pos * duration;
+    }
+  };
+
+  const formatTime = (time) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds.toString().padStart(2, "0")}`;
+  };
+
+  const handleVolumeChange = (e) => {
+    const newVolume = parseFloat(e.target.value);
+    setVolume(newVolume);
+    if (videoRef.current) {
+      videoRef.current.volume = newVolume;
+    }
+  };
+
+  if (videoLoading) {
+    return (
+      <div className="flex justify-center items-center h-screen text-2xl">
+        <Loader />
+      </div>
+    );
+  }
+
+  if (videoError) {
+    return (
+      <div className="flex justify-center items-center h-screen text-2xl">
+        {/* {t("error")} */} Error
+      </div>
+    );
+  }
   if (descriptionLoading) {
     return (
       <div className="flex justify-center items-center h-screen text-2xl">
@@ -91,16 +170,24 @@ export default function AssemblyToOrder() {
   return (
     <section
       id="customBuild"
-      className="assemblytoOrder h-fit flex flex-col justify-center items-center gap-4 lg:gap-14 px-3 sm:px-10 md:px-16 xl:px-28 py-5 lg:py-10 xl:py-20 relative z-10 overflow-hidden"
+      className="assemblytoOrder h-fit flex flex-col justify-center items-center gap-4 lg:gap-14 px-3 py-5 lg:py-10 xl:py-20 relative z-10 overflow-hidden"
       style={{
         backgroundImage: `url(${assemblyBg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <div className="text flex flex-col justify-center items-center gap-2">
+      <LetterGlitch
+        glitchSpeed={50}
+        centerVignette={true}
+        outerVignette={false}
+        smooth={true}
+      />
+      <div className="absolute top-0 left-0 w-full h-full bg-[#081826] opacity-[0.6] z-[9]"></div>
+
+      <div className="text flex flex-col justify-center items-center gap-2 relative z-10">
         <h2 className="font-PlayfairDisplay text-white text-xl sm:text-2xl lg:text-4xl xl:text-[40px] font-bold">
-          {t("customBuild.title")}
+          {t("header.ourServices")}
         </h2>
         <p className="font-helvetica text-[#fde9e9] font-light text-[10px] sm:text-[12px] lg:text-base text-center w-full sm:w-[70%]">
           {description && description.length > 0
@@ -109,7 +196,7 @@ export default function AssemblyToOrder() {
         </p>
       </div>
 
-      <div className="form flex flex-col sm:flex-row items-center sm:items-start gap-4 lg:gap-10">
+      {/* <div className="form flex flex-col sm:flex-row items-center sm:items-start gap-4 lg:gap-10">
         <form
           onSubmit={handleSubmit}
           className="flex flex-col justify-between bg-[#011729b0] rounded-[2px] lg:rounded  p-5 lg:p-10 w-[85%] sm:w-1/2 lg:w-[40%] xl:h-[408px]"
@@ -283,7 +370,7 @@ export default function AssemblyToOrder() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <ImagePuzzle />
     </section>
   );

@@ -94,30 +94,30 @@ export default function Header() {
                   <img src={logo} alt="logo" />
                 </div>
                 <div className="header-menu sr-only sm:not-sr-only">
-                  <ul className="header-menu-list font-helvetica flex items-center justify-center sm:gap-2 lg:gap-5 text-black sm:text-[10px] lg:text-base font-light sm:w-[220px] lg:w-full sm:flex-wrap lg:flex-nowrap">
+                  <ul className="header-menu-list font-helvetica flex items-center justify-center sm:gap-2 lg:gap-5 text-black sm:text-[10px] lg:text-base font-light sm:w-[220px] lg:w-full">
                     <li className="header-menu-item py-0 lg:py-2 whitespace-nowrap">
                       <a href="#" onClick={(e) => handleNavClick(e, "about")}>
                         {t("header.about")}
                       </a>
                     </li>
-                    <li className="header-menu-item py-0 lg:py-2">
+                    {/* <li className="header-menu-item py-0 lg:py-2">
                       <a href="#" onClick={(e) => handleNavClick(e, "catalog")}>
                         {t("header.catalog")}
                       </a>
-                    </li>
+                    </li> */}
                     <li className="header-menu-item py-0 lg:py-2 whitespace-nowrap">
                       <a
                         href="#"
                         onClick={(e) => handleNavClick(e, "customBuild")}
                       >
-                        {t("header.customBuild")}
+                        {t("header.ourServices")}
                       </a>
                     </li>
-                    <li className="header-menu-item py-0 lg:py-2">
+                    {/* <li className="header-menu-item py-0 lg:py-2">
                       <a href="#" onClick={(e) => handleNavClick(e, "upgrade")}>
                         {t("header.repair")}
                       </a>
-                    </li>
+                    </li> */}
                     <li className="header-menu-item py-0 lg:py-2">
                       <a href="#" onClick={(e) => handleNavClick(e, "b2b")}>
                         {t("header.b2b")}
@@ -144,6 +144,14 @@ export default function Header() {
                         {t("catalog.title")}
                       </a>
                     </li>
+                    <li className="header-menu-item py-0 lg:py-2">
+                      <a
+                        href="https://www.ebay.de/str/socomputertechnik?_trksid=p4624852.m570.l113337"
+                        target="_blank"
+                      >
+                        Ebay
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -157,12 +165,12 @@ export default function Header() {
                 <div className="header-language flex gap-2">
                   <LanguageSwitcher />
                 </div>
-                <button
+                {/* <button
                   onClick={() => scrollToSection("customBuild")}
                   className="header-button font-helvetica p-[5px] lg:p-[10px] bg-none border-[1px] border-[#019ee2] rounded-[2px] lg:rounded  text-[#019ee2] text-[10px] lg:text-base font-normal min-w-[90px] lg:min-w-[178px] whitespace-nowrap"
                 >
                   {t("header.leaveRequest")}
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
@@ -223,28 +231,10 @@ export default function Header() {
               <li>
                 <a
                   href="#"
-                  onClick={(e) => handleNavClick(e, "catalog")}
-                  className="block px-4 text-gray-800 hover:bg-gray-100 rounded-lg transition-colors font-helvetica text-base"
-                >
-                  {t("header.catalog")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
                   onClick={(e) => handleNavClick(e, "customBuild")}
                   className="block px-4 text-gray-800 hover:bg-gray-100 rounded-lg transition-colors font-helvetica text-base"
                 >
-                  {t("header.customBuild")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onClick={(e) => handleNavClick(e, "upgrade")}
-                  className="block px-4 text-gray-800 hover:bg-gray-100 rounded-lg transition-colors font-helvetica text-base"
-                >
-                  {t("header.repair")}
+                  {t("header.ourServices")}
                 </a>
               </li>
               <li>

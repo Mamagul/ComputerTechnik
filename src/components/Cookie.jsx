@@ -25,18 +25,18 @@ const Cookie = () => {
   if (!visible) return null;
 
   return (
-    <div className="w-full bg-white text-[#302727] px-3 py-2 lg:py-4 lg:px-10  z-50 flex flex-col sm:flex-row justify-between items-end sm:items-center gap-2 lg:gap-32">
-      <p className="text-[8px] lg:text-base">{t("cookie.description")}</p>
-      <div className="flex gap-2 lg:gap-8">
+    <div className="w-full bg-white text-[#302727] px-3 py-2 lg:py-4 lg:px-10  z-50 grid grid-cols-[120px_1fr] sm:grid-cols-[1fr_1fr] justify-between items-center gap-2 lg:gap-32">
+      <p className="text-[6px] lg:text-base ">{t("cookie.description")}</p>
+      <div className="flex justify-end gap-2 lg:gap-8 ">
         <button
           onClick={handleAccept}
-          className="bg-[#e7f1fc] text-[#019ee2] border-[#019ee2] border-[1px] px-2 w-[100px] lg:w-[196px] rounded-[2px] lg:rounded whitespace-nowrap text-[10px] lg:text-base"
+          className="bg-[#e7f1fc] text-[#019ee2] border-[#019ee2] border-[1px] px-2 w-[90px] lg:w-[196px] rounded-[2px] lg:rounded text-[10px] lg:text-base"
         >
           {t("cookie.buttonSettings")}
         </button>
         <button
           onClick={handleAccept}
-          className="bg-[#019ee2] text-white rounded-[2px] lg:rounded px-2 w-[100px] lg:w-[196px] whitespace-nowrap text-[10px] lg:text-base"
+          className="bg-[#019ee2] text-white rounded-[2px] lg:rounded px-2 w-[90px] lg:w-[196px] text-[10px] lg:text-base"
         >
           {t("cookie.buttonAccept")}
         </button>

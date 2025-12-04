@@ -16,7 +16,7 @@ export default function Contacts() {
       className="flex flex-col sm:flex-row bg-[#011b32] sm:bg-transparent w-full"
     >
       <h2 className="block sm:hidden font-PlayfairDisplay text-[#e7f1fc] font-bold text-center text-xl sm:text-2xl lg:text-[32px] w-full pt-5 lg:pt-0">
-        {t("contact.title")}:
+        {t("contact.title")}
       </h2>
       <div className="flex flex-row sm:flex-col  bg-[#011b32] px-3 sm:px-10 lg:px-12 xl:px-28 h-full gap-5 lg:gap-[46px] py-5 lg:py-16 xl:py-24">
         <h2 className="hidden sm:block font-PlayfairDisplay text-[#e7f1fc] font-bold text-xl sm:text-2xl lg:text-[32px]">

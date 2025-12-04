@@ -39,7 +39,7 @@ export default function FirstScreen() {
       {/* Desktop */}
       {details && details.length > 0 ? (
         <section
-          className="first-screen hidden sm:flex sm:min-h-[396px] lg:min-h-[50vh] xl:min-h-[80vh] relative z-10 px-3 sm:px-16 lg:px-32 sm:mt-[124px] lg:mt-[132px] overflow-hidden"
+          className="first-screen hidden sm:flex sm:min-h-[396px] lg:min-h-[50vh] xl:min-h-[80vh] relative z-10 px-3 sm:px-16 lg:px-11 xl:px-32 sm:mt-[124px] lg:mt-[132px] overflow-hidden"
           style={{
             backgroundImage: `url(${details[0].image})`,
             backgroundSize: "80% 100%",
@@ -47,7 +47,7 @@ export default function FirstScreen() {
           }}
         >
           <div className="gradient-overlay absolute top-0 left-0 w-[60%] h-full mt-0 sm:min-h-[396px] lg:min-h-[80vh] z-0"></div>
-          <div className="first-screen-content flex flex-col items-start justify-start gap-9 z-20 pb-20 pt-24 sm:w-[60%] lg:w-[40%]">
+          <div className="first-screen-content flex flex-col items-start justify-start gap-9 z-20 pb-20 pt-24 sm:w-[60%] lg:w-[85%]">
             <h1 className="font-PlayfairDisplay text-[#FFFEFE] text-xl sm:text-2xl lg:text-5xl font-bold leading-7 lg:leading-18">
               {getLocalizedField(details[0], "h_text", lang)}
             </h1>
@@ -59,14 +59,14 @@ export default function FirstScreen() {
                 {getLocalizedField(details[0], "text", lang)}
               </span>
             </p>
-            <div className="flex gap-4 font-helvetica font-normal sm:text-xs lg:text-base ">
+            {/* <div className="flex gap-4 font-helvetica font-normal sm:text-xs lg:text-base ">
               <button className="px-6 py-1 lg:py-2 bg-[#019ee2] text-[#FFFEFE] rounded-[2px] lg:rounded  w-24 lg:w-52">
                 {t("hero.cta2")}
               </button>
               <button className="px-6 py-1 lg:py-2 border border-[#019ee2] bg-none text-[#019ee2] rounded-[2px] lg:rounded w-24 lg:w-52">
                 {t("hero.cta")}
               </button>
-            </div>
+            </div> */}
           </div>
         </section>
       ) : null}
@@ -93,14 +93,14 @@ export default function FirstScreen() {
                 {getLocalizedField(details[0], "text", lang)}
               </span>
             </p>
-            <div className="flex gap-4 font-helvetica font-normal text-[10px] lg:text-base ">
+            {/* <div className="flex gap-4 font-helvetica font-normal text-[10px] lg:text-base ">
               <button className="lg:px-6 py-2 lg:py-4 bg-[#019ee2] text-[#FFFEFE] rounded-[2px] lg:rounded  w-24 whitespace-nowrap">
                 {t("hero.cta2")}
               </button>
               <button className="lg:px-6 py-2 lg:py-4 backdrop-blur-[1px] border border-[#019ee2] bg-none text-[#019ee2] rounded-[2px] lg:rounded  w-24 whitespace-nowrap">
                 {t("hero.cta")}
               </button>
-            </div>
+            </div> */}
           </div>
         </section>
       ) : null}

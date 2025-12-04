@@ -21,7 +21,7 @@ export default function Footer() {
   return (
     <footer className="">
       <div className="container1">
-        <div className="flex font-semibold justify-between items-center py-4 gap-5 px-0 sm:px-5">
+        <div className="flex font-semibold justify-between items-center py-1 lg:py-4 gap-5 px-0 sm:px-5">
           <a
             href="#"
             className="w-[70px] h-[50px] sm:w-[106px] lg:w-[140px] sm:h-full pt-2"
@@ -29,7 +29,7 @@ export default function Footer() {
             <img src={logo} alt="Logo" />
           </a>
           <nav className="flex items-start justify-center gap-13 text-[8px] sm:text-[10px] lg:text-base">
-            <ul className="footer-menu-list font-helvetica grid grid-cols-3 gap-1 lg:gap-5 text-black text-[8px] sm:text-[10px] lg:text-base font-normal whitespace-nowrap">
+            <ul className="footer-menu-list font-helvetica grid grid-cols-2 gap-3 lg:gap-5 text-black text-[8px] sm:text-[10px] lg:text-base font-normal whitespace-nowrap">
               <li className="footer-menu-item  text-center">
                 <a
                   // href="#"
@@ -43,31 +43,11 @@ export default function Footer() {
               <li className="footer-menu-item text-center">
                 <a
                   // href="#"
-                  // onClick={(e) => handleNavClick(e, "catalog")}
-                  onClick={() => scrollToSection("catalog")}
-                  className="hover:underline transition-all duration-300 cursor-pointer"
-                >
-                  {t("header.catalog")}
-                </a>
-              </li>
-              <li className="footer-menu-item text-center">
-                <a
-                  // href="#"
                   className="hover:underline transition-all duration-300 cursor-pointer"
                   // onClick={(e) => handleNavClick(e, "customBuild")}
                   onClick={() => scrollToSection("customBuild")}
                 >
-                  {t("header.customBuild")}
-                </a>
-              </li>
-              <li className="footer-menu-item text-center">
-                <a
-                  // href="#"
-                  className="hover:underline transition-all duration-300 cursor-pointer"
-                  // onClick={(e) => handleNavClick(e, "upgrade")}
-                  onClick={() => scrollToSection("upgrade")}
-                >
-                  {t("header.repair")}
+                  {t("header.ourServices")}
                 </a>
               </li>
               <li className="footer-menu-item text-center">

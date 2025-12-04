@@ -65,15 +65,15 @@ export default function B2b() {
 
   return (
     <section id="b2b" className="b2b bg-[#7db8eb]">
-      <div className="container1 flex flex-col sm:px-6 py-5 sm:py-10 lg:pt-20 lg:pb-10 gap-0 lg:gap-14">
+      <div className="container1 flex flex-col sm:px-6 py-5 sm:pt-10 sm:pb-5 lg:pt-20 lg:pb-10 gap-2 lg:gap-14">
         <h2 className="font-PlayfairDisplay text-xl sm:text-2xl lg:text-4xl xl:text-[40px] font-bold text-[#012645] text-center">
           {t("b2b.title")}
         </h2>
         {b2b && b2b.length > 0 ? (
           <div className="flex flex-col-reverse sm:flex-row justify-center lg:justify-between items-center sm:items-start">
-            <button className="flex sm:hidden justify-center items-center bg-[#019ee2] py-2 text-white w-[338px] rounded-[2px] lg:rounded text-[10px] lg:text-base mt-5">
+            {/* <button className="flex sm:hidden justify-center items-center bg-[#019ee2] py-2 text-white w-[338px] rounded-[2px] lg:rounded text-[10px] lg:text-base mt-5">
               {t("b2b.button")}
-            </button>
+            </button> */}
             <div className="text flex flex-col gap-3 sm:gap-5 lg:gap-8 font-helvetica text-black">
               <p className="font-bold text-xs sm:text-base lg:text-xl">
                 {getLocalizedField(b2b[0], "title", lang)}:
@@ -83,14 +83,14 @@ export default function B2b() {
                   <li key={item.id}>{getLocalizedField(item, "text", lang)}</li>
                 ))}
               </ul>
-              <button
+              {/* <button
                 className="hidden sm:block bg-[#019ee2] py-4 text-white w-[338px] rounded-[2px] lg:rounded text-[10px] sm:text-xs lg:text-base"
                 onClick={() => scrollToSection("customBuild")}
               >
                 {t("b2b.button")}
-              </button>
+              </button> */}
             </div>
-            <div className="image w-[310px] lg:w-[500px] h-[310px] lg:h-[500px] ">
+            <div className="image w-[310px] lg:w-[500px] h-[310px] lg:h-[500px] -mt-10 lg:-mt-26">
               <img
                 src={b2bImage}
                 alt="b2b"
