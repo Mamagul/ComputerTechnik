@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import logo from "../images/logo.svg";
 import telegram from "../images/telegram.svg";
 import whatsapp from "../images/whatsapp.svg";
+import instagram from "../images/instagram.svg";
+import tiktok from "../images/tiktok.svg";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 import burger from "../images/burger.svg";
@@ -51,7 +53,6 @@ export default function Header() {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
-
   return (
     <>
       <header
@@ -63,25 +64,39 @@ export default function Header() {
         <div className="header-contacts w-full bg-white">
           <div className="container1">
             <div className="w-full py-[10px] flex justify-end items-center gap-[22px] font-helvetica">
-              <span className="text-[#019ee2] text-[8px] sm:text-xs lg:text-base font-normal">
-                +49 (0)1516 1569163
-              </span>
+              <a href="tel:+49015161569163">
+                <span className="text-[#019ee2] text-[8px] sm:text-xs lg:text-base font-normal">
+                  +49 (0)1516 1569163
+                </span>
+              </a>
               <span className="text-[#019ee2] text-[8px] sm:text-xs lg:text-base font-normal">
                 computertech@gmail.com
               </span>
               <div className="header-contacts-social flex gap-[10px] sm:gap-[22px]">
-                <a
+                {/* <a
                   href="#"
                   className="w-[18px] h-[18px] sm:w-[24px] sm:h-[24px] lg:w-[32px] lg:h-[32px]"
                 >
                   <img src={whatsapp} alt="whatsapp" />
+                </a> */}
+                <a
+                  href="https://www.tiktok.com/@socomputertechnik?_r=1&_t=ZN-91wX8grQiAw"
+                  className="w-[18px] h-[18px] sm:w-[24px] sm:h-[24px] lg:w-[32px] lg:h-[32px]"
+                >
+                  <img src={tiktok} alt="tiktok" />
                 </a>
                 <a
+                  href="https://www.instagram.com/so_computertechnik?igsh=aWpvcnh4djRxcHBp&utm_source=qr"
+                  className="w-[18px] h-[18px] sm:w-[24px] sm:h-[24px] lg:w-[32px] lg:h-[32px]"
+                >
+                  <img src={instagram} alt="instagram" />
+                </a>
+                {/* <a
                   href="#"
                   className="w-[18px] h-[18px] sm:w-[24px] sm:h-[24px] lg:w-[32px] lg:h-[32px]"
                 >
                   <img src={telegram} alt="telegram" />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

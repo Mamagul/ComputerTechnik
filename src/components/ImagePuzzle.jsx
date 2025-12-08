@@ -3,16 +3,10 @@ import puzzle1 from "../images/puzzle1.svg";
 import puzzle2 from "../images/puzzle2.svg";
 import puzzle3 from "../images/puzzle3.svg";
 import puzzle4 from "../images/puzzle4.svg";
-import puzzle3_1 from "../images/puzzlePhone3.svg";
-import puzzle4_1 from "../images/puzzlePhone4.svg";
+import puzzlePhone3 from "../images/puzzlePhone3.svg";
+import puzzlePhone4 from "../images/puzzlePhone4.svg";
 import puzzle5 from "../images/puzzle5.svg";
 import puzzle6 from "../images/puzzle6.svg";
-import puzzle11 from "../images/puzzle11.svg";
-import puzzle22 from "../images/puzzle22.svg";
-import puzzle33 from "../images/puzzle33.svg";
-import puzzle44 from "../images/puzzle44.svg";
-import puzzle55 from "../images/puzzle55.svg";
-import puzzle66 from "../images/puzzle66.svg";
 import PixelTransition from "./effects/PixelTransition";
 import useFetch from "../hooks/useFetch";
 import Loader from "./Loader.jsx";
@@ -57,7 +51,7 @@ export default function ImagePuzzle() {
                 <img
                   src={puzzle1}
                   alt="service image"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  // style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               }
               secondContent={
@@ -69,19 +63,21 @@ export default function ImagePuzzle() {
                     placeItems: "center",
                   }}
                 >
-                  <img
-                    src={puzzle11}
-                    alt="service image"
+                  <div
                     style={{
                       width: "100%",
                       height: "100%",
-                      objectFit: "cover",
+                      backgroundColor: "#E7F1FC",
+                      maskImage: `url(${puzzle1})`,
+                      WebkitMaskImage: `url(${puzzle1})`,
+                      maskSize: "cover",
+                      WebkitMaskSize: "cover",
+                      maskPosition: "center",
+                      WebkitMaskPosition: "center",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskRepeat: "no-repeat",
                       position: "relative",
                       zIndex: 10,
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
                     }}
                   />
                   <p className="flex flex-col items-center justify-center gap-3 lg:gap-6 absolute top-0 left-0 right-0 bottom-0 z-15 text-[#012645] px-[20px] lg:px-[30px]">
@@ -107,7 +103,7 @@ export default function ImagePuzzle() {
                 <img
                   src={puzzle2}
                   alt="service image"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  // style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               }
               secondContent={
@@ -119,19 +115,21 @@ export default function ImagePuzzle() {
                     placeItems: "center",
                   }}
                 >
-                  <img
-                    src={puzzle22}
-                    alt="service image"
+                  <div
                     style={{
                       width: "100%",
                       height: "100%",
-                      objectFit: "cover",
+                      backgroundColor: "#E7F1FC",
+                      maskImage: `url(${puzzle2})`,
+                      WebkitMaskImage: `url(${puzzle2})`,
+                      maskSize: "cover",
+                      WebkitMaskSize: "cover",
+                      maskPosition: "center",
+                      WebkitMaskPosition: "center",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskRepeat: "no-repeat",
                       position: "relative",
                       zIndex: 10,
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
                     }}
                   />
                   <p className="flex flex-col items-center justify-center gap-3 lg:gap-6 absolute top-0 left-0 right-0 bottom-0 z-15 text-[#012645] px-[20px] lg:px-[30px]">
@@ -158,9 +156,9 @@ export default function ImagePuzzle() {
                   src={puzzle3}
                   alt="service image"
                   style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
+                    // width: "100%",
+                    // height: "100%",
+                    // objectFit: "cover",
                     transform: "rotate(180deg)",
                   }}
                 />
@@ -174,19 +172,21 @@ export default function ImagePuzzle() {
                     placeItems: "center",
                   }}
                 >
-                  <img
-                    src={puzzle33}
-                    alt="service image"
+                  <div
                     style={{
                       width: "100%",
                       height: "100%",
-                      objectFit: "cover",
+                      backgroundColor: "#E7F1FC",
+                      maskImage: `url(${puzzle3})`,
+                      WebkitMaskImage: `url(${puzzle3})`,
+                      maskSize: "cover",
+                      WebkitMaskSize: "cover",
+                      maskPosition: "center",
+                      WebkitMaskPosition: "center",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskRepeat: "no-repeat",
                       position: "relative",
                       zIndex: 10,
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
                     }}
                   />
                   <p className="flex flex-col items-center justify-center gap-3 lg:gap-6 absolute top-0 left-0 right-0 bottom-0 z-15 text-[#012645] px-[20px] lg:px-[30px]">
@@ -211,11 +211,11 @@ export default function ImagePuzzle() {
                 <img
                   src={puzzle4}
                   alt="service image"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
+                  // style={{
+                  //   width: "100%",
+                  //   height: "100%",
+                  //   objectFit: "cover",
+                  // }}
                 />
               }
               secondContent={
@@ -227,19 +227,21 @@ export default function ImagePuzzle() {
                     placeItems: "center",
                   }}
                 >
-                  <img
-                    src={puzzle44}
-                    alt="service image"
+                  <div
                     style={{
                       width: "100%",
                       height: "100%",
-                      objectFit: "cover",
+                      backgroundColor: "#E7F1FC",
+                      maskImage: `url(${puzzle4})`,
+                      WebkitMaskImage: `url(${puzzle4})`,
+                      maskSize: "cover",
+                      WebkitMaskSize: "cover",
+                      maskPosition: "center",
+                      WebkitMaskPosition: "center",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskRepeat: "no-repeat",
                       position: "relative",
                       zIndex: 10,
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
                     }}
                   />
                   <p className="flex flex-col items-center justify-center gap-3 lg:gap-6 absolute top-0 left-0 right-0 bottom-0 z-15 text-[#012645] px-[20px] lg:px-[30px]">
@@ -264,7 +266,7 @@ export default function ImagePuzzle() {
                 <img
                   src={puzzle5}
                   alt="service image"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  // style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               }
               secondContent={
@@ -276,19 +278,21 @@ export default function ImagePuzzle() {
                     placeItems: "center",
                   }}
                 >
-                  <img
-                    src={puzzle55}
-                    alt="service image"
+                  <div
                     style={{
                       width: "100%",
                       height: "100%",
-                      objectFit: "cover",
+                      backgroundColor: "#E7F1FC",
+                      maskImage: `url(${puzzle5})`,
+                      WebkitMaskImage: `url(${puzzle5})`,
+                      maskSize: "cover",
+                      WebkitMaskSize: "cover",
+                      maskPosition: "center",
+                      WebkitMaskPosition: "center",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskRepeat: "no-repeat",
                       position: "relative",
                       zIndex: 10,
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
                     }}
                   />
                   <p className="flex flex-col items-center justify-center gap-3 lg:gap-6 absolute top-0 left-0 right-0 bottom-0 z-15 text-[#012645] px-[20px] lg:px-[30px]">
@@ -313,7 +317,7 @@ export default function ImagePuzzle() {
                 <img
                   src={puzzle6}
                   alt="service image"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  // style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               }
               secondContent={
@@ -325,19 +329,21 @@ export default function ImagePuzzle() {
                     placeItems: "center",
                   }}
                 >
-                  <img
-                    src={puzzle66}
-                    alt="service image"
+                  <div
                     style={{
                       width: "100%",
                       height: "100%",
-                      objectFit: "cover",
+                      backgroundColor: "#E7F1FC",
+                      maskImage: `url(${puzzle6})`,
+                      WebkitMaskImage: `url(${puzzle6})`,
+                      maskSize: "cover",
+                      WebkitMaskSize: "cover",
+                      maskPosition: "center",
+                      WebkitMaskPosition: "center",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskRepeat: "no-repeat",
                       position: "relative",
                       zIndex: 10,
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
                     }}
                   />
                   <p className="flex flex-col items-center justify-center gap-3 lg:gap-6 absolute top-0 left-0 right-0 bottom-0 z-15 text-[#012645] px-[20px] lg:px-[30px]">
@@ -369,7 +375,7 @@ export default function ImagePuzzle() {
                 <img
                   src={puzzle1}
                   alt="service image"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  // style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               }
               secondContent={
@@ -381,26 +387,28 @@ export default function ImagePuzzle() {
                     placeItems: "center",
                   }}
                 >
-                  <img
-                    src={puzzle11}
-                    alt="service image"
+                  <div
                     style={{
                       width: "100%",
                       height: "100%",
-                      objectFit: "cover",
+                      backgroundColor: "#E7F1FC",
+                      maskImage: `url(${puzzle1})`,
+                      WebkitMaskImage: `url(${puzzle1})`,
+                      maskSize: "cover",
+                      WebkitMaskSize: "cover",
+                      maskPosition: "center",
+                      WebkitMaskPosition: "center",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskRepeat: "no-repeat",
                       position: "relative",
                       zIndex: 10,
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
                     }}
                   />
-                  <p className="flex flex-col items-center justify-center gap-6 absolute top-0 left-0 right-0 bottom-0 z-15 text-[#012645] px-[30px]">
-                    <span className="text-xl font-bold text-center">
+                  <p className="flex flex-col items-center justify-center gap-[10px] absolute top-0 left-0 right-0 bottom-0 z-15 text-[#012645] px-[10px]">
+                    <span className="text-[14px] font-bold text-center leading-4">
                       {getLocalizedField(services[0], "title", lang)}
                     </span>
-                    <span className="text-xs font-normal text-center">
+                    <span className="text-[10px] font-normal text-center leading-3">
                       {getLocalizedField(services[0], "description", lang)}
                     </span>
                   </p>
@@ -419,7 +427,7 @@ export default function ImagePuzzle() {
                 <img
                   src={puzzle2}
                   alt="service image"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  // style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               }
               secondContent={
@@ -431,26 +439,28 @@ export default function ImagePuzzle() {
                     placeItems: "center",
                   }}
                 >
-                  <img
-                    src={puzzle22}
-                    alt="service image"
+                  <div
                     style={{
                       width: "100%",
                       height: "100%",
-                      objectFit: "cover",
+                      backgroundColor: "#E7F1FC",
+                      maskImage: `url(${puzzle2})`,
+                      WebkitMaskImage: `url(${puzzle2})`,
+                      maskSize: "cover",
+                      WebkitMaskSize: "cover",
+                      maskPosition: "center",
+                      WebkitMaskPosition: "center",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskRepeat: "no-repeat",
                       position: "relative",
                       zIndex: 10,
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
                     }}
                   />
-                  <p className="flex flex-col items-center justify-center gap-6 absolute top-0 left-0 right-0 bottom-0 z-15 text-[#012645] px-[30px]">
-                    <span className="text-[28px] font-bold text-center">
+                  <p className="flex flex-col items-center justify-center gap-[10px] absolute top-0 left-0 right-0 bottom-0 z-15 text-[#012645] px-[10px]">
+                    <span className="text-[14px] font-bold text-center leading-4">
                       {getLocalizedField(services[1], "title", lang)}
                     </span>
-                    <span className="text-xl font-normal text-center">
+                    <span className="text-[10px] font-normal text-center leading-3">
                       {getLocalizedField(services[1], "description", lang)}
                     </span>
                   </p>
@@ -467,15 +477,13 @@ export default function ImagePuzzle() {
             <PixelTransition
               firstContent={
                 <img
-                  src={puzzle3_1}
+                  src={puzzlePhone3}
                   alt="service image"
                   style={{
                     width: "100%",
                     height: "100%",
                     objectFit: "cover",
-                    translate: "translatex(100%)",
                   }}
-                  className="rotate-180"
                 />
               }
               secondContent={
@@ -487,26 +495,28 @@ export default function ImagePuzzle() {
                     placeItems: "center",
                   }}
                 >
-                  <img
-                    src={puzzle33}
-                    alt="service image"
+                  <div
                     style={{
                       width: "100%",
                       height: "100%",
-                      objectFit: "cover",
+                      backgroundColor: "#E7F1FC",
+                      maskImage: `url(${puzzlePhone3})`,
+                      WebkitMaskImage: `url(${puzzlePhone3})`,
+                      maskSize: "cover",
+                      WebkitMaskSize: "cover",
+                      maskPosition: "center",
+                      WebkitMaskPosition: "center",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskRepeat: "no-repeat",
                       position: "relative",
                       zIndex: 10,
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
                     }}
                   />
-                  <p className="flex flex-col items-center justify-center gap-6 absolute top-0 left-0 right-0 bottom-0 z-15 text-[#012645] px-[30px]">
-                    <span className="text-[28px] font-bold text-center">
+                  <p className="flex flex-col items-center justify-center gap-[10px] absolute top-0 left-0 right-0 bottom-0 z-15 text-[#012645] px-[10px]">
+                    <span className="text-[14px] font-bold text-center leading-4">
                       {getLocalizedField(services[2], "title", lang)}
                     </span>
-                    <span className="text-xl font-normal text-center">
+                    <span className="text-[10px] font-normal text-center leading-3">
                       {getLocalizedField(services[2], "description", lang)}
                     </span>
                   </p>
@@ -522,7 +532,7 @@ export default function ImagePuzzle() {
             <PixelTransition
               firstContent={
                 <img
-                  src={puzzle4_1}
+                  src={puzzlePhone4}
                   alt="service image"
                   style={{
                     width: "100%",
@@ -540,26 +550,28 @@ export default function ImagePuzzle() {
                     placeItems: "center",
                   }}
                 >
-                  <img
-                    src={puzzle44}
-                    alt="service image"
+                  <div
                     style={{
                       width: "100%",
                       height: "100%",
-                      objectFit: "cover",
+                      backgroundColor: "#E7F1FC",
+                      maskImage: `url(${puzzlePhone4})`,
+                      WebkitMaskImage: `url(${puzzlePhone4})`,
+                      maskSize: "cover",
+                      WebkitMaskSize: "cover",
+                      maskPosition: "center",
+                      WebkitMaskPosition: "center",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskRepeat: "no-repeat",
                       position: "relative",
                       zIndex: 10,
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
                     }}
                   />
-                  <p className="flex flex-col items-center justify-center gap-6 absolute top-0 left-0 right-0 bottom-0 z-15 text-[#012645] px-[30px]">
-                    <span className="text-[28px] font-bold text-center">
+                  <p className="flex flex-col items-center justify-center gap-[10px] absolute top-0 left-0 right-0 bottom-0 z-15 text-[#012645] px-[10px]">
+                    <span className="text-[14px] font-bold text-center leading-4">
                       {getLocalizedField(services[3], "title", lang)}
                     </span>
-                    <span className="text-xl font-normal text-center">
+                    <span className="text-[10px] font-normal text-center leading-3">
                       {getLocalizedField(services[3], "description", lang)}
                     </span>
                   </p>
@@ -577,7 +589,7 @@ export default function ImagePuzzle() {
                 <img
                   src={puzzle5}
                   alt="service image"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  // style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               }
               secondContent={
@@ -589,26 +601,28 @@ export default function ImagePuzzle() {
                     placeItems: "center",
                   }}
                 >
-                  <img
-                    src={puzzle55}
-                    alt="service image"
+                  <div
                     style={{
                       width: "100%",
                       height: "100%",
-                      objectFit: "cover",
+                      backgroundColor: "#E7F1FC",
+                      maskImage: `url(${puzzle5})`,
+                      WebkitMaskImage: `url(${puzzle5})`,
+                      maskSize: "cover",
+                      WebkitMaskSize: "cover",
+                      maskPosition: "center",
+                      WebkitMaskPosition: "center",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskRepeat: "no-repeat",
                       position: "relative",
                       zIndex: 10,
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
                     }}
                   />
-                  <p className="flex flex-col items-center justify-center gap-6 absolute top-0 left-0 right-0 bottom-0 z-15 text-[#012645] px-[30px]">
-                    <span className="text-[28px] font-bold text-center">
+                  <p className="flex flex-col items-center justify-center gap-[10px] absolute top-0 left-0 right-0 bottom-0 z-15 text-[#012645] px-[10px]">
+                    <span className="text-[14px] font-bold text-center leading-4">
                       {getLocalizedField(services[4], "title", lang)}
                     </span>
-                    <span className="text-xl font-normal text-center">
+                    <span className="text-[10px] font-normal text-center leading-3">
                       {getLocalizedField(services[4], "description", lang)}
                     </span>
                   </p>
@@ -626,7 +640,7 @@ export default function ImagePuzzle() {
                 <img
                   src={puzzle6}
                   alt="service image"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  // style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               }
               secondContent={
@@ -638,26 +652,28 @@ export default function ImagePuzzle() {
                     placeItems: "center",
                   }}
                 >
-                  <img
-                    src={puzzle66}
-                    alt="service image"
+                  <div
                     style={{
                       width: "100%",
                       height: "100%",
-                      objectFit: "cover",
+                      backgroundColor: "#E7F1FC",
+                      maskImage: `url(${puzzle6})`,
+                      WebkitMaskImage: `url(${puzzle6})`,
+                      maskSize: "cover",
+                      WebkitMaskSize: "cover",
+                      maskPosition: "center",
+                      WebkitMaskPosition: "center",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskRepeat: "no-repeat",
                       position: "relative",
                       zIndex: 10,
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
                     }}
                   />
-                  <p className="flex flex-col items-center justify-center gap-6 absolute top-0 left-0 right-0 bottom-0 z-15 text-[#012645] px-[30px]">
-                    <span className="text-[28px] font-bold text-center">
+                  <p className="flex flex-col items-center justify-center gap-[10px] absolute top-0 left-0 right-0 bottom-0 z-15 text-[#012645] px-[10px]">
+                    <span className="text-[14px] font-bold text-center leading-4">
                       {getLocalizedField(services[5], "title", lang)}
                     </span>
-                    <span className="text-xl font-normal text-center">
+                    <span className="text-[10px] font-normal text-center leading-3">
                       {getLocalizedField(services[5], "description", lang)}
                     </span>
                   </p>

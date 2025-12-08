@@ -4,6 +4,7 @@ import useFetch from "../hooks/useFetch.js";
 import { useTranslation } from "react-i18next";
 import getLocalizedField from "../utils/localizationHelpers.js";
 import Loader from "./Loader.jsx";
+import puzzlePhone3 from "../images/puzzlePhone3.svg";
 
 export default function FirstScreen() {
   const { t, i18n } = useTranslation();
@@ -47,7 +48,7 @@ export default function FirstScreen() {
           }}
         >
           <div className="gradient-overlay absolute top-0 left-0 w-[60%] h-full mt-0 sm:min-h-[396px] lg:min-h-[80vh] z-0"></div>
-          <div className="first-screen-content flex flex-col items-start justify-start gap-9 z-20 pb-20 pt-24 sm:w-[60%] lg:w-[85%]">
+          <div className="first-screen-content flex flex-col items-start justify-start gap-9 z-20 pb-20 pt-24 sm:w-[60%] lg:w-[85%] max-w-[600px]">
             <h1 className="font-PlayfairDisplay text-[#FFFEFE] text-xl sm:text-2xl lg:text-5xl font-bold leading-7 lg:leading-18">
               {getLocalizedField(details[0], "h_text", lang)}
             </h1>

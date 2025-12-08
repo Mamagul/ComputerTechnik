@@ -2,6 +2,8 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import telegram from "../images/telegram.svg";
 import whatsapp from "../images/whatsapp.svg";
+import instagram from "../images/instagram.svg";
+import tiktok from "../images/tiktok.svg";
 import { FiPhoneCall } from "react-icons/fi";
 import { GoMail } from "react-icons/go";
 import { MdOutlineLocationOn } from "react-icons/md";
@@ -23,10 +25,15 @@ export default function Contacts() {
           {t("contact.title")}:
         </h2>
         <div className="flex flex-col gap-3 sm:gap-4 lg:gap-6 justify-start w-[200px] lg:w-full">
-          <p className="flex gap-3 lg:gap-6 text-white text-[10px] sm:text-xs lg:text-base">
+          <a
+            href="https://wa.me/4915161569163"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex gap-3 lg:gap-6 text-white text-[10px] sm:text-xs lg:text-base hover:text-[#019ee2] transition-colors"
+          >
             <FiPhoneCall className="text-[#019ee2] w-3 lg:w-5 h-3 lg:h-5" />
             +49 (0)1516 1569163
-          </p>
+          </a>
           <p className="flex gap-3 lg:gap-6 text-white text-[10px] sm:text-xs lg:text-base">
             <GoMail className="text-[#019ee2] w-3 lg:w-5 h-3 lg:h-5" />
             info@so-computertechnik.de
@@ -38,11 +45,17 @@ export default function Contacts() {
         </div>
         <div className="iconsButton flex flex-col justify-end items-start gap-3 sm:gap-5 lg:gap-[30px] w-full">
           <div className="contacts-social flex gap-3 lg:gap-[22px]">
-            <a href="#" className="w-5 h-5 sm:w-8 sm:h-8">
-              <img src={whatsapp} alt="whatsapp" />
+            <a
+              href="https://www.tiktok.com/@socomputertechnik?_r=1&_t=ZN-91wX8grQiAw"
+              className="w-5 h-5 sm:w-8 sm:h-8"
+            >
+              <img src={tiktok} alt="tiktok" />
             </a>
-            <a href="#" className="w-5 h-5 sm:w-8 sm:h-8">
-              <img src={telegram} alt="telegram" />
+            <a
+              href="https://www.instagram.com/so_computertechnik?igsh=aWpvcnh4djRxcHBp&utm_source=qr"
+              className="w-5 h-5 sm:w-8 sm:h-8"
+            >
+              <img src={instagram} alt="instagram" />
             </a>
           </div>
           <a
