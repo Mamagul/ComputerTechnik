@@ -57,6 +57,12 @@ export default function Contacts() {
             >
               <img src={instagram} alt="instagram" />
             </a>
+            <a
+              href="https://wa.me/message/R4GFIUV56O2JH1"
+              className="w-5 h-5 sm:w-8 sm:h-8"
+            >
+              <img src={whatsapp} alt="whatsapp" />
+            </a>
           </div>
           <a
             href="https://computershophamburg.de/en/pages/kontaktformular"

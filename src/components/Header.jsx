@@ -73,12 +73,12 @@ export default function Header() {
                 computertech@gmail.com
               </span>
               <div className="header-contacts-social flex gap-[10px] sm:gap-[22px]">
-                {/* <a
-                  href="#"
+                <a
+                  href="https://wa.me/message/R4GFIUV56O2JH1"
                   className="w-[18px] h-[18px] sm:w-[24px] sm:h-[24px] lg:w-[32px] lg:h-[32px]"
                 >
                   <img src={whatsapp} alt="whatsapp" />
-                </a> */}
+                </a>
                 <a
                   href="https://www.tiktok.com/@socomputertechnik?_r=1&_t=ZN-91wX8grQiAw"
                   className="w-[18px] h-[18px] sm:w-[24px] sm:h-[24px] lg:w-[32px] lg:h-[32px]"
