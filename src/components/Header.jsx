@@ -105,7 +105,10 @@ export default function Header() {
           <div className="container1">
             <div className=" flex justify-between items-center w-full">
               <div className="flex justify-between items-center sm:gap-16 md:gap-36 lg:gap-5">
-                <div className="header-logo py-2 w-[70px] h-[50px] sm:w-[114px] sm:h-[80px] lg:w-full lg:h-full">
+                <div
+                  className="header-logo py-2 w-[70px] h-[50px] sm:w-[114px] sm:h-[80px] lg:w-full lg:h-full cursor-pointer"
+                  onClick={(e) => handleNavClick(e, "firstScreen")}
+                >
                   <img src={logo} alt="logo" />
                 </div>
                 <div className="header-menu sr-only sm:not-sr-only">

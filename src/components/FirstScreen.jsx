@@ -36,7 +36,7 @@ export default function FirstScreen() {
   }
 
   return (
-    <>
+    <div id="firstScreen">
       {/* Desktop */}
       {details && details.length > 0 ? (
         <section
@@ -105,41 +105,6 @@ export default function FirstScreen() {
           </div>
         </section>
       ) : null}
-    </>
-    // <>
-    //   {details && details.length > 0 ? (
-    //     <section
-    //       className="first-screen flex bg-no-repeat min-h-[90vh] relative z-10 px-3 lg:px-32 pt-[132px] md:min-h-[400px]"
-    //       style={{
-    //         backgroundImage: `url(${details[0].image})`,
-    //         backgroundSize: "80% 100%",
-    //         backgroundPosition: "right center",
-    //       }}
-    //     >
-    //       <div className="gradient-overlay absolute top-0 left-0 w-[60%] h-full z-0"></div>
-    //       <div className="first-screen-content flex flex-col items-start justify-start gap-9 z-20 py-20 pt-28 w-[40%]">
-    //         <h1 className="font-PlayfairDisplay text-[#FFFEFE] text-xl lg:text-5xl font-bold leading-7 lg:leading-18">
-    //           {getLocalizedField(details[0], "h_text", lang)}
-    //         </h1>
-    //         <p className="flex flex-col gap-1 font-helvetica text-[#FFFEFE] text-xl font-light">
-    //           <span className="text-[#019ee2]">
-    //             {getLocalizedField(details[0], "blue_text", lang)}
-    //           </span>
-    //           <span className="text-[#FFFEFE]">
-    //             {getLocalizedField(details[0], "text", lang)}
-    //           </span>
-    //         </p>
-    //         <div className="flex gap-4 font-helvetica font-normal text-base ">
-    //           <button className="px-6 py-4 bg-[#019ee2] text-[#FFFEFE] rounded">
-    //             {t("hero.cta2")}
-    //           </button>
-    //           <button className="px-6 py-4 border border-[#019ee2] bg-none text-[#019ee2] rounded">
-    //             {t("hero.cta")}
-    //           </button>
-    //         </div>
-    //       </div>
-    //     </section>
-    //   ) : null}
-    // </>
+    </div>
   );
 }
