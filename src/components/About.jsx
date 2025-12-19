@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import DotGrid from "./effects/DotGrid.jsx";
-
+import aboutUs from "../images/aboutUs.png";
 import dhl from "../images/dhl.svg";
 import businessmen from "../images/businessmen.svg";
 import individual from "../images/individual.svg";
@@ -122,7 +122,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="aboutUs flex flex-col items-center justify-center gap-4 lg:gap-16 py-5 lg:py-20 px-10 lg:px-11 xl:px-20 2xl:px-[155px] relative z-10"
+      className="aboutUs flex flex-col items-center justify-center gap-4 lg:gap-16 py-5 lg:py-20 px-3 lg:px-11 xl:px-20 2xl:px-[155px] relative z-10"
     >
       <div
         style={{
@@ -147,82 +147,41 @@ export default function About() {
         />
       </div>
       <div className="relative z-20">
-        <h2 className="block lg:hidden font-PlayfairDisplay text-center text-xl sm:text-2xl lg:text-4xl xl:text-[40px] font-bold w-full">
+        <h2 className="font-PlayfairDisplay text-center text-xl sm:text-2xl lg:text-4xl xl:text-[40px] font-bold w-full">
           {t("about.title")}
         </h2>
-        <div className="flex flex-col sm:flex-row w-full gap-4 lg:gap-8 mt-4 lg:mt-0">
+        <div className="flex flex-col  w-full gap-4 lg:gap-8 mt-4">
           {details && details.length > 0 ? (
-            <div className="images grid grid-cols-2 gap-3 lg:gap-[30px] w-full sm:w-[50%]">
-              <div className="2img grid grid-rows-[192px_1fr] lg:grid-rows-[344px_1fr] gap-3 lg:gap-[30px]">
-                <div className="img1 rounded-[2px] lg:rounded relative h-[192px] lg:h-[344px]">
-                  <div
-                    className="absolute -top-4 lg:-top-8 -left-4 lg:-left-6 bg-[#FAF8F8] rounded-[2px] lg:rounded w-[80px] lg:w-[150px] h-[60px] lg:h-[116px] flex flex-col items-center justify-center font-semibold"
-                    style={{
-                      boxShadow: "0px 4px 16px 0px rgba(0, 0, 0, 0.07)",
-                    }}
-                  >
-                    <span className="font-PlayfairDisplay text-xl lg:text-4xl text-black">
-                      200+
-                    </span>
-                    <span className="font-PlayfairDisplay text-xs lg:text-xl text-black">
-                      {t("about.comp")}
-                    </span>
-                  </div>
-                  <img
-                    src={details[0].image_1}
-                    alt=""
-                    className="w-full h-full object-cover rounded-[2px] lg:rounded"
-                  />
-                </div>
-                <div className="img2 rounded-[2px] lg:rounded h-[92px] lg:h-[196px]">
-                  <img
-                    src={details[0].image_3}
-                    alt=""
-                    className="w-full h-full object-cover rounded-[2px] lg:rounded"
-                  />
-                </div>
+            <div className="images grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-[30px] px-6 lg:px-0">
+              <div
+                className="img rounded-[2px] lg:rounded h-[307px] sm:h-[450px] lg:h-[60vh] px-3
+               lg:px-0"
+              >
+                <img
+                  src={aboutUs}
+                  alt=""
+                  className="w-full h-full object-cover object-[center_30%] rounded-[2px] lg:rounded"
+                />
               </div>
-              <div className="img3 flex items-center justify-center">
-                <div className="rounded-[2px] lg:rounded h-[205px] lg:h-[390px] relative">
-                  <img
-                    src={details[0].image_2}
-                    alt=""
-                    className="w-full h-full object-cover rounded-[2px] lg:rounded"
-                  />
-                  <div
-                    className="absolute -bottom-7 lg:-bottom-20 left-7 lg:left-18 bg-[#FAF8F8] rounded-[2px] lg:rounded w-[80px] lg:w-[150px] h-[60px] lg:h-[116px] flex flex-col items-center justify-center font-semibold"
-                    style={{
-                      boxShadow: "0px 4px 16px 0px rgba(0, 0, 0, 0.07)",
-                    }}
-                  >
-                    <span className="font-PlayfairDisplay text-xl lg:text-4xl text-black">
-                      200+
-                    </span>
-                    <span className="font-PlayfairDisplay text-xs lg:text-xl text-black">
-                      {t("about.comp")}
-                    </span>
-                  </div>
-                </div>
+              <div className="text flex flex-col items-start justify-start gap-6 ">
+                <p className="font-helvetica text-xs sm:text-xs lg:text-xl font-light text-justify">
+                  {details && details.length > 0
+                    ? getLocalizedField(details[0], "text", lang)
+                    : null}
+                  {details && details.length > 0
+                    ? getLocalizedField(details[0], "text", lang)
+                    : null}
+                </p>
               </div>
             </div>
           ) : null}
-          <div className="textCards w-full sm:w-[50%] flex flex-col items-start gap-3 lg:gap-8 xl:gap-10">
-            <div className="text flex flex-col items-start justify-center gap-6">
-              <h2 className="font-PlayfairDisplay hidden lg:block text-xl sm:text-2xl lg:text-4xl xl:text-[40px] font-bold">
-                {t("about.title")}
-              </h2>
-              <p className="font-helvetica text-xs sm:text-xs lg:text-base font-light text-justify">
-                {details && details.length > 0
-                  ? getLocalizedField(details[0], "text", lang)
-                  : null}
-              </p>
-            </div>
-            <div className="cards grid grid-cols-2 grid-rows-2 gap-3 lg:gap-x-7 lg:gap-y-5 w-full">
+          <div className="textCards w-full flex flex-col items-start gap-3 lg:gap-8 xl:gap-10">
+            <div className="cards grid grid-cols-2 lg:grid-cols-4 justify-between gap-3 lg:gap-5 w-full">
               {cards.map((item, index) => {
                 return (
                   <div
                     key={index}
-                    className="flex flex-col justify-start items-center gap-[10px] bg-[#012645] rounded-[2px] lg:rounded p-4 border border-[#019ee2]"
+                    className="flex flex-col justify-start items-center gap-[10px] bg-[#012645] rounded-[2px] lg:rounded p-4 border border-[#019ee2] transition-all duration-300 hover:border-[6px] hover:border-[#E7F1FC]  hover:shadow-[4px_4px_8.4px_8px_#00000033] hover:shadow-[#012645]/30 hover:scale-105"
                   >
                     <div className="h-9 lg:h-16">
                       <img src={item.image} alt="" className="h-full" />

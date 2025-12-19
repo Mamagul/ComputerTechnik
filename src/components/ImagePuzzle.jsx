@@ -1,12 +1,12 @@
 import React from "react";
-import puzzle1 from "../images/puzzle1.svg";
-import puzzle2 from "../images/puzzle2.svg";
-import puzzle3 from "../images/puzzle3.svg";
-import puzzle4 from "../images/puzzle4.svg";
+import puzzle1 from "../images/puzzle1.png";
+import puzzle2 from "../images/puzzle2.png";
+import puzzle3 from "../images/puzzle3.png";
+import puzzle4 from "../images/puzzle4.png";
 import puzzlePhone3 from "../images/puzzlePhone3.svg";
 import puzzlePhone4 from "../images/puzzlePhone4.svg";
-import puzzle5 from "../images/puzzle5.svg";
-import puzzle6 from "../images/puzzle6.svg";
+import puzzle5 from "../images/puzzle5.png";
+import puzzle6 from "../images/puzzle6.png";
 import PixelTransition from "./effects/PixelTransition";
 import useFetch from "../hooks/useFetch";
 import Loader from "./Loader.jsx";
@@ -477,7 +477,7 @@ export default function ImagePuzzle() {
             <PixelTransition
               firstContent={
                 <img
-                  src={puzzlePhone3}
+                  src={puzzlePhone4}
                   alt="service image"
                   style={{
                     width: "100%",
@@ -500,8 +500,8 @@ export default function ImagePuzzle() {
                       width: "100%",
                       height: "100%",
                       backgroundColor: "#E7F1FC",
-                      maskImage: `url(${puzzlePhone3})`,
-                      WebkitMaskImage: `url(${puzzlePhone3})`,
+                      maskImage: `url(${puzzlePhone4})`,
+                      WebkitMaskImage: `url(${puzzlePhone4})`,
                       maskSize: "cover",
                       WebkitMaskSize: "cover",
                       maskPosition: "center",
@@ -532,7 +532,7 @@ export default function ImagePuzzle() {
             <PixelTransition
               firstContent={
                 <img
-                  src={puzzlePhone4}
+                  src={puzzlePhone3}
                   alt="service image"
                   style={{
                     width: "100%",
@@ -555,8 +555,8 @@ export default function ImagePuzzle() {
                       width: "100%",
                       height: "100%",
                       backgroundColor: "#E7F1FC",
-                      maskImage: `url(${puzzlePhone4})`,
-                      WebkitMaskImage: `url(${puzzlePhone4})`,
+                      maskImage: `url(${puzzlePhone3})`,
+                      WebkitMaskImage: `url(${puzzlePhone3})`,
                       maskSize: "cover",
                       WebkitMaskSize: "cover",
                       maskPosition: "center",
