@@ -26,7 +26,7 @@ export default function Home() {
         <AssemblyToOrder />
         {/* <TechServices /> */}
         {/* <Upgrade /> */}
-        {/* <OfficeMaintenance /> */}
+        <OfficeMaintenance />
         <B2b />
         <Reviews />
         <Contacts />

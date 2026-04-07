@@ -76,18 +76,24 @@ export default function Header() {
                 <a
                   href="https://wa.me/message/R4GFIUV56O2JH1"
                   className="w-[18px] h-[18px] sm:w-[24px] sm:h-[24px] lg:w-[32px] lg:h-[32px]"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <img src={whatsapp} alt="whatsapp" />
                 </a>
                 <a
                   href="https://www.tiktok.com/@socomputertechnik?_r=1&_t=ZN-91wX8grQiAw"
                   className="w-[18px] h-[18px] sm:w-[24px] sm:h-[24px] lg:w-[32px] lg:h-[32px]"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <img src={tiktok} alt="tiktok" />
                 </a>
                 <a
                   href="https://www.instagram.com/so_computertechnik?igsh=aWpvcnh4djRxcHBp&utm_source=qr"
                   className="w-[18px] h-[18px] sm:w-[24px] sm:h-[24px] lg:w-[32px] lg:h-[32px]"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <img src={instagram} alt="instagram" />
                 </a>
@@ -236,7 +242,7 @@ export default function Header() {
 
           {/* Navigation Menu */}
           <nav className="flex-1 px-1 py-4">
-            <ul className="space-y-5">
+            <ul className="space-y-4">
               <li>
                 <a
                   href="#"

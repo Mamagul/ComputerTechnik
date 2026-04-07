@@ -56,9 +56,9 @@ export default function FirstScreen() {
               <span className="text-[#019ee2]">
                 {getLocalizedField(details[0], "blue_text", lang)}
               </span>
-              <span className="text-[#FFFEFE]">
+              {/* <span className="text-[#FFFEFE]">
                 {getLocalizedField(details[0], "text", lang)}
-              </span>
+              </span> */}
             </p>
             {/* <div className="flex gap-4 font-helvetica font-normal sm:text-xs lg:text-base ">
               <button className="px-6 py-1 lg:py-2 bg-[#019ee2] text-[#FFFEFE] rounded-[2px] lg:rounded  w-24 lg:w-52">

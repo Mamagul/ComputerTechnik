@@ -122,7 +122,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="aboutUs flex flex-col items-center justify-center gap-4 lg:gap-16 py-5 lg:py-20 px-3 lg:px-11 xl:px-20 2xl:px-[155px] relative z-10"
+      className="aboutUs flex flex-col items-center justify-center gap-4 lg:gap-16 py-5 lg:py-22 px-3 lg:px-11 xl:px-20 2xl:px-[155px] relative z-10"
     >
       <div
         style={{
@@ -150,11 +150,11 @@ export default function About() {
         <h2 className="font-PlayfairDisplay text-center text-xl sm:text-2xl lg:text-4xl xl:text-[40px] font-bold w-full">
           {t("about.title")}
         </h2>
-        <div className="flex flex-col  w-full gap-4 lg:gap-8 mt-4">
+        <div className="flex flex-col  w-full gap-4 lg:gap-8 mt-5 lg:mt-14">
           {details && details.length > 0 ? (
-            <div className="images grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-[30px] px-6 lg:px-0">
+            <div className="images grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-3 lg:gap-[30px]">
               <div
-                className="img rounded-[2px] lg:rounded h-[307px] sm:h-[450px] lg:h-[60vh] px-3
+                className="img rounded-[2px] lg:rounded h-[280px] sm:h-[430px] lg:h-[50vh] px-3
                lg:px-0"
               >
                 <img
@@ -163,8 +163,8 @@ export default function About() {
                   className="w-full h-full object-cover object-[center_30%] rounded-[2px] lg:rounded"
                 />
               </div>
-              <div className="text flex flex-col items-start justify-start gap-6 ">
-                <p className="font-helvetica text-xs sm:text-xs lg:text-xl font-light text-justify">
+              <div className="text flex flex-col items-start justify-start gap-6 px-3 lg:px-0">
+                <p className="font-helvetica text-xs sm:text-[14px] lg:text-xl font-light tracking-normal leading-4 sm:leading-5 lg:leading-8 text-justify">
                   {details && details.length > 0
                     ? getLocalizedField(details[0], "text", lang)
                     : null}

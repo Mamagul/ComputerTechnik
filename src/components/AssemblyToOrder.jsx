@@ -170,7 +170,7 @@ export default function AssemblyToOrder() {
   return (
     <section
       id="customBuild"
-      className="assemblytoOrder h-fit flex flex-col justify-center items-center gap-4 lg:gap-14 px-3 py-5 relative z-10 overflow-hidden"
+      className="assemblytoOrder h-fit flex flex-col justify-center items-center gap-4 lg:gap-14 px-3 sm:px-10 lg:px-12 py-5 sm:py-10 lg:py-15 xl:py-20 relative z-10 overflow-hidden"
       style={{
         backgroundImage: `url(${assemblyBg})`,
         backgroundSize: "cover",
