@@ -15,16 +15,13 @@ export default function Contacts() {
   return (
     <section
       id="contacts"
-      className="flex flex-col sm:flex-row bg-[#011b32] sm:bg-transparent w-full"
+      className="flex flex-col-reverse lg:flex-row bg-[#011b32] sm:bg-transparent w-full"
     >
-      <h2 className="block sm:hidden font-PlayfairDisplay text-[#e7f1fc] font-bold text-center text-xl sm:text-2xl lg:text-[32px] w-full pt-5 lg:pt-0">
-        {t("contact.title")}
-      </h2>
-      <div className="flex flex-row sm:flex-col  bg-[#011b32] px-3 sm:px-10 lg:px-12 xl:px-28 h-full gap-5 lg:gap-[46px] py-5 lg:py-16 xl:py-24">
-        <h2 className="hidden sm:block font-PlayfairDisplay text-[#e7f1fc] font-bold text-xl sm:text-2xl lg:text-[32px]">
+      <div className="flex flex-row lg:flex-col  bg-[#011b32] px-3 sm:px-10 lg:px-12 xl:px-28 h-full gap-5 lg:gap-[46px] py-5 lg:py-16 xl:py-24">
+        <h2 className="hidden lg:block font-PlayfairDisplay text-[#e7f1fc] font-bold text-xl sm:text-2xl lg:text-3xl">
           {t("contact.title")}:
         </h2>
-        <div className="flex flex-col gap-3 sm:gap-4 lg:gap-6 justify-start w-[200px] lg:w-full">
+        <div className="flex flex-col gap-3 sm:gap-4 lg:gap-6 justify-start w-[200px] sm:w-full">
           <a
             href="https://wa.me/4915161569163"
             target="_blank"
@@ -38,7 +35,7 @@ export default function Contacts() {
             <GoMail className="text-[#019ee2] w-3 lg:w-5 h-3 lg:h-5" />
             info@so-computertechnik.de
           </p>
-          <p className="flex gap-3 lg:gap-6 text-white text-[10px] sm:text-xs lg:text-base w-[165px] lg:w-full">
+          <p className="flex gap-3 lg:gap-6 text-white text-[10px] sm:text-xs lg:text-base w-[165px] sm:w-full">
             <SlLocationPin className="text-[#019ee2] w-5 h-5 lg:w-8 lg:h-8" />
             Kieler Str. 103-107/entrance D, 25474 Bönningstedt
           </p>
@@ -73,13 +70,16 @@ export default function Contacts() {
           </a>
         </div>
       </div>
+      <h2 className="block lg:hidden font-PlayfairDisplay bg-[#011b32] text-[#e7f1fc] font-bold text-center text-xl sm:text-2xl lg:text-[32px] w-full pt-5 lg:pt-0">
+        {t("contact.title")}
+      </h2>
       <iframe
         title="Google Map"
         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1751.6978436971228!2d58.40417650936241!3d37.909097483365336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1748940553598!5m2!1sen!2s"
         width="600"
         height="450"
         style={{ border: 0 }}
-        className="w-full h-[250px] sm:h-[312px] lg:h-[513px] xl:h-[578px]"
+        className="w-full h-[250px] sm:h-[312px] lg:h-[506px] xl:h-[570px]"
         allowFullScreen=""
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"

@@ -13,7 +13,6 @@ export default function OfficeMaintenance() {
     error: officeServiceError,
   } = useFetch("office_service");
 
-  // officeService ? console.log(officeService) : null;
   if (officeServiceLoading) {
     return (
       <div className="flex justify-center items-center h-screen text-2xl">

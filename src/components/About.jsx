@@ -35,10 +35,6 @@ export default function About() {
     loading: videoLoading,
     error: videoError,
   } = useFetch("main_video");
-  // console.log(details);
-  // details ? console.log(getLocalizedField(details, "text", lang)) : null;
-  // details ? console.log(details[0].h_text_en) : null;
-  // details ? console.log(details[0].h_text_ru) : null;
 
   const togglePlay = () => {
     if (videoRef.current) {

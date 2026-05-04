@@ -13,7 +13,6 @@ function Loader({ loading = true, color = "#019ee2" }) {
         color={color}
         loading={loading}
         cssOverride={override}
-        // size={size}
         aria-label="Loading Spinner"
         data-testid="loader"
       />

@@ -13,40 +13,6 @@ export default function B2b() {
     loading: b2bLoading,
     error: b2bError,
   } = useFetch("optom_buy");
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    // if (element) {
-    //   element.scrollIntoView({
-    //     behavior: "smooth",
-    //     block: "start",
-    //   });
-    // }
-    if (element) {
-      const elementPosition = element.getBoundingClientRect().top;
-      // Определяем отступ в зависимости от размера экрана
-      let offset = 100; // по умолчанию для десктопа
-
-      if (window.innerWidth < 480) {
-        offset = 80; // мобильные устройства
-      } else if (window.innerWidth < 768) {
-        offset = 100; // планшеты портрет
-      } else if (window.innerWidth < 1024) {
-        offset = 110; // планшеты ландшафт
-      } else if (window.innerWidth < 1440) {
-        offset = 115; // небольшие десктопы
-      } else {
-        offset = 140; // большие экраны
-      }
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
-  // b2b ? console.log(b2b) : null;
   if (b2bLoading) {
     return (
       <div className="flex justify-center items-center h-screen text-2xl">
@@ -71,9 +37,6 @@ export default function B2b() {
         </h2>
         {b2b && b2b.length > 0 ? (
           <div className="flex flex-col-reverse sm:flex-row justify-center lg:justify-between items-center sm:items-start">
-            {/* <button className="flex sm:hidden justify-center items-center bg-[#019ee2] py-2 text-white w-[338px] rounded-[2px] lg:rounded text-[10px] lg:text-base mt-5">
-              {t("b2b.button")}
-            </button> */}
             <div className="text flex flex-col gap-3 sm:gap-5 lg:gap-8 font-helvetica text-black">
               <p className="font-bold text-xs sm:text-base lg:text-xl">
                 {getLocalizedField(b2b[0], "title", lang)}:
@@ -83,12 +46,6 @@ export default function B2b() {
                   <li key={item.id}>{getLocalizedField(item, "text", lang)}</li>
                 ))}
               </ul>
-              {/* <button
-                className="hidden sm:block bg-[#019ee2] py-4 text-white w-[338px] rounded-[2px] lg:rounded text-[10px] sm:text-xs lg:text-base"
-                onClick={() => scrollToSection("customBuild")}
-              >
-                {t("b2b.button")}
-              </button> */}
             </div>
             <div className="image w-[310px] lg:w-[500px] h-[310px] lg:h-[500px] -mt-10 lg:-mt-26">
               <img

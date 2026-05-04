@@ -22,7 +22,6 @@ export default function ImagePuzzle() {
     error: servicesError,
   } = useFetch("service");
 
-  services ? console.log("services", services) : null;
   if (servicesLoading) {
     return (
       <div className="flex justify-center items-center h-screen text-2xl">
@@ -207,17 +206,7 @@ export default function ImagePuzzle() {
             />
             {/* Fourth Puzzle */}
             <PixelTransition
-              firstContent={
-                <img
-                  src={puzzle4}
-                  alt="service image"
-                  // style={{
-                  //   width: "100%",
-                  //   height: "100%",
-                  //   objectFit: "cover",
-                  // }}
-                />
-              }
+              firstContent={<img src={puzzle4} alt="service image" />}
               secondContent={
                 <div
                   style={{
@@ -262,13 +251,7 @@ export default function ImagePuzzle() {
             />
             {/* Fifth Puzzle */}
             <PixelTransition
-              firstContent={
-                <img
-                  src={puzzle5}
-                  alt="service image"
-                  // style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-              }
+              firstContent={<img src={puzzle5} alt="service image" />}
               secondContent={
                 <div
                   style={{
@@ -313,13 +296,7 @@ export default function ImagePuzzle() {
             />
             {/* Sixth Puzzle */}
             <PixelTransition
-              firstContent={
-                <img
-                  src={puzzle6}
-                  alt="service image"
-                  // style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-              }
+              firstContent={<img src={puzzle6} alt="service image" />}
               secondContent={
                 <div
                   style={{
@@ -371,13 +348,7 @@ export default function ImagePuzzle() {
         {services && services.length > 5 ? (
           <>
             <PixelTransition
-              firstContent={
-                <img
-                  src={puzzle1}
-                  alt="service image"
-                  // style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-              }
+              firstContent={<img src={puzzle1} alt="service image" />}
               secondContent={
                 <div
                   style={{
@@ -423,13 +394,7 @@ export default function ImagePuzzle() {
             {/* Second Puzzle */}
 
             <PixelTransition
-              firstContent={
-                <img
-                  src={puzzle2}
-                  alt="service image"
-                  // style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-              }
+              firstContent={<img src={puzzle2} alt="service image" />}
               secondContent={
                 <div
                   style={{
@@ -585,13 +550,7 @@ export default function ImagePuzzle() {
             />
             {/* Fifth Puzzle */}
             <PixelTransition
-              firstContent={
-                <img
-                  src={puzzle5}
-                  alt="service image"
-                  // style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-              }
+              firstContent={<img src={puzzle5} alt="service image" />}
               secondContent={
                 <div
                   style={{
@@ -636,13 +595,7 @@ export default function ImagePuzzle() {
             />
             {/* Sixth Puzzle */}
             <PixelTransition
-              firstContent={
-                <img
-                  src={puzzle6}
-                  alt="service image"
-                  // style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-              }
+              firstContent={<img src={puzzle6} alt="service image" />}
               secondContent={
                 <div
                   style={{

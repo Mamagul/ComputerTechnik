@@ -1,10 +1,8 @@
 import React from "react";
-// import firstScreenBg from "../images/firstScreen.svg";
 import useFetch from "../hooks/useFetch.js";
 import { useTranslation } from "react-i18next";
 import getLocalizedField from "../utils/localizationHelpers.js";
 import Loader from "./Loader.jsx";
-import puzzlePhone3 from "../images/puzzlePhone3.svg";
 
 export default function FirstScreen() {
   const { t, i18n } = useTranslation();
@@ -14,10 +12,6 @@ export default function FirstScreen() {
     loading: detailsLoading,
     error: detailsError,
   } = useFetch("main_page");
-  console.log(details);
-  details ? console.log(getLocalizedField(details, "text", lang)) : null;
-  // details ? console.log(details[0].h_text_en) : null;
-  // details ? console.log(details[0].h_text_ru) : null;
 
   if (detailsLoading) {
     return (
@@ -56,18 +50,7 @@ export default function FirstScreen() {
               <span className="text-[#019ee2]">
                 {getLocalizedField(details[0], "blue_text", lang)}
               </span>
-              {/* <span className="text-[#FFFEFE]">
-                {getLocalizedField(details[0], "text", lang)}
-              </span> */}
             </p>
-            {/* <div className="flex gap-4 font-helvetica font-normal sm:text-xs lg:text-base ">
-              <button className="px-6 py-1 lg:py-2 bg-[#019ee2] text-[#FFFEFE] rounded-[2px] lg:rounded  w-24 lg:w-52">
-                {t("hero.cta2")}
-              </button>
-              <button className="px-6 py-1 lg:py-2 border border-[#019ee2] bg-none text-[#019ee2] rounded-[2px] lg:rounded w-24 lg:w-52">
-                {t("hero.cta")}
-              </button>
-            </div> */}
           </div>
         </section>
       ) : null}
@@ -94,14 +77,6 @@ export default function FirstScreen() {
                 {getLocalizedField(details[0], "text", lang)}
               </span>
             </p>
-            {/* <div className="flex gap-4 font-helvetica font-normal text-[10px] lg:text-base ">
-              <button className="lg:px-6 py-2 lg:py-4 bg-[#019ee2] text-[#FFFEFE] rounded-[2px] lg:rounded  w-24 whitespace-nowrap">
-                {t("hero.cta2")}
-              </button>
-              <button className="lg:px-6 py-2 lg:py-4 backdrop-blur-[1px] border border-[#019ee2] bg-none text-[#019ee2] rounded-[2px] lg:rounded  w-24 whitespace-nowrap">
-                {t("hero.cta")}
-              </button>
-            </div> */}
           </div>
         </section>
       ) : null}

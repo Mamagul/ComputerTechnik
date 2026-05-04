@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import logo from "../images/logo.svg";
-import telegram from "../images/telegram.svg";
 import whatsapp from "../images/whatsapp.svg";
 import instagram from "../images/instagram.svg";
 import tiktok from "../images/tiktok.svg";
@@ -14,12 +13,6 @@ export default function Header() {
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
-    // if (element) {
-    //   element.scrollIntoView({
-    //     behavior: "smooth",
-    //     block: "start",
-    //   });
-    // }
     if (element) {
       const elementPosition = element.getBoundingClientRect().top;
       // Определяем отступ в зависимости от размера экрана
@@ -97,12 +90,6 @@ export default function Header() {
                 >
                   <img src={instagram} alt="instagram" />
                 </a>
-                {/* <a
-                  href="#"
-                  className="w-[18px] h-[18px] sm:w-[24px] sm:h-[24px] lg:w-[32px] lg:h-[32px]"
-                >
-                  <img src={telegram} alt="telegram" />
-                </a> */}
               </div>
             </div>
           </div>
@@ -124,11 +111,7 @@ export default function Header() {
                         {t("header.about")}
                       </a>
                     </li>
-                    {/* <li className="header-menu-item py-0 lg:py-2">
-                      <a href="#" onClick={(e) => handleNavClick(e, "catalog")}>
-                        {t("header.catalog")}
-                      </a>
-                    </li> */}
+
                     <li className="header-menu-item py-0 lg:py-2 whitespace-nowrap">
                       <a
                         href="#"
@@ -137,11 +120,7 @@ export default function Header() {
                         {t("header.ourServices")}
                       </a>
                     </li>
-                    {/* <li className="header-menu-item py-0 lg:py-2">
-                      <a href="#" onClick={(e) => handleNavClick(e, "upgrade")}>
-                        {t("header.repair")}
-                      </a>
-                    </li> */}
+
                     <li className="header-menu-item py-0 lg:py-2">
                       <a href="#" onClick={(e) => handleNavClick(e, "b2b")}>
                         {t("header.b2b")}
@@ -189,12 +168,6 @@ export default function Header() {
                 <div className="header-language flex gap-2">
                   <LanguageSwitcher />
                 </div>
-                {/* <button
-                  onClick={() => scrollToSection("customBuild")}
-                  className="header-button font-helvetica p-[5px] lg:p-[10px] bg-none border-[1px] border-[#019ee2] rounded-[2px] lg:rounded  text-[#019ee2] text-[10px] lg:text-base font-normal min-w-[90px] lg:min-w-[178px] whitespace-nowrap"
-                >
-                  {t("header.leaveRequest")}
-                </button> */}
               </div>
             </div>
           </div>
