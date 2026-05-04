@@ -75,7 +75,7 @@ export default function Contacts() {
       </h2>
       <iframe
         title="Google Map"
-        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1751.6978436971228!2d58.40417650936241!3d37.909097483365336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1748940553598!5m2!1sen!2s"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d963.8816787856016!2d9.903833185188045!3d53.66451514266847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b1876560dd6fcd%3A0x12067e2aada6e1d1!2zS2llbGVyIFN0ci4gMTAzLzEwNywgMjU0NzQgQsO2bm5pbmdzdGVkdCwg0JPQtdGA0LzQsNC90LjRjw!5e0!3m2!1sru!2sbg!4v1777881692108!5m2!1sru!2sbg"
         width="600"
         height="450"
         style={{ border: 0 }}
